@@ -1,4 +1,7 @@
 ;
+; CC-GEN 
+; Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
+;
 ; cc-gen-a.ss
 ;
 
@@ -6,5 +9,5 @@
   (lambda (x . y)
     (apply + x y))) 
 
-(display (sum 1 2 3 4 5)) (newline)
+(display (sum 3 4 5 6 7 8 9)) (newline)
 
