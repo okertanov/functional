@@ -9,19 +9,22 @@
 # Defines
 #
 CC      = gcc
-CFLAGS  =  
+CFLAGSW = -Wall -Wno-unused-variable  
+CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW)
 LDFLAGS = -lchicken
 
-SS   := $(wildcard *.ss)
-CSS  := $(patsubst %.ss,%.c,$(SS))
-OBJS := $(patsubst %.c,%.o,$(CSS))
+SS     := $(wildcard *.ss)
+CSS    := $(patsubst %.ss,%.c,$(SS))
+OBJS   := $(patsubst %.c,%.o,$(CSS))
+
+MODULE  = cc-gen-a
 
 #
 # Targets
 #
-all: cc-gen-a
+all: $(MODULE)
 
-cc-gen-a: $(OBJS)
+$(MODULE): $(OBJS)
 	$(CC) $(CFLAGS) $? -o $@ $(LDFLAGS)
 
 $(OBJS): $(CSS)
@@ -29,8 +32,6 @@ $(OBJS): $(CSS)
 
 $(CSS): $(SS)
 	chicken $? 
-
-.o: .c
 
 clean:
 	-@echo cleaning...
