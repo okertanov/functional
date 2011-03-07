@@ -13,7 +13,8 @@ SYSTEM ?= $(shell uname -o)
 #
 # Defines
 #
-CC      = gcc
+CC      = gcc 
+CHICKEN = chicken 
 ifeq ($(SYSTEM), Msys)
 	CFLAGSI = -IC:/MinGW/local/include/chicken -LC:/MinGW/local/lib
 else
@@ -23,10 +24,16 @@ CFLAGSW = -Wall -Wno-unused-variable
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
 LDFLAGS = -lchicken 
 
+#
+# Files
+#
 SS     := $(wildcard *.ss)
 CSS    := $(patsubst %.ss,%.c,$(SS))
 OBJS   := $(patsubst %.c,%.o,$(CSS))
 
+#
+# Module
+#
 MODULE  = cc-gen-a
 
 #
@@ -41,7 +48,7 @@ $(OBJS): $(CSS)
 	$(CC) $(CFLAGS) -c $? -o $@ 
 
 $(CSS): $(SS)
-	chicken $? 
+	$(CHICKEN) $? 
 
 clean:
 	-@echo cleaning...
