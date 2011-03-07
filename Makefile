@@ -6,12 +6,22 @@
 # ###################################################################
 
 #
+# Platform
+#
+SYSTEM ?= $(shell uname -o)
+
+#
 # Defines
 #
 CC      = gcc
+ifeq ($(SYSTEM), Msys)
+	CFLAGSI = -IC:/MinGW/local/include/chicken -LC:/MinGW/local/lib
+else
+	CFLAGSI = 
+endif
 CFLAGSW = -Wall -Wno-unused-variable  
-CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW)
-LDFLAGS = -lchicken
+CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
+LDFLAGS = -lchicken 
 
 SS     := $(wildcard *.ss)
 CSS    := $(patsubst %.ss,%.c,$(SS))
@@ -35,7 +45,7 @@ $(CSS): $(SS)
 
 clean:
 	-@echo cleaning...
-	-@rm -f *.c *.o cc-gen-a 2>/dev/null
+	-@rm -f *.c *.o cc-gen-a cc-gen-a.exe 2>/dev/null
 
 #
 # Explicit recipes
