@@ -22,7 +22,7 @@ else
 endif
 CFLAGSW = -Wall -Wno-unused-variable  
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
-LDFLAGS = -lchicken 
+LDFLAGS = -lchicken -Xlinker --enable-auto-import
 
 #
 # Files
