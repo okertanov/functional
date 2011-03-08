@@ -22,4 +22,4 @@ Generic Makefile example to use as is
 [How Lists Work](http://www.soe.ucsc.edu/classes/cmps112/Spring03/languages/scheme/SchemeTutorialB.html)  
 [MIT Scheme Reference](http://www.cse.iitb.ac.in/~as/mit-scheme/scheme.html)  
 [Scheme Revised(4)](http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/html/r4rs/r4rs_toc.html)  
-
+[Community Scheme Siki](http://community.schemewiki.org/)
