@@ -17,12 +17,14 @@ CC      = gcc
 CHICKEN = chicken 
 ifeq ($(SYSTEM), Msys)
 	CFLAGSI = -IC:/MinGW/local/include/chicken -LC:/MinGW/local/lib
+	LDFLAGL = -Xlinker --enable-auto-import
 else
 	CFLAGSI = 
+	LDFLAGL = 
 endif
 CFLAGSW = -Wall -Wno-unused-variable  
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
-LDFLAGS = -lchicken -Xlinker --enable-auto-import
+LDFLAGS = -lchicken $(LDFLAGL) 
 
 #
 # Files
