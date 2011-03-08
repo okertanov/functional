@@ -8,6 +8,7 @@ Some scheme code that compiles to C language.
 Generic Makefile example to use as is
 
 ### Terms
+* Parentheses :)
 * Lambda calculus
 * Currying
 * Closure
