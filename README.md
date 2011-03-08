@@ -7,6 +7,12 @@ Some scheme code that compiles to C language.
 ### Makefile
 Generic Makefile example to use as is
 
+### Terms
+* Lambda calculus
+* Currying
+* Closure
+* Continuation
+
 ### See also
 [PLT Scheme Reference](http://download.plt-scheme.org/doc/html/reference/pairs.html)  
 [Wikipedia: Scheme (programming language)](http://en.wikipedia.org/wiki/Scheme_%28programming_language%29)  
