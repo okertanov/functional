@@ -41,7 +41,7 @@ MODULE  = cc-gen-a
 #
 # Targets
 #
-all: $(MODULE)
+all: $(MODULE) run
 
 $(MODULE): $(OBJS)
 	$(CC) $(CFLAGS) $? -o $@ $(LDFLAGS)
@@ -51,6 +51,9 @@ $(OBJS): $(CSS)
 
 $(CSS): $(SS)
 	$(CHICKEN) $? 
+
+run: $(MODULE)
+	./$(MODULE)
 
 clean:
 	-@echo cleaning...
