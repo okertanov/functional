@@ -13,6 +13,7 @@ Generic Makefile example to use as is
 * Currying
 * Closure
 * Continuation
+* REPL
 
 ### See also
 [PLT Scheme Reference](http://download.plt-scheme.org/doc/html/reference/pairs.html)  
