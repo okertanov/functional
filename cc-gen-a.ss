@@ -99,5 +99,11 @@
     (print-for '((+ -) (* /) (square cube)))
 )
 
+;
+; day 7
+;
+(newline)
+(for-each print '(another way to iterate))
+
 (newline)
 
