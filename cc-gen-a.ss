@@ -58,7 +58,7 @@
 
 (define cube
     (lambda (i)
-        (* (* i i) i)
+        (* i i i)
     )
 )
 
@@ -98,4 +98,6 @@
 (let ((print-for (iterate-with (lambda (i)(display i)))))
     (print-for '((+ -) (* /) (square cube)))
 )
+
+(newline)
 
