@@ -110,5 +110,16 @@
 (newline)
 (for-each print '(another way to iterate))
 
+;
+; day 8
+;
+(define (gcdi a b)
+    (if (= b 0)
+        a
+        (gcd b (modulo a b))))
+
+(display (gcdi 4294967297 65537)) (newline)
+(display (gcd  100 15 20 30)) (newline)
+
 (newline)
 
