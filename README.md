@@ -27,3 +27,5 @@ Generic Makefile example to use as is
 [Community Scheme Siki](http://community.schemewiki.org/)
 [Y Combinator in Scheme](http://www.ece.uc.edu/~franco/C511/html/Scheme/ycomb.html)
 [RosettaCode Wiki Y Combinator](http://rosettacode.org/wiki/Y_combinator)
+
+[Gambit-C](http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page)
