@@ -18,50 +18,61 @@ CHICKEN = chicken
 ifeq ($(SYSTEM), Msys)
 	CFLAGSI = -IC:/MinGW/local/include/chicken -LC:/MinGW/local/lib
 	LDFLAGL = -Xlinker --enable-auto-import
+	MODEXT  = .exe
 else
 	CFLAGSI = 
 	LDFLAGL = 
+	MODEXT  = 
 endif
-CFLAGSW = -Wall -Wno-unused-variable  
+CFLAGSW = -Wall -Wno-unused-variable 
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
 LDFLAGS = -lchicken $(LDFLAGL) 
 
 #
 # Files
 #
-SS     := $(wildcard *.ss)
-CSS    := $(patsubst %.ss,%.c,$(SS))
-OBJS   := $(patsubst %.c,%.o,$(CSS))
-
-#
-# Module
-#
-MODULE  = cc-gen-a
+SS      := $(wildcard *.ss)
+CSS     := $(patsubst %.ss,%.c,$(SS))
+OBJS    := $(patsubst %.c,%.o,$(CSS))
+MODULES := $(patsubst %.ss,%$(MODEXT),$(SS))
 
 #
 # Targets
 #
-all: $(MODULE) run
+all: modules run
 
-$(MODULE): $(OBJS)
-	$(CC) $(CFLAGS) $? -o $@ $(LDFLAGS)
+modules: $(MODULES)
 
-$(OBJS): $(CSS)
-	$(CC) $(CFLAGS) -c $? -o $@ 
+$(MODULES): $(OBJS)
 
-$(CSS): $(SS)
-	$(CHICKEN) $? 
+%$(MODEXT): %.o
+	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
-run: $(MODULE)
-	./$(MODULE)
+%.o: %.c $(CSS)
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+%.c: %.ss $(SS)
+	$(CHICKEN) $<
+
+run: $(MODULES)
+	-@echo Running: $(MODULES) 
+	-@$(foreach file,$(MODULES), if [ -x $(file) ]; then echo $(file) | xargs -Ifile sh -c ./file ; fi; )
 
 clean:
 	-@echo cleaning...
-	-@rm -f *.c *.o cc-gen-a cc-gen-a.exe 2>/dev/null
+	-@rm -f *.c *.o *.so *.a *.exe *.dll *.lib 2>/dev/null
 
 #
 # Explicit recipes
 #
 .SILENT: clean
-.PHONY:  all clean
+
+.PHONY:  all modules run clean
+
+.DEFAULT: all
+
+.SECONDARY:
+
+.INTERMEDIATE:
+
 

@@ -6,6 +6,11 @@
 ;
 
 ;
+; day 0
+;
+(display "Inside cc-gen-a.ss")
+
+;
 ; day 1
 ;
 (define sum

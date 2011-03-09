@@ -25,3 +25,5 @@ Generic Makefile example to use as is
 [MIT Scheme Reference](http://www.cse.iitb.ac.in/~as/mit-scheme/scheme.html)  
 [Scheme Revised(4)](http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/html/r4rs/r4rs_toc.html)  
 [Community Scheme Siki](http://community.schemewiki.org/)
+[Y Combinator in Scheme](http://www.ece.uc.edu/~franco/C511/html/Scheme/ycomb.html)
+[RosettaCode Wiki Y Combinator](http://rosettacode.org/wiki/Y_combinator)
