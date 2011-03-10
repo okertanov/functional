@@ -1,17 +1,33 @@
 #!/usr/bin/perl -w
+#
+# http://docstore.mik.ua/orelly/perl/cookbook/ch04_20.htm
+# by Mark Jason Dominus
+#
+
 use strict;
+
+#prorotypes
+sub factorial($);
+sub n2pat();
+sub pat2perm;
+sub pat2perm; 
+sub n2perm;
 
 my @data = split '', "123";
 my $num_permutations = factorial(scalar @data);
-for (my $i=0; $i < $num_permutations; $i++) {
+
+for (my $i=0; $i < $num_permutations; $i++) 
+{
     my @permutation = @data[n2perm($i, $#data)];
-    #print "@permutation\n";
+    print "@permutation\n";
 }
 
 # Utility function: factorial with memoizing
-BEGIN {
+BEGIN 
+{
   my @fact = (1);
-  sub factorial($) {
+  sub factorial($) 
+  {
       my $n = shift;
       return $fact[$n] if defined $fact[$n];
       $fact[$n] = $n * factorial($n - 1);
@@ -19,7 +35,8 @@ BEGIN {
 }
 
 # n2pat($N, $len) : produce the $N-th pattern of length $len
-sub n2pat {
+sub n2pat 
+{
     my $i   = 1;
     my $N   = shift;
     my $len = shift;
@@ -34,7 +51,8 @@ sub n2pat {
 
 # pat2perm(@pat) : turn pattern returned by n2pat() into
 # permutation of integers.  XXX: splice is already O(N)
-sub pat2perm {
+sub pat2perm 
+{
     my @pat    = @_;
     my @source = (0 .. $#pat);
     my @perm;
@@ -43,6 +61,8 @@ sub pat2perm {
 }
 
 # n2perm($N, $len) : generate the Nth permutation of $len objects
-sub n2perm {
+sub n2perm 
+{
     pat2perm(n2pat(@_));
 }
+
