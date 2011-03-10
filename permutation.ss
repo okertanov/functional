@@ -31,10 +31,8 @@
 )
 
 (newline)
-
-(for-each
-    (lambda (i)(display i)(newline))
-    (permute '(a b c))
+(map 
+    (lambda (r) (display r) (newline))
+    (map (lambda (p) p) (permute '(0 1 2)))
 )
-
 (newline)
