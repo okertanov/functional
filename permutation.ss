@@ -8,7 +8,7 @@
 ;
 ; day 0
 ;
-(display "Inside cc-permutation.ss")
+(display "Inside permutation.ss")
 
 ;
 ; day 1
