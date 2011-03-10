@@ -61,6 +61,7 @@ run: $(MODULES)
 clean:
 	-@echo cleaning...
 	-@rm -f *.c *.o *.so *.a *.exe *.dll *.lib 2>/dev/null
+	-@rm -f $(MODULES)
 
 #
 # Explicit recipes
