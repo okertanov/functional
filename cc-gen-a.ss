@@ -5,6 +5,8 @@
 ; cc-gen-a.ss
 ;
 
+;(require-extension (srfi 1))
+
 ;
 ; day 0
 ;
@@ -120,6 +122,11 @@
 
 (display (gcdi 4294967297 65537)) (newline)
 (display (gcd  100 15 20 30)) (newline)
+
+;
+; day 9
+;
+;(print  (fold cons '() '(1 2 3)))
 
 (newline)
 

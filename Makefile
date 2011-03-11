@@ -27,6 +27,7 @@ endif
 CFLAGSW = -Wall -Wno-unused-variable 
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
 LDFLAGS = -lchicken $(LDFLAGL) 
+CHFLAGS = -feature srfi-1 
 
 #
 # Files
@@ -52,7 +53,7 @@ $(MODULES): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 %.c: %.ss $(SS)
-	$(CHICKEN) $<
+	$(CHICKEN) $< $(CHFLAGS) 
 
 run: $(MODULES)
 	-@echo Running: $(MODULES) 
