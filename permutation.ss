@@ -32,7 +32,7 @@
 
 (newline)
 (map 
-    (lambda (r) (display r) (newline))
-    (map (lambda (p) p) (permute '(0 1 2)))
+    (lambda (r) (map (lambda (x) (display x) (display " ")) r) (newline))
+    (map (lambda (p) p) (permute '(0 1 2 3 4 5 6 7 8 9)))
 )
 (newline)

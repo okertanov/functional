@@ -31,7 +31,7 @@ function print_result (a)
   io.write("\n")
 end
 
-itable = {"0","1","2"};
+itable = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
 for p in permutation(itable) do
   print_result(p)

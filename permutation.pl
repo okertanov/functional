@@ -13,7 +13,7 @@ sub pat2perm;
 sub pat2perm; 
 sub n2perm;
 
-my @data = split '', "012";
+my @data = split '', "0123456789";
 my $num_permutations = factorial(scalar @data);
 
 for (my $i=0; $i < $num_permutations; $i++) 
