@@ -144,7 +144,7 @@ const unsigned char* Perm::Next()
 void TestOne()
 {
 	benchmark::timer::PerfTimer* timer = new benchmark::timer::PerfTimer("STL Permutation");
-	std::string* stringData = new std::string("0123456789");
+	std::string* stringData = new std::string("012");
 	do
 	{
 #ifdef USE_STDOUT
@@ -158,7 +158,7 @@ void TestOne()
 void TestTwo()
 {
 	benchmark::timer::PerfTimer* timer = new benchmark::timer::PerfTimer("Generic Permutation");
-	benchmark::algorithm::Perm P((unsigned char*)"0123456789");
+	benchmark::algorithm::Perm P((unsigned char*)"012");
 	
 #ifdef USE_STDOUT	
 	std::cout << P << std::endl; 
