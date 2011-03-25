@@ -5,7 +5,7 @@
 ; cc-gen-a.ss
 ;
 
-(require-extension (srfi 1))
+;(require-extension (srfi 1))
 
 ;
 ; day 0
@@ -126,7 +126,7 @@
 ;
 ; day 9
 ;
-(print  (fold cons '() '(1 2 3)))
+;(print  (fold cons '() '(1 2 3)))
 
 (newline)
 
