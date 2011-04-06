@@ -1,5 +1,5 @@
 ;
-; CC-GEN 
+; CC-GEN
 ; Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
 ;
 ; repl.ss

@@ -1,5 +1,5 @@
 ;
-; CC-GEN 
+; CC-GEN
 ; Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
 ;
 ; permutation.ss
@@ -31,7 +31,7 @@
 )
 
 (newline)
-(map 
+(map
     (lambda (r) (map (lambda (x) (display x) (display " ")) r) (newline))
     (map (lambda (p) p) (permute '(0 1 2)))
 )

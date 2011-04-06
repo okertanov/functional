@@ -1,7 +1,7 @@
 My Chicken/cc samples
 ---------------------
 
-### cc-gen-a 
+### cc-gen-a
 Some scheme code that compiles to C language.
 
 ### permutation.*

@@ -1,5 +1,5 @@
 ;
-; CC-GEN 
+; CC-GEN
 ; Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
 ;
 ; cc-gen-a.ss
@@ -19,7 +19,7 @@
     (lambda (x . y)
         (apply + x y)
     )
-) 
+)
 
 (display (car '(1 2 3 4 5))) (newline)
 (display (sum 3 4 5 6 7 8 9)) (newline)
@@ -31,7 +31,7 @@
 (define on-every-item
     (lambda (lst)
         (if (not (null? lst))
-            (begin (display (car lst)) 
+            (begin (display (car lst))
                    (display " ")
                    (on-every-item (cdr lst)))
             (begin (newline)
@@ -90,7 +90,7 @@
 (define output-pair
     (lambda (p)
         (display (car p))
-        (display " => ") 
+        (display " => ")
         (display (cdr p)) (newline)
     )
 )
