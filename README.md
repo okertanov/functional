@@ -16,7 +16,18 @@ Generic Makefile example to use as is
 * Currying
 * Closure
 * Continuation
+* Tuples
+* List Comprehensions
 * REPL
+
+### More Terms
+* lambda abstraction
+* application
+* beta reduction
+* apply
+* filter
+* map
+* reduce
 
 ### See also
 [The Scheme Programming Language 4 ed. R. Kent Dybvig](http://www.scheme.com/tspl4/)  
@@ -32,5 +43,6 @@ Generic Makefile example to use as is
 [Wikipedia: Y Combinator](http://en.wikipedia.org/wiki/Y_combinator)  
 [Y Combinator in Scheme](http://www.ece.uc.edu/~franco/C511/html/Scheme/ycomb.html)  
 [RosettaCode Wiki Y Combinator](http://rosettacode.org/wiki/Y_combinator)  
+[Collected Lambda Calculus Functions](http://jwodder.freeshell.org/lambda.html)  
 
 [Gambit-C](http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page)  
