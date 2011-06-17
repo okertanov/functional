@@ -28,6 +28,8 @@ Generic Makefile example to use as is
 * filter
 * map
 * reduce
+* coerce
+* zip
 
 ### See also
 [The Scheme Programming Language 4 ed. R. Kent Dybvig](http://www.scheme.com/tspl4/)  
