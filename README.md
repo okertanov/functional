@@ -17,7 +17,11 @@ Generic Makefile example to use as is
 * Closure
 * Continuation
 * Tuples
-* List Comprehensions
+* List comprehensions
+* Immutable data structures
+* Tail recursion
+* Lazy evaluation
+* Monad
 * REPL
 
 ### More Terms
