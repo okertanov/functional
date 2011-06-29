@@ -22,6 +22,7 @@ Generic Makefile example to use as is
 * Tail recursion
 * Lazy evaluation
 * Monad
+* STM
 * REPL
 
 ### More Terms
