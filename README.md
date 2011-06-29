@@ -23,6 +23,7 @@ Generic Makefile example to use as is
 * Lazy evaluation
 * Monad
 * STM
+* CPS
 * REPL
 
 ### More Terms
@@ -36,6 +37,9 @@ Generic Makefile example to use as is
 * coerce
 * zip
 * arity
+* coroutine
+* continuation
+* call/cc
 
 ### See also
 [The Scheme Programming Language 4 ed. R. Kent Dybvig](http://www.scheme.com/tspl4/)  
