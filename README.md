@@ -2,9 +2,9 @@ My Chicken/cc samples
 ---------------------
 
 ### cc-gen-a
-Some scheme code that compiles to C language.
+Some scheme code that compiles to the C language.
 
-### permutation.*
+### permutation.
 Benchmarking on simple iterative function
 
 ### Makefile
