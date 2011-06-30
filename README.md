@@ -21,6 +21,8 @@ Generic Makefile example to use as is
 * Immutable data structures
 * Tail recursion
 * Lazy evaluation
+* Type coercion
+* Boxing and Unboxing
 * Monad
 * STM
 * CPS
@@ -34,7 +36,6 @@ Generic Makefile example to use as is
 * filter
 * map
 * reduce
-* coerce
 * zip
 * arity
 * coroutine
