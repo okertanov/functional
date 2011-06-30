@@ -27,6 +27,8 @@ Generic Makefile example to use as is
 * Monad
 * Declarative
 * Literate
+* Automata
+* Turing complete
 * STM
 * CPS
 * DSL
