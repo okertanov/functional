@@ -13,6 +13,7 @@ Generic Makefile example to use as is
 ### Terms
 * Parentheses :)
 * Lambda calculus
+* Fixed point combinator
 * Currying
 * Closure
 * Continuation
@@ -24,23 +25,32 @@ Generic Makefile example to use as is
 * Type coercion
 * Boxing and Unboxing
 * Monad
+* Declarative
+* Literate
 * STM
 * CPS
+* DSL
 * REPL
 
 ### More Terms
 * lambda abstraction
+* pure function
 * application
 * beta reduction
 * apply
 * filter
 * map
 * reduce
+* fold
 * zip
 * arity
+* predicates
+* macro system
+* scope
 * coroutine
 * continuation
 * call/cc
+* non-deterministic polynomial
 
 ### See also
 [The Scheme Programming Language 4 ed. R. Kent Dybvig](http://www.scheme.com/tspl4/)  
