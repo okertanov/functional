@@ -32,6 +32,7 @@ Generic Makefile example to use as is
 * STM
 * CPS
 * DSL
+* AOP
 * REPL
 
 ### More Terms
