@@ -40,6 +40,7 @@ Generic Makefile example to use as is
 * pure function
 * application
 * beta reduction
+* higher-order functions
 * apply
 * filter
 * map
