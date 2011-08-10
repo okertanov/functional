@@ -149,6 +149,6 @@ Languages
 
 International Certificates
 --------------------------
-* C++ Programmer
+* Brainbench: C++ Programmer
 * Brainbench: Unix Administrator
 
