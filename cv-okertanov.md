@@ -3,6 +3,7 @@ Oleg E. Kertanov
 
     Email: okertanov@gmail.com
     Phone: +371 25864676
+    Location: Riga, LV
 
 Objective
 ---------
