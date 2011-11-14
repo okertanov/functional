@@ -41,6 +41,7 @@ Generic Makefile example to use as is
 * application
 * beta reduction
 * higher-order functions
+* identity function
 * apply
 * filter
 * map
