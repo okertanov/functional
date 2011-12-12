@@ -3,11 +3,11 @@ My Functional samples
 
 scheme
 ------
-[scheme/README.md](scheme/README.md)  
+[scheme/README.md](functional/blob/master/scheme/README.md)  
 
 clojure
 -------
-[clojure/README.md](clojure/README.md)  
+[clojure/README.md](functional/blob/master/clojure/README.md)  
 
 Terms
 -----
