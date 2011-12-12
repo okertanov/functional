@@ -3,18 +3,11 @@ My Functional samples
 
 scheme
 ------
-* cc-gen-a
-Some scheme code that compiles to the C language.
-
-* permutation.
-Benchmarking on simple iterative function
-
-* Makefile
-Generic Makefile example to use as is
+[scheme/README.md](scheme/README.md)  
 
 clojure
 -------
-* Clojure Test environment with Leiningen.
+[clojure/README.md](clojure/README.md)  
 
 Terms
 -----
