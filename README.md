@@ -7,7 +7,7 @@ scheme
 
 clojure
 -------
-[clojure/README.md](functional/blob/master/clojure/README.md)  
+[clojure/README.md](functional/blob/master/clojure/Lija/README.md)  
 
 Terms
 -----
