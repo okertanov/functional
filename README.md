@@ -1,16 +1,23 @@
 My Functional samples
----------------------
+=====================
 
-### cc-gen-a
+scheme
+------
+* cc-gen-a
 Some scheme code that compiles to the C language.
 
-### permutation.
+* permutation.
 Benchmarking on simple iterative function
 
-### Makefile
+* Makefile
 Generic Makefile example to use as is
 
-### Terms
+clojure
+-------
+* Clojure Test environment with Leiningen.
+
+Terms
+-----
 * Parentheses :)
 * Lambda calculus
 * Fixed point combinator
@@ -35,7 +42,8 @@ Generic Makefile example to use as is
 * AOP
 * REPL
 
-### More Terms
+More Terms
+----------
 * lambda abstraction
 * pure function
 * application
@@ -59,7 +67,8 @@ Generic Makefile example to use as is
 * type inference
 * invariants
 
-### See also
+See also
+--------
 [The Scheme Programming Language 4 ed. R. Kent Dybvig](http://www.scheme.com/tspl4/)  
 [PLT Scheme Reference](http://download.plt-scheme.org/doc/html/reference/pairs.html)  
 [Wikipedia: Scheme (programming language)](http://en.wikipedia.org/wiki/Scheme_%28programming_language%29)  
