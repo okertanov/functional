@@ -1,4 +1,4 @@
-My Chicken/cc samples
+My Functional samples
 ---------------------
 
 ### cc-gen-a
