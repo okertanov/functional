@@ -1,3 +1,24 @@
+;;
+;; Copyright (c) 2011 Oleg Kertanov <okertanov@gmail.com>
+;;
+
+;; * To use:
+;;   lein plugin install swank-clojure 1.3.4-SNAPSHOT
+;;   then from inside a project, invoke M-x clojure-jack-in
+;; * SLIME Commands
+;;   M-.: Jump to the definition of a var
+;;   C-c TAB: Autocomplete symbol at point
+;;   C-x C-e: Eval the form under the point
+;;   C-c C-k: Compile the current buffer
+;;   C-c C-l: Load current buffer and force required namespaces to reload
+;;   C-M-x: Compile the whole top-level form under the point.
+;;   C-c S-i: Inspect a value
+;;   C-c C-m: Macroexpand the call under the point
+;;   C-c C-d C-d: Look up documentation for a var
+;;   C-c C-z: Switch from a Clojure buffer to the repl buffer
+;;   C-c M-p: Switch the repl namespace to match the current buffer
+;;   C-c C-w c: List all callers of a given function
+
 (ns Lija.core)
 
 (import

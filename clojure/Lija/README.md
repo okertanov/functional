@@ -13,6 +13,7 @@ Other things
 ------------
 https://github.com/technomancy/clojure-mode
 https://github.com/technomancy/swank-clojure
+http://blog.bensmann.com/setting-up-a-clojure-development-environment
 
 License
 -------
