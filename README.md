@@ -59,6 +59,7 @@ More Terms
 * non-deterministic polynomial
 * type inference
 * invariants
+* numeric tower
 
 See also
 --------
