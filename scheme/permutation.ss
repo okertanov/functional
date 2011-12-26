@@ -4,6 +4,9 @@
 ;
 ; permutation.ss
 ;
+; see also
+;     http://paste.lisp.org/display/11447
+;
 
 ;
 ; day 0
