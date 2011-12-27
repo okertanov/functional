@@ -60,6 +60,7 @@ More Terms
 * type inference
 * invariants
 * numeric tower
+* homoiconicity
 
 See also
 --------
