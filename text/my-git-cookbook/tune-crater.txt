@@ -1,0 +1,365 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Domain Name
+Domain:     espectrale.com
+
+Google Apps Services:
+                    
+            start.espectrale.com 
+            mail.espectrale.com 
+            calendar.espectrale.com 
+            docs.espectrale.com 
+            sites.espectrale.com 
+            go.espectrale.com
+
+My Services:
+            crater.espectrale.com
+            www.espectrale.com 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    New Slice Root Tasks
+id
+pwd
+uname -a
+ifconfig
+
+ssh-keygen -t dsa -b 1024
+cat id_dsa.pub >> .ssh/authorized_keys
+rm id_dsa.pub 
+
+chmod go-w ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+
+vim /etc/apt/sources.list
+apt-get update
+apt-get upgrade
+
+adduser --ingroup users okertanov
+visudo 
+usermod -a -G adm okertanov
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    New Slice User Tasks
+ssh-keygen -t dsa -b 1024
+cat id_dsa.pub >> .ssh/authorized_keys
+rm id_dsa.pub 
+
+chmod go-w ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*
+
+sudo vim /etc/ssh/sshd_config 
+sudo /etc/init.d/ssh reload
+
+sudo apt-get install build-essential screen mc vim-nox nmap
+sudo apt-get install dnsutils
+sudo aptitude install rcconf
+
+locale
+sudo locale-gen en_US.UTF-8
+sudo /usr/sbin/update-locale LANG=en_US.UTF-8
+sudo dpkg-reconfigure locales
+
+sudo vim /etc/environment 
+
+sudo vim /etc/hosts
+sudo vim /etc/hostname
+
+sudo aptitude update
+sudo aptitude upgrade
+sudo aptitude dist-upgrade
+sudo apt-get install aptitude
+
+sudo update-alternatives --config editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apache
+sudo aptitude install apache2 apache2.2-common apache2-mpm-prefork apache2-utils libexpat1 ssl-cert
+sudo vim /etc/apache2/apache2.conf 
+sudo vim /etc/apache2/ports.conf 
+sudo apache2ctl graceful
+
+ls /var/www
+sudo a2dissite default
+sudo /etc/init.d/apache2 reload
+
+mkdir public_html
+mkdir -p public_html/www.espectrale.com/{public,private,log,cgi-bin,backup}
+mkdir -p public_html/crater.espectrale.com/{public,private,log,cgi-bin,backup}
+
+vim public_html/www.espectrale.com/public/index.html
+vim public_html/crater.espectrale.com/public/index.html 
+
+sudo vim /etc/apache2/sites-available/www.espectrale.com
+sudo vim /etc/apache2/sites-available/crater.espectrale.com
+
+sudo a2ensite www.espectrale.com
+sudo a2ensite crater.espectrale.com
+sudo /etc/init.d/apache2 reload
+
+    HTTPS
+sudo a2enmod ssl
+sudo /etc/init.d/apache2 restart
+sudo a2dismod ssl
+sudo /etc/init.d/apache2 restart
+
+	PHP
+sudo aptitude install apache2 php5 libapache2-mod-php5
+sudo /etc/init.d/apache2 restart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Firewall
+sudo -i
+iptables -L
+
+vim /etc/network/interfaces
+    pre-up iptables-restore < /etc/iptables.crater.rules
+vim /etc/iptables.crater.rules
+    http://articles.slicehost.com/assets/2007/9/4/iptables.txt
+
+iptables-save > /etc/iptables.saved.rules    
+iptables-restore < /etc/iptables.crater.rules
+iptables -L
+
+/etc/init.d/ssh reload
+
+nmap localhost
+nmap crater.espectrale.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    RSync
+sudo aptitude install rsync
+sudo vim /etc/defaults/rsync
+sudo vim /etc/rsyncd.conf
+sudo vim /etc/rsyncd.secrets
+sudo chmod 600 /etc/rsyncd.secrets
+sudo /etc/init.d/rsync stop
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Monit
+sudo aptitude install monit
+sudo vim /etc/default/monit
+sudo vim /etc/monit/monitrc 
+sudo monit -t /etc/monit/monitrc 
+sudo /etc/init.d/monit restart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Security Monitoring
+http://www.qualys.com/index.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Subversion access
+sudo aptitude install subversion
+sudo mkdir /var/svn
+
+sudo groupadd subversion
+sudo usermod -a -G subversion okertanov
+
+sudo mkdir /var/svn/repo
+sudo svnadmin create /var/svn/repo
+
+sudo chown -R www-data /var/svn/repo
+sudo chgrp -R subversion /var/svn/repo
+sudo chmod -R g+rws /var/svn/repo
+ls -l /var/svn/repo/
+
+sudo vim /var/svn/repo/conf/svnserve.conf
+sudo vim /var/svn/repo/conf/passwd
+sudo vim /var/svn/repo/conf/authz
+
+vim ~/.ssh/authorized_keys (to add local DSS publik key)
+
+svn --username okertanov list svn+ssh://crater.espectrale.com/var/svn/repo/
+svn ls svn+ssh://crater.espectrale.com/var/svn/repo
+    
+    Windows Setup
+        vim "C:\Documents and Settings\oleg.kertanov\Application Data\Subversion\config" 
+            ssh = plink.exe -v -i D:/okertanov/.ssh/a1-0115-ssh-id-rsa-private.key.ppk
+        svn --username okertanov list svn+ssh://crater.espectrale.com/var/svn/repo/
+
+
+    Usage
+svn import espectrale.com svn+ssh://crater.espectrale.com/var/svn/repo/trunk/espectrale.com
+svn list svn+ssh://crater.espectrale.com/var/svn/repo
+mv espectrale.com espectrale.com.non-svn
+svn checkout svn+ssh://crater.espectrale.com/var/svn/repo/trunk/espectrale.com espectrale.com
+svn --username okertanov checkout svn+ssh://crater.espectrale.com/var/svn/repo/trunk/espectrale.com espectrale.com
+svn diff -r BASE:HEAD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /etc under svn
+
+sudo tar czvf ./crater-etc-18.11.2008.tgz /etc
+sudo mkdir /var/backups/_manual_
+sudo mv crater-etc-18.11.2008.tgz /var/backups/_manual_/
+
+sudo ls -lR /etc/ > ls-lR-etc-before-svn.txt
+
+ls -l /var/svn/
+sudo mkdir /var/svn/sysrepo
+sudo svnadmin create /var/svn/sysrepo
+sudo chmod -R go-rwx /var/svn/sysrepo
+sudo svn mkdir file:///var/svn/sysrepo/crater -m"empty Crater hist module"
+sudo svn mkdir file:///var/svn/sysrepo/crater/etc -m"empty Crater:/etc module"
+sudo svn ls file:///var/svn/sysrepo/crater
+sudo svn ls file:///var/svn/sysrepo/crater/etc
+
+cd /etc
+sudo svn checkout file:///var/svn/sysrepo/crater/etc .
+sudo svn status
+
+sudo svn add --auto-props *
+sudo svn commit -m "initial crater/etc commit"
+sudo svn update
+
+sudo ls -lR /etc/ > ls-lR-etc-after-svn.txt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Mail relay
+sudo aptitude install postfix telnet mailx ssl-cert
+sudo dpkg-reconfigure postfix
+
+sudo make-ssl-cert /usr/share/ssl-cert/ssleay.cnf /etc/ssl/certs/mailcert.pem
+
+sudo vim /etc/postfix/main.cf 
+sudo vim /etc/postfix/transport
+
+sudo postmap /etc/postfix/transport
+
+sudo /etc/init.d/postfix restart
+
+telnet rt.njabl.org 2500
+
+sudo vim /etc/aliases
+sudo newaliases
+
+mail root
+
+mail okertanov@gmail.com
+sudo aptitude install mutt
+mutt
+
+vim ~/.forward
+
+mailq
+tail -f /var/log/mail.log 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Trac
+
+    http://trac.edgewall.org/wiki/0.11/TracOnUbuntu
+    http://trac.edgewall.org/wiki/0.11/TracOnUbuntuHardy
+    http://shaman-sir.wikidot.com/trac-subersion-ubuntu-revisited
+    http://philipatswarchy.wordpress.com/2006/12/17/how-to-install-trac-on-ubuntu/
+    http://hobbinsblog.blogspot.com/2008/03/ubuntu-server-trac.html
+    http://trac.edgewall.org/wiki/TracModPython
+    https://help.ubuntu.com/community/Subversion
+    
+
+sudo apt-get install libapache2-mod-python libapache2-svn python-setuptools subversion python-subversion python-pysqlite2 
+sudo easy_install Trac
+
+sudo mkdir /var/lib/trac
+sudo chown www-data:www-data /var/lib/trac
+
+sudo vim  /etc/apache2/sites-available/trac.espectrale.com
+sudo a2dissite default
+sudo a2ensite trac
+sudo  /etc/init.d/apache2 reload 
+
+    env install
+sudo trac-admin /var/lib/trac/espectrale.com initenv
+sudo chown -R www-data /var/lib/trac
+
+sudo vim /etc/apache2/mods-available/dav_svn.conf
+sudo htpasswd -c /etc/apache2/dav_svn.passwd okertanov
+sudo vim /etc/apache2/dav_svn.authz
+
+sudo a2dismod dav_svn
+
+sudo apt-get install build-essential graphviz htmldoc enscript python-clearsilver
+
+sudo easy_install <PLUGINS...>
+
+
+sudo chown www-data /etc/apache2/dav_svn.passwd 
+ls -l  /etc/apache2/dav_svn.passwd
+
+sudo trac-admin /var/lib/trac/espectrale.com/ permission remove anonymous BROWSER_VIEW CHANGESET_VIEW FILE_VIEW LOG_VIEW MILESTONE_VIEW REPORT_SQL_VIEW REPORT_VIEW ROADMAP_VIEW SEARCH_VIEW TICKET_CREATE TICKET_MODIFY TICKET_VIEW TIMELINE_VIEW WIKI_CREATE WIKI_MODIFY
+sudo trac-admin /var/lib/trac/espectrale.com permission add okertanov TRAC_ADMIN
+
+sudo  /etc/init.d/apache2 reload
+
+
+    htdigest support
+sudo htdigest -c /etc/apache2/dav_svn.passwd trac okertanov
+sudo vim  /etc/apache2/sites-available/trac.espectrale.com
+sudo a2enmod auth_digest
+sudo /etc/init.d/apache2 restart
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    MySQL
+sudo aptitude install mysql-server mysql-client libmysqlclient15-dev libphp-phpmailer mysql-common php5-gd php5-mysql
+
+mysqladmin -u root -p password NewRootDatabasePassword
+mysqladmin -u root -h localhost password NewRootDatabasePassword -p
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    WordPress
+mysql -u root -p
+
+CREATE DATABASE wordpress;
+GRANT ALL PRIVILEGES ON wordpress.* TO "wordpress"@"localhost"
+IDENTIFIED BY "<Password>";
+FLUSH PRIVILEGES;
+
+cp -dpR template.espectrale.com wp.espectrale.com
+sudo cp /etc/apache2/sites-available/crater.espectrale.com /etc/apache2/sites-available/wp.espectrale.com 
+
+sudo vim /etc/apache2/sites-available/wp.espectrale.com
+sudo a2ensite wp.espectrale.com
+sudo a2enmod rewrite
+sudo /etc/init.d/apache2 reload
+
+cd /home/okertanov/public_html/wp.espectrale.com/public
+svn diff http://svn.automattic.com/wordpress/tags/2.6.5  http://svn.automattic.com/wordpress/branches/2.6
+svn checkout http://svn.automattic.com/wordpress/branches/2.6 ./
+cp wp-config-sample.php wp-config.php 
+vim wp-config.php
+
+firefox http://wp.espectrale.com/wp-admin/install.php
+WordPress has been installed.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SSH Attacs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Backup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Ubuntu setup
+http://www.howtoforge.com/perfect-server-ubuntu8.04-lts  --- Perfect Server
+http://deflate.medialayer.com/  --- DDOS Protection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

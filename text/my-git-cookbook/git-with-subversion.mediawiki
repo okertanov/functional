@@ -1,0 +1,112 @@
+== Using git as the Subversion client ==
+
+<syntaxhighlight lang="bash">
+
+    git svn clone http://team-server/svn/main/Product/trunk     # git clone aka svn checkout
+    git svn info                                                # like svn info
+    git svn rebase                                              # fetch revision and rebase, like svn update
+    git branch issue-branch                                     # create a branch
+    git checkout issue-branch                                   # then switch to it
+
+    vim src/*                                                   # code a new feature or fix an issue
+    git status                                                  # what's changed
+    git diff                                                    # show patchset
+    git commit -a -m "BUG-123 issue fixed"                      # commit to the local git branch
+
+    git checkout master                                         # switch to master aka trunk
+    git svn rebase                                              # fetch svn changes again, aka svn update
+    git rebase issue-branch                                     # merge our feature to master
+    git svn dcommit                                             # push local changes, like svn commit
+
+</syntaxhighlight>
+
+
+Compare with [[Mercurial to Subversion]].
+
+
+== Using Product test git sandbox ==
+
+<syntaxhighlight lang="bash">
+    git clone http://team-server/git/test.git                   # clone git repo
+    git pull && git status                                      # up and happy
+
+    git checkout -b feature                                     # create branch and checkout it locally
+    git push origin feature:refs/heads/feature                  # update remote server with our branch ref
+    git branch --set-upstream feature origin/feature            # set tracking local->remote, eg feature->origin/feature
+
+    vim files, features, etc.                                   # coding, fixing, playing ''ping-pong''
+    git commit -a -m "feature ok"                               # commit our changes locally
+    git pull && git push git status                             # then receive any news, then send it to the server
+    git status                                                  # ensure that everything is clear
+</syntaxhighlight>
+
+
+== Real-life Product git clone ==
+
+=== Setup ===
+<syntaxhighlight lang="bash">
+    git svn clone
+      http://team-server/svn/main/Product/trunk Product-trunk   # fresh svn clone
+    cd Product-trunk.git                                        # change working dir
+    git remote add origin http://team-server/git/Product.git    # add git remote "origin"
+    git push -u origin master                                   # push and setup tracking local master with origin
+</syntaxhighlight>
+
+=== Every day duty ===
+<syntaxhighlight lang="bash">
+    git remote show origin                                      #
+    git remote -v                                               #
+    git branch -a                                               # if you wondering
+    git svn log                                                 # who we are
+    git log master -10                                          # and where to go
+    git diff master remotes/git-svn | vim -                     #
+    git diff master origin/master | vim -                       #
+
+    git checkout master                                         # switch the branch
+    git svn fetch                                               # fetch from svn ''or''
+    git svn rebase                                              # update from svn
+    git pull && git push && git status                          # everyday mantra
+    git diff                                                    # what is done, when status isn't empty
+    git commit -a -m "commit message"                           # ultimate answer of everything in git
+    git svn dcommit                                             # push to the svn repo (''like svn commit'')
+    git pull && git push && git status                          # everyday mantra again
+</syntaxhighlight>
+
+
+== Server-side shared git repository ==
+
+<syntaxhighlight lang="bash">
+    sudo aptitude install git-core git-svn                      # install core packages
+
+    sudo mkdir -p /srv/git/test.git                             # create storage
+    cd /srv/git/test.git                                        # go inside
+    sudo git --bare init --shared                               # create bare shared repo (''bare'' means w/o work tree)
+    sudo git update-server-info                                 # magic info metadata generation
+    cd /srv/git/                                                # go up above
+    sudo chown -R www-data:www-data test.git                    # ownership magic (recursive inside top-level dir)
+    sudo chmod -R g+wX,o= test.git                              # file mode magic (recursive, group to be rwx)
+    sudo find test.git -type d -exec chmod g+s '{}' ';'         # directory mode magic (recursive, sticky on group)
+    sudo ls -la test.git/                                       # ensure that we have lot of ''www-data'' but ''root''
+
+    sudo cp /etc/apache2/sites-available/dav-share \            # copy this
+            /etc/apache2/sites-available/dav-git                #      to that
+    sudo vim /etc/apache2/sites-available/dav-git               # hack it
+    sudo a2ensite dav-git                                       # enable it to be seen by apache
+    sudo /etc/init.d/apache2 reload                             # do open his eyes on
+
+    xdg-open http://team-server/git                             # test http:// with your browser
+    xdg-open https://team-server/git                            # test https:// with your browser
+    curl --netrc --location -v \                                #
+            http://team-server/git/test.git/HEAD                # test your netrc with cURL
+</syntaxhighlight>
+
+
+== Links ==
+* [http://git-scm.com/ GIT SCM Home]
+* [https://git.wiki.kernel.org/index.php/Main_Page Git Wiki Homepage]
+* [http://code.google.com/p/tortoisegit/ TortoiseGit source code & installation package]
+* [http://code.google.com/p/gitextensions/ GitExtensions Windows git client]
+* [http://habrahabr.ru/blogs/Git/106912/ A successful Git branching model (ru)]
+
+
+[[Category:Developer Tools]]
