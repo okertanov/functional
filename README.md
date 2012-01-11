@@ -63,6 +63,7 @@ More Terms
 * homoiconicity
 * self-interpreter or metainterpreter
 * meta-circular evaluator
+* reflective interpreter
 
 See also
 --------
