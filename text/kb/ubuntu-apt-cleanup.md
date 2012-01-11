@@ -18,11 +18,11 @@ Cleaning up an APT-based Debian/Ubuntu system
 ### Bring the *APT* system to the consistent state
     sudo apt-get -f install
 
-### Save your packages selection 
+### Save your packages selection
     sudo dpkg --get-selections '*' | vim -
 
 ### Use Synaptic package manager
-*Synaptic* > _Installed_, _Installed(local)_ > review and mark to remove unused > *Apply*.
+    *Synaptic* > _Installed_, _Installed(local)_ > review and mark to remove unused > *Apply*.
 
 ### apt-get autoclean
     sudo ls /var/cache/apt/archives/
@@ -49,3 +49,4 @@ Cleaning up an APT-based Debian/Ubuntu system
 [See also commandlinefu.com](http://www.commandlinefu.com/)
 
 [okertanov@gmail.com](mailto:okertanov@gmail.com)
+

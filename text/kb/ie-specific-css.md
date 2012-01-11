@@ -7,7 +7,7 @@ CSS Specific for Internet Explorer
     <!--[if gte IE 8]> <![endif]--> = greater than or equal to IE8
 
 ### CSS Rules Specific to Explorer (IE CSS hacks)
-    .box 
+    .box
     {
         background: gray; /* standard */
         background: pink\9; /* IE 8 and below */
@@ -26,3 +26,4 @@ CSS Specific for Internet Explorer
 /via [http://www.webdesignerwall.com/tutorials/css-specific-for-internet-explorer/](http://www.webdesignerwall.com/tutorials/css-specific-for-internet-explorer/)
 
 [See also html5boilerplate.com](http://html5boilerplate.com/)
+
