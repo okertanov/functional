@@ -44,6 +44,7 @@ More FP Mumbo-jumbo
 * pure function
 * application
 * beta reduction
+* first-class function
 * higher-order functions
 * identity function
 * apply
@@ -68,6 +69,7 @@ More FP Mumbo-jumbo
 * meta-circular evaluator
 * reflective interpreter
 * partial evaluation
+* trampoline
 
 See also
 --------
