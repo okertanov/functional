@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{{title}}</title>
+        <link rel="stylesheet" media="all" href="/static/lessframework.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    </head>
+
+    <body lang="en">
+
+        <header id="masthead">
+            <h1></h1>
+            <p><abbr></abbr></p>
+            <nav>
+                <ul>
+                    <li><a href="#s1">s1</a></li>
+                    <li><a href="#s2">s2</a></li>
+                    <li><a href="#s3">s3</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr/>
+
+        <article id="s1">
+            <section class="opening">
+                <h1>{{huge}}</h1>
+                <p>{{text}}</p>
+            </section>
+            <section>
+                <h2>{{huge}}</h2>
+                <p>{{text}}</p>
+            </section>
+        </article>
+
+        <hr/>
+
+        <footer id="colophon">
+            <section>
+                <p>section</p>
+            </section>
+            <section>
+                <p>footer</p>
+            </section>
+        </footer>
+
+    </body>
+
+</html>
+

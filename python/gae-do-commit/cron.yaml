@@ -1,0 +1,5 @@
+cron:
+- description: daily job
+  url: /api/periodic
+  schedule: every 24 hours
+

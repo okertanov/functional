@@ -1,0 +1,33 @@
+application: do-commit
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /static/
+  static_files: static/index.html
+  upload: static/index.html
+
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: scripts/application.py
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+
+- ^(.*/)?.*\.log$
+- ^(.*/)?Makefile$
+- ^(.*/)?\.git$
+
