@@ -64,6 +64,7 @@ More Terms
 * self-interpreter or metainterpreter
 * meta-circular evaluator
 * reflective interpreter
+* partial evaluation
 
 See also
 --------
