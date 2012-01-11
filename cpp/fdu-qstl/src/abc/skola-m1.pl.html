@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/projects/abc/skola-m1.pl.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+.Identifier { color: #40ffff; }
+.Constant { color: #ffa0a0; }
+.Comment { color: #80a0ff; }
+.Special { color: #ffa500; }
+pre { font-family: monospace; color: #c0c0c0; background-color: #000040; }
+body { font-family: monospace; color: #c0c0c0; background-color: #000040; }
+.PreProc { color: #ff80ff; }
+.Statement { color: #ffff60; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="PreProc">#!/usr/bin/perl -w  </span>
+<span class="Statement">use strict</span>;
+<span class="Statement">use utf8</span>;
+<span class="Statement">binmode</span> <span class="Identifier">STDOUT</span>, <span class="Constant">&quot;</span><span class="Constant">:utf8</span><span class="Constant">&quot;</span>;
+
+
+<span class="Comment">## Начальные условия</span>
+<span class="Statement">my</span> $орешки_сначала_было = <span class="Constant">30</span>;
+<span class="Statement">my</span> $орешки_в_корзине = $орешки_сначала_было;
+
+<span class="Comment">## Переменная для ответа</span>
+<span class="Statement">my</span> $прошло_времени = <span class="Constant">0</span>;
+
+<span class="Comment">## Функция Носить</span>
+<span class="Statement">sub</span><span class="Identifier"> Первая</span><span class="Identifier">_</span><span class="Identifier">Белочка</span><span class="Identifier">_</span><span class="Identifier">приносит</span><span class="Identifier">( $ )</span><span class="Identifier"> </span>
+{
+    <span class="Statement">my</span> $сколько_орешков = <span class="Statement">shift</span>;
+    $орешки_в_корзине += $сколько_орешков;
+    <span class="Statement">return</span> $сколько_орешков;
+}
+
+<span class="Comment">## Функция Кушать</span>
+<span class="Statement">sub</span><span class="Identifier"> Вторая</span><span class="Identifier">_</span><span class="Identifier">Белочка</span><span class="Identifier">_</span><span class="Identifier">кушает</span><span class="Identifier">( $ )</span><span class="Identifier"> </span>
+{
+    <span class="Statement">my</span> $сколько_орешков = <span class="Statement">shift</span>;
+    $орешки_в_корзине -= $сколько_орешков;
+    <span class="Statement">return</span> $сколько_орешков;
+}
+
+<span class="Comment">## Функция проверки условия</span>
+<span class="Statement">sub</span><span class="Identifier"> Орешки</span><span class="Identifier">_</span><span class="Identifier">закончились</span><span class="Identifier">_</span><span class="Identifier">в</span><span class="Identifier">_</span><span class="Identifier">Корзинке</span><span class="Identifier">()</span>
+{
+    <span class="Statement">return</span> ( $орешки_в_корзине &lt;= <span class="Constant">0</span> );
+}
+
+<span class="Comment">## Функция времени</span>
+<span class="Statement">sub</span><span class="Identifier"> Проходит</span><span class="Identifier">_</span><span class="Identifier">Минут</span><span class="Identifier">( $ )</span>
+{
+    <span class="Statement">my</span> $сколько = <span class="Statement">shift</span>;
+    <span class="Statement">sleep</span>( $сколько );
+    <span class="Statement">return</span> $сколько;
+}
+
+<span class="Comment">## ############################################################</span>
+<span class="Comment">##                                                           ##</span>
+<span class="Comment">## Главная работа задачи                                     ##</span>
+<span class="Comment">##                                                           ##</span>
+<span class="Comment">## ############################################################</span>
+<span class="Statement">print</span> <span class="Constant">&quot;</span><span class="Constant">Привет, ★еня! </span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+<span class="Statement">print</span> <span class="Constant">&quot;</span><span class="Constant">Сначала было $орешки_сначала_было орешков в корзинке.</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+<span class="Statement">print</span> <span class="Constant">&quot;</span><span class="Constant">И начали белочки свою работу: </span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+<span class="Statement">do</span>
+{
+    <span class="Statement">my</span> $принесла = Первая_Белочка_приносит( <span class="Constant">2</span> );
+    <span class="Statement">my</span> $скушала  = Вторая_Белочка_кушает( <span class="Constant">5</span> );
+    $прошло_времени += Проходит_Минут( <span class="Constant">1</span> );
+
+    <span class="Statement">print</span> (<span class="Constant">&quot;</span><span class="Constant">Прошла $прошло_времени минутка.</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+    <span class="Statement">print</span> (<span class="Constant">&quot;</span><span class="Constant">Первая белочка принесла $принесла орешков, Вторая белочка скушала $скушала орешков </span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+    <span class="Statement">print</span> (<span class="Constant">&quot;</span><span class="Constant">А сейчас в корзинке стало $орешки_в_корзине .</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+}
+<span class="Statement">until</span> ( Орешки_закончились_в_Корзинке() );
+
+<span class="Statement">print</span>(<span class="Constant">&quot;</span><span class="Constant">Мы закончили работу. В корзине $орешки_в_корзине . Прошло времени: $прошло_времени </span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+<span class="Statement">print</span> <span class="Constant">&quot;</span><span class="Constant">До свидания, ★еня! </span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+<span class="Comment">## Конец.</span>
+</pre>
+</body>
+</html>

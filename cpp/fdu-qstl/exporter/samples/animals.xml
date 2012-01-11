@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Vasyl Kochetov</Author>
+  <LastAuthor>okertanov</LastAuthor>
+  <Created>2005-08-30T14:23:44Z</Created>
+  <LastSaved>2005-09-28T08:07:34Z</LastSaved>
+  <Company>Unitech</Company>
+  <Version>11.6568</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>13035</WindowHeight>
+  <WindowWidth>17400</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>30</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font x:CharSet="204"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21">
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Font x:CharSet="204" ss:Color="#FF0000"/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s25">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font x:CharSet="204" x:Family="Swiss"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s28">
+   <Font x:CharSet="204" ss:Color="#0000FF"/>
+  </Style>
+  <Style ss:ID="s29">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s30">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s31">
+   <Font x:CharSet="204" x:Family="Swiss" ss:Color="#FF6600" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s32">
+   <Font x:CharSet="204" ss:Color="#008000"/>
+  </Style>
+  <Style ss:ID="s33">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="13" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="117"/>
+   <Column ss:AutoFitWidth="0" ss:Width="83.25"/>
+   <Column ss:Index="6" ss:AutoFitWidth="0" ss:Width="204.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="279"/>
+   <Column ss:AutoFitWidth="0" ss:Width="54.75"/>
+   <Column ss:Index="10" ss:AutoFitWidth="0" ss:Width="69.75"/>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Topic</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Content</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String"># of questions</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Weight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">Question</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Answers</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">correct</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Responsible person</Data></Cell>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">Remarks</Data></Cell>
+   </Row>
+   <Row ss:Index="3">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Лошадки</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s23"/>
+    <Cell ss:StyleID="s24"/>
+    <Cell ss:StyleID="s25"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="67.5">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Скока ног у лошадки</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">1. семь&#10;2. три&#10;3. It depends on system realization&#10;4. Unlimited&#10;5. чатыри</Data></Cell>
+    <Cell ss:StyleID="s25"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">SINGLE</Data></Cell>
+   </Row>
+   <Row ss:Height="63.75">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s22"/>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Скока рук у лошадки</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">1. Совсем нету&#10;2. Мало&#10;3. Скоко хочешь&#10;4. Безрукие они&#10;5. А что такое руки?</Data></Cell>
+    <Cell ss:StyleID="s25"><Data ss:Type="String">1*, 4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">MULTIPLE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Ежики</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s23"/>
+    <Cell ss:StyleID="s29"/>
+    <Cell ss:StyleID="s25"/>
+   </Row>
+   <Row ss:Height="89.25">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s28"/>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Поставьте правильные варианты</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">1. 1 ежик + 1 ежиха&#10;2. 1 ежик + 1 ежик&#10;3. 1 ежик и 1 гадюка&#10;&#10;1. АХТУНГ&#10;2. еженок&#10;3. 12 метров колючей проволоки</Data></Cell>
+    <Cell ss:StyleID="s24"><Data ss:Type="String">1 2&#10;2 1&#10;3 3</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s24"><Data ss:Type="String">ARROWS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Носит ли ежик яблоки на спине</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">да</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">EDIT</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:StyleID="s32"><Data ss:Type="String">Софтваре дивелоперы</Data></Cell>
+    <Cell ss:Index="4"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Height="51">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Отсортируйте пожалуста софтваре дивелоперов по уровню крутости</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">1. Джуниор Дивелопер&#10;2. Сениор Дивелопер&#10;3. Великий ГУРУ!&#10;4. Просто Дивелопер</Data></Cell>
+    <Cell><Data ss:Type="String">1 4 3 2</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">SORT</Data></Cell>
+   </Row>
+   <Row ss:Height="127.5">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s23"><Data ss:Type="String">Отсортируйте дивелопиров по должностям, званиям, и государственным наградам. Даны хфамилии.</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">1. Алексей Борисович (с)(тм)(R) Федорченко&#10;2. Стасик Домарацкий&#10;3. Серьога Сергунин&#10;4. Люк Скайвокер&#10;&#10;1. Тестер&#10;2. Дивелопер&#10;3. Тим Лидер&#10;4. Джидай&#10;5. Проджект менеджер</Data></Cell>
+    <Cell ss:StyleID="s33"><Data ss:Type="String">1 3&#10;2 2&#10;3 1&#10;4 4</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="String">ARROWS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+   </Row>
+   <Row ss:StyleID="s31">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">звери</Data></Cell>
+    <Cell><Data ss:Type="String">Total звери</Data></Cell>
+    <Cell ss:Index="4" ss:Formula="=R[-10]C+R[-7]C+R[-4]C"><Data ss:Type="Number">6</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>300</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Selected/>
+   <LeftColumnVisible>6</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>3</ActiveRow>
+     <ActiveCol>9</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

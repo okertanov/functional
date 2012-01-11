@@ -1,0 +1,6 @@
+C:\kertanov\Fun\Books\FromRadek\Addison_STL Tutorial and Reference Guide
+C:\kertanov\Fun\Books\FromRadek\Addison_Effective STL-revised
+C:\kertanov\Fun\Books\FromRadek\Addison_C++ by Dissection
+
+and much more... see the Documentation folder
+

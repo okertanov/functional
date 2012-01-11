@@ -1,0 +1,9 @@
+Please 
+    gmake all 
+or 
+    nmake all 
+or 
+    make all 
+to get the pdf and xls files with STL questions for FDU BrainBench Project.
+
+(c) Oleg E Kertanov and many other.

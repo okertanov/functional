@@ -1,0 +1,1082 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[dvips]{graphicx}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{latexsym}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{tabularx}
+
+\newcommand{\Question}{\stepcounter{questNum}\paragraph{Question \arabic{questNum}.}}
+\newcommand{\llll}{\texttt<} 
+\newcommand{\rrrr}{\texttt>} 
+
+\newcommand{\chk}{\bf $\Box$} 
+\newcommand{\rad}{\scriptsize $\bigcirc$} 
+%\newcommand{\chx}{\bf $\boxtimes$} 
+%\newcommand{\rax}{\bf $\otimes$} 
+\newcommand{\chx}{\chk} %%fake
+\newcommand{\rax}{\rad} %%fake
+\newcommand{\edt}{} 
+
+\newcounter{questNum}
+
+\pagestyle{plain}
+\begin{document}
+\author{Oleg Kertanov}
+\title{FDU BrainBench.\\ Test Questions on C++ Standard Template Library}
+\date{\today}
+\maketitle
+\newpage
+\tableofcontents
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Standard Template Library Organization and Containers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{STL. General questions}
+%%%
+\Question{}
+\textbf{What does STL abbreviation mean?}
+\begin{itemize}
+\item[\rad]Standart Template Library
+\item[\rad]C++ Template Library
+\item[\rad]C with Classes Template Library
+\item[\rax]Standard Template Library
+\item[\rad]Standard Toolkit Library
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What data type is an array's iterator?}
+\begin{itemize}
+\item[\rad]Element of the array
+\item[\rax]Pointer to an array's element
+\item[\rad]Pointer to a pointer to array's element
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please indicate which standard STL containers are supposed to use hashes for accessing their elements.}
+\begin{itemize}
+\item[\chk]map
+\item[\chk]hash\_map
+\item[\chk]rope
+\item[\chx]no one
+\end{itemize}
+%%%
+\Question{}
+\textbf{Standard consecutive (sequential) containers are:}
+\begin{itemize}
+\item[\chx]vector
+\item[\chx]string
+\item[\chx]deque
+\item[\chx]list
+\item[\chk]set
+\item[\chk]multiset
+\item[\chk]map
+\item[\chk]multimap
+\end{itemize}
+%%%
+\Question{}
+\textbf{Standard associative containers are:}
+\begin{itemize}
+\item[\chk]vector
+\item[\chk]string
+\item[\chk]deque
+\item[\chk]list
+\item[\chx]set
+\item[\chx]multiset
+\item[\chx]map
+\item[\chx]multimap
+\end{itemize}
+%%%
+\Question{}
+\textbf{Which of the methods is the most efficient for detecting that the container is empty?}
+\begin{itemize}
+\item[\rax]container.empty()
+\item[\rad]container.size()==0
+\item[\rad]both
+\end{itemize} 
+%%%
+\Question{}
+\textbf{The standard contiguous-memory containers are:}
+\begin{itemize}
+\item[\chx]vector
+\item[\chx]deque
+\item[\chx]string
+\item[\chk]list
+\item[\chk]set
+\item[\chk]multiset
+\item[\chk]map
+\item[\chk]multimap
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Node-based containers are:}
+\begin{itemize}
+\item[\chk]vector
+\item[\chk]deque
+\item[\chk]string
+\item[\chx]list
+\item[\chx]set
+\item[\chx]multiset
+\item[\chx]map
+\item[\chx]multimap
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please choose the reason why the following code may produce a compilation error: \\vector\llll{}vector\llll{}int\rrrr\rrrr Vector;}
+\begin{itemize}
+\item[\rad]It is impossible to declare a vector of vector of int.
+\item[\rad]Its use for template prototyping is prohibited in STL.
+\item[\rax]int\rrrr\rrrr is interpreted as a token for the bit-shift operator.
+\item[\rad]Incorrect name of the Vector variable.
+\item[\rad]In STL Vector is a reserved word.
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Which of the following lines represents the correct preprocessor derective for including the STL header file into the list container?}
+\begin{itemize}
+\item[\rad]\#include <list.h>
+\item[\rad]\#include <list.hpp>
+\item[\rax]\#include <list>
+\item[\rad]\#include "list.h"
+\item[\rad]\#use <list.h>
+\item[\rad]\#include "list.cpp"
+\item[\rad]\#include "list.inc"
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select the correct namespace name for STL library.}
+\begin{itemize}
+\item[\rad]stl
+\item[\rad]STL
+\item[\rax]std
+\item[\rad]cpp
+\item[\rad]boost
+\item[\rad]\_ext
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you need to insert a new element at an arbitrary position in the container. Which container class will be the most sufficient?}
+\begin{itemize}
+\item[\rax]sequence container
+\item[\rad]associative containers
+\item[\rad]both sequence and associative containers are good
+\item[\rad]regular C++ array
+\item[\rad]such operations cannot be performed using standard STL containers.
+\end{itemize} 
+%%%
+\Question{}
+\textbf{STL implementations usually contain nonsnandard as well as standard containers. Select nonstandard containers from the following list:}
+\begin{itemize}
+\item[\chk]vector
+\item[\chx]hash\_multimap
+\item[\chk]deque
+\item[\chk]string
+\item[\chx]hash\_map 
+\item[\chk]list
+\item[\chk]set
+\item[\chx]hash\_set 
+\item[\chx]rope
+\item[\chk]multiset
+\item[\chk]map
+\item[\chk]multimap
+\item[\chx]slist
+\item[\chx]hash\_multiset
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Which method of the container tells how many elements are in the container?}
+\begin{itemize}
+\item[\rax]size()
+\item[\rad]sizeof()
+\item[\rad]capacity()
+\item[\rad]getSize()
+\item[\rad]reserve()
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Which method of the container tells how many elements the container can hold in the memory it has already allocated?}
+\begin{itemize}
+\item[\rad]size()
+\item[\rad]sizeof()
+\item[\rax]capacity()
+\item[\rad]getSize()
+\item[\rad]reserve()
+\end{itemize} 
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Standard containers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{String}
+%%%
+\Question{}
+\textbf{The std::string type is typedef for:}
+\begin{itemize}
+\item[\rad]std::String
+\item[\rad]std::basic\_string<wchar\_t>
+\item[\rad]char*
+\item[\rax]std::basic\_string<char>
+\item[\rad]char[]
+\item[\rad]std::basic\_string<char*>
+\item[\rad]std::vector<char>
+\item[\rad]std::vector<char*>
+\end{itemize} 
+%%%
+\Question{}
+\textbf{The std::wstring type is typedef for:}
+\begin{itemize}
+\item[\rad]std::String
+\item[\rax]std::basic\_string<wchar\_t>
+\item[\rad]char*
+\item[\rad]std::basic\_string<char>
+\item[\rad]char[]
+\item[\rad]std::basic\_string<char*>
+\item[\rad]std::vector<char>
+\item[\rad]std::vector<char*>
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you need to pass an STL string to a legacy C-function which will be able to modify the passed string. \\String declaration looks like this: \\std::string str("Any string content");\\Which of the solutions is correct?}
+\begin{itemize}
+\item[\rad]::strcpy(str, "copy me!");
+\item[\rad]char* tmpstr = \&str[0];\\::strcpy(tmpstr, "copy me!");
+\item[\rad]std::string tmpstr = str;\\char* tmpptr =const\_cast<char*>(tmpstr.c\_str());\\::strcpy(tmpptr, "copy me!");
+\item[\rad]std::vector<char> vect;\\vect.assign(str.begin(), str.end());\\::strcpy(vect, "copy me!");
+\item[\rax]std::vector<char> vect;\\vect.assign(str.begin(), str.end());\\::strcpy(\&vect[0], "copy me!");
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Vector}
+%%%
+\Question{}
+\textbf{What does the following code do?}
+\begin{verbatim}
+    int fillValues[] = {0,1,2,3,4,5};
+    vector<int> vec(fillValues, fillValues+sizeof(fillValues)/sizeof(int));
+\end{verbatim}
+\begin{itemize}
+\item[\rax]Fills the vector vec with all values from the fillValues array.
+\item[\rad]Fills the vector vec with the first two values from the fillValues array.
+\item[\rad]Fills the vector vec with the last two values from the fillValues array.
+\item[\rad]Produces a compilation error.
+\item[\rad]Produces a run-time error.
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. What what will be produced during its execution?}
+\begin{verbatim}
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {0,1,2,3,4,5};
+    vector<int> vec(fillValues, fillValues+sizeof(fillValues)/sizeof(int));
+    vec.erase(remove(vec.begin(), vec.end(), 0), vec.end());
+    ostream_iterator<int> output(cout, " "); 
+    copy(vec.begin(), vec.end(), output);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\rad]0
+\item[\rax]1 2 3 4 5
+\item[\rad]nothing
+\item[\rad]5 4 3 2 1
+\item[\rad]0 1 2 3 4 5
+\end{itemize} 
+%%%
+\Question{}
+\textbf{The vec variable is declared as vector<int> vec;\\and it contains certain values.\\There is a line of code:\\cout \llll\llll{} vec.count();\\What will be the result of its execution?}
+\begin{itemize}
+\item[\rad]Amount of integer items stored in vec
+\item[\rad]Size of the vec in bytes
+\item[\rad]Size for each item which is stored in vec
+\item[\rad]Vector's capacity
+\item[\rax]Nothing but a compilation error
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select VECTOR members only:}
+\begin{itemize}
+\item[\chx]insert
+\item[\chx]push\_back
+\item[\chk]rbegin
+\item[\chx]reserve
+\item[\chk]push\_front
+\item[\chk]find
+\item[\chx]pop\_back
+\item[\chk]lower\_bound
+\item[\chx]swap
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What kind of data structure is vector<T>::value\_type?}
+\begin{itemize}
+\item[\rax]type of elements stored in a container
+\item[\rad]type of pointers to elements in a container
+\item[\rad]type of locations of elements in a container
+\item[\rad]iterator type, referring to values of type reference
+\item[\rad]there is no such type
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What does the following code mean?}
+\begin{verbatim}
+    vector<int> vec;
+    //a lot of insertions and deletions goes here
+    //...
+    vector<int>(vec).swap(vec);
+\end{verbatim}
+\begin{itemize}
+\item[\rad]the code is incorrect and incompatible with most of the STL implementations.
+\item[\rad]the code is correct but useless because vector<int>(vec).swap(vec) creates a temporary object.
+\item[\rad]this code destroys all vec items because of swap with the empty temporary vector.
+\item[\rad]this code reverses all the elements of the vec to back order.
+\item[\rax]this code reduces the capacity of the vector vec to the real one.
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What is the difference between front() and begin() vector methods?}
+\begin{itemize}
+\item[\rax]front() returns a reference to the first element in a vector\\begin() returns a random-access iterator to the first element in the container
+\item[\rad]front() returns a random-access iterator to the first element in the container\\begin() returns a reference to the first element in a vector
+\item[\rad]front() returns a constant only iterator to the first element in the container\\begin() returns a non-constant iterator to the first element in the container
+\item[\rad]front() returns a reference to the current element in a vector\\begin() returns a random-access iterator to the first element in the container
+\item[\rad]there is no difference
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select the properties of vector<bool> type}
+\begin{itemize}
+\item[\chk]stores bool type values
+\item[\chx]stores bit-packed representation of bool values
+\item[\chx]minimizes the size for storing boolean values
+\item[\chx]eight-bit byte inside the vector<bool> can hold eight bools
+\item[\chk]vector<bool>::operator[] can return references to individual bits
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{List}
+%%%
+\Question{Please select LIST members only:}
+\textbf{}
+\begin{itemize}
+\item[\chx]insert
+\item[\chx]push\_back
+\item[\chx]rend
+\item[\chx]reverse
+\item[\chx]push\_front
+\item[\chk]find
+\item[\chx]pop\_back
+\item[\chk]lower\_bound
+\item[\chx]swap
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Deque}
+%%%
+\Question{}
+\textbf{What deque operations can be performed with the time constant?}
+\begin{itemize}
+\item[\chx]insertion at the beginning
+\item[\chx]deletion at the beginning
+\item[\chk]find operation
+\item[\chk]insertion in the middle
+\item[\chx]insertion at the end
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Does the insert operation of the deque always keep the iterators in a valid state?}
+\begin{itemize}
+\item[\rad]deque's insert operations keeps the iterators always valid
+\item[\rad]every insert operation can invalidate deque's iterators
+\item[\rax]some insert operations can invalidate deque's iterators
+\item[\rad]insert operations cannot be performed with the deque container
+\item[\rad]deque has no random access iterators, so there is no method to invalidate them
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select DEQUE members only:}
+\begin{itemize}
+\item[\chx]insert
+\item[\chx]push\_back
+\item[\chk]reserve
+\item[\chk]reverse
+\item[\chx]push\_front
+\item[\chk]find
+\item[\chx]pop\_back
+\item[\chk]lower\_bound
+\item[\chx]swap
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select DEQUE accessors only:}
+\begin{itemize}
+\item[\chx]begin
+\item[\chx]rend
+\item[\chx]size
+\item[\chx]max\_size
+\item[\chk]capacity
+\item[\chx]empty
+\item[\chx]at
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. What will be produced during its execution?}
+\begin{verbatim}
+#include <iostream>
+#include <deque>
+#include <algorithm>
+
+using namespace std;
+
+int main(int, char**)
+{
+    deque<int> deq;
+    for(int i=0; i<10; i++)
+        deq.push_front(i);
+    deq.erase(remove(deq.begin(), deq.end(), 1), deq.end());
+    ostream_iterator<int> output(cout, " "); 
+    copy(deq.begin(), deq.end(), output);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\rad]0
+\item[\rad]1
+\item[\rad]nothing
+\item[\rad]1 2 3 4 5 6 7 8 9
+\item[\rax]9 8 7 6 5 4 3 2 0
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What is the main difference between deque's at() and operator[]?}
+\begin{itemize}
+\item[\rad]there is no difference
+\item[\rad]at() returns a reference to the deque element at a specified position but operator[] returns a pointer to the deque element at a specified position
+\item[\rad]at() returns a pointer to the deque element at a specified position but operator[] returns a reference to the deque element at a specified position
+\item[\rax]if index is greater than the size of the deque, at() throws an exception but operator[] does not
+\item[\rad]if index is greater than the size of the deque, operator[] throws an exception but at() does not
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. What will be produced during its execution?}
+\begin{verbatim}
+#include <iostream>
+#include <deque>
+#include <algorithm>
+#include <functional>
+
+using namespace std;
+
+int main(int, char**)
+{
+    deque<int> deq;
+    for(int i=0; i<10; i++)
+        deq.push_back(i);
+    sort(deq.begin(), deq.end(), greater<int>());
+    ostream_iterator<int> output(cout, " "); 
+    copy(deq.begin(), deq.end(), output);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\rad]0 1 2 3 4 5 6 7 8 9
+\item[\rad]0
+\item[\rad]nothing
+\item[\rax]9 8 7 6 5 4 3 2 1 0
+\item[\rad]0 1 2 3 4 5 6 7 8
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select the case when the deque will be the most efficient:}
+\begin{itemize}
+\item[\rad]when there are frequent insertions and deletions in the middle of the sequence
+\item[\rax]when there are frequent insertions and deletions at the beginning or at the end of the sequence
+\item[\rad]when there are infrequent insertions and deletions at the beginning or at the end of the sequence
+\item[\rad]when there are infrequent insertions and deletions in the middle of the sequence
+\item[\rad]the deque container has the same efficiency for all operations
+\end{itemize} 
+%%%
+\Question{}
+\textbf{RIBA}
+\begin{itemize}
+\item[\chk]RIBA
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. Please chose the value that will be printed after its execution.}
+\begin{verbatim}
+#include <iostream>
+#include <deque>
+#include <algorithm>
+
+using namespace std;
+
+int main(int, char**)
+{
+    deque<int> deq;
+	deq.assign(1, 10);
+    ostream_iterator<int> output(cout, " "); 
+    copy(deq.begin(), deq.end(), output);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\edt]\framebox[3in]{???}%10
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Set}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiset}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Map}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multimap}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algorithms and Function Objects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{count}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{sort}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{search}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{copy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{reverse}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{shuffle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{find\_if}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{for\_each}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{equal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{fill}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{remove}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{replace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{reverse}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{rotate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{swap}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{transform}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{unique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{nth\_element}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{merge}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{min/max\_element}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{lexicographical\_compare}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{permutation}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Iterators and Allocators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iterators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Allocators}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Strings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Initialization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Converting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Using}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Streams}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Predefined stream instances: cin, cout, cerr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Manipulators: iomanip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ios}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{iosfwd}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{istream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ostream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{iostream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{sstream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{fstream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{strstream}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{streambuf}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{<cmath>}
+%%%
+\Question{}
+\textbf{Please select CMATH functions only:}
+\begin{itemize}
+\item[\chx]abs()
+\item[\chx]ceil()
+\item[\chx]fabs()
+\item[\chx]pow()
+\item[\chx]atoi()
+\item[\chx]atan2()
+\item[\chx]atan()
+\item[\chk]itoa()
+\item[\chk]sqr()
+\item[\chk]int()
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{accumulate}
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. Please choose the value of accResult variable after its execution.}
+\begin{verbatim}
+#include <numeric>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {0,1,2,3,4,5};
+    int accResult = accumulate(&fillValues[0], &fillValues[5], 0);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\rad]0
+\item[\rad]1
+\item[\rax]10
+\item[\rad]11
+\item[\rad]15
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. Please enter the value of accResult variable after its execution.}
+\begin{verbatim}
+#include <numeric>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {0,1,2,3,4,5,6,7};
+    int accResult = accumulate(&fillValues[0], &fillValues[5], 1);
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\edt]\framebox[3in]{???}%11
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{partial\_sum}
+%%%
+\Question{}
+\textbf{You have the sequence ${x_0,x_1,x_2,...,x_{n-1}}$  Please select the correct sequence used by partial\_sum algorithm.}
+\begin{itemize}
+\item[\rad]${x_0,x_1,x_2,...,x_{n-1}}$
+\item[\rad]${x_{n-1},...,x_2,x_1,x_0}$
+\item[\rad]${x_0*x_1,x_1*x_2,...,x_{n-1}*x_n}$
+\item[\rad]${x_0+CONST,x_1+CONST,x_2+CONST,...,x_{n-1}+CONST}$
+\item[\rax]${x_0,x_0+x_1,x_0+x_1+x_2,...,x_0+x_1+x_2+...+x_{n-1}}$
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{adjacent\_difference}
+%%%
+\Question{}
+\textbf{You have the sequence ${x_0,x_1,x_2,...,x_{n-1}}$  Please select the correct sequence used by adjacent\_difference algorithm.}
+\begin{itemize}
+\item[\rad]${x_0,x_1,x_2,...,x_{n-1}}$
+\item[\rad]${x_{n-1},...,x_2,x_1,x_0}$
+\item[\rad]${x_0/x_1,x_1/x_2,...,x_{n-1}/x_n}$
+\item[\rad]${x_0-CONST,x_1-CONST,x_2-CONST,...,x_{n-1}-CONST}$
+\item[\rax]${x_1-x_0,x_2-x_1,x_3-x_2,...,x_{n-1}-x_{n-2}}$
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{inner\_product}
+%%%
+\Question{}
+\textbf{Imagine that you have the code shown below. Please enter the number which will be printed after its execution.}
+\begin{verbatim}
+#include <iostream>
+#include <vector>
+#include <numeric>
+
+using namespace std;
+
+int main(int, char**)
+{
+    const int lim = 3;
+    int first[lim] = {1,2,3};
+    int second[lim] = {3,2,1}; 
+    
+    cout << inner_product(&first[0], &first[lim], &second[0], 0) <<endl;
+    
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\edt]\framebox[3in]{???}%10
+\end{itemize} 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Adaptors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Container Adaptors}
+%%%
+\Question{}
+\textbf{The Stack container Adaptor can be applied to:}
+\begin{itemize}
+\item[\chx]vector
+\item[\chx]list
+\item[\chx]deque
+\item[\chk]stack
+\item[\chk]map
+\item[\chk]set
+\item[\chk]multimap
+\item[\chk]multiset
+\item[\chk]string
+\item[\chk]wstring
+\end{itemize} 
+%%%
+\Question{}
+\textbf{stack<T> is a stack of T with a default implementation using:}
+\begin{itemize}
+\item[\rad]a vector
+\item[\rad]a list
+\item[\rax]a deque
+\item[\rad]a stack
+\item[\rad]a map
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select only methods which are propagated by a stack adaptor.}
+\begin{itemize}
+\item[\chx]empty
+\item[\chx]size
+\item[\chx]top
+\item[\chx]push
+\item[\chx]pop
+\item[\chk]begin
+\item[\chk]end
+\item[\chk]push\_front
+\item[\chk]push\_back
+\item[\chk]rbegin
+\end{itemize} 
+%%%
+\Question{}
+\textbf{You need to "pop" a value from a stack which is declared as stack\llll int, list\llll int\rrrr\rrrr{} stackAsList; What do you need to call?}
+\begin{itemize}
+\item[\rad]int x = stackAsList.pop();
+\item[\rad]int x = stackAsList.end();\\stackAsList.pop();
+\item[\rax]int x = stackAsList.top();\\stackAsList.pop();
+\item[\rad]int x = stackAsList.pop();\\stackAsList.top();
+\item[\rad]int x = stackAsList.pop();\\stackAsList.end();
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What is the difference between a stack and a queue as a service organization?}
+\begin{itemize}
+\item[\rad]stack is FIFO but queue is LIFO
+\item[\rax]stack is LIFO but queue is FIFO
+\item[\rad]FIFO/LIFO organization for those adaptors should be qualified by the container prototyping, so it does not matter what they are
+\item[\rad]there is no difference, they are both FIFO
+\item[\rad]there is no difference, they are both LIFO
+\end{itemize} 
+%%%
+\Question{}
+\textbf{The Queue container Adaptor can be applied to:}
+\begin{itemize}
+\item[\chk]vector
+\item[\chx]list
+\item[\chx]deque
+\item[\chk]stack
+\item[\chk]map
+\item[\chk]set
+\item[\chk]multimap
+\item[\chk]multiset
+\item[\chk]string
+\item[\chk]wstring
+\end{itemize} 
+%%%
+\Question{}
+\textbf{queue<T> is a queue of T with a default implementation using}
+\begin{itemize}
+\item[\rad]a vector
+\item[\rad]a list
+\item[\rax]a deque
+\item[\rad]a stack
+\item[\rad]a map
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select only the methods which are propagated by a queue adaptor.}
+\begin{itemize}
+\item[\chx]empty
+\item[\chx]size
+\item[\chx]front
+\item[\chx]back
+\item[\chx]push\_back
+\item[\chx]pop\_front
+\item[\chk]top
+\end{itemize} 
+%%%
+\Question{}
+\textbf{As you know, the pop() function of the queue has no return value. How can you obtain the value which will be "popped"?}
+\begin{itemize}
+\item[\rad]using push() before pop()
+\item[\rax]using front() before pop()
+\item[\rad]using front() after pop()
+\item[\rad]using begin() after pop()
+\item[\rad]using top() after pop()
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Iterator Adaptors}
+%%%
+\Question{}
+\textbf{Please select only correct STL Iterator Adaptors that exist in the library:}
+\begin{itemize}
+\item[\chk]const\_iterator
+\item[\chx]reverse\_iterator
+\item[\chk]back\_insert\_iterator
+\item[\chk]istream\_iterator
+\item[\chk]ostream\_iterator 
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please choose the value which will be printed after the execution of the following code:}
+\begin{verbatim}
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <iterator>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {1,2,3,4,5,6,7};
+    vector<int> vec(fillValues, fillValues+sizeof(fillValues)/sizeof(int));
+    reverse_iterator<vector<int>::iterator, int> start(vec.end());
+    reverse_iterator<vector<int>::iterator, int> finish(vec.begin());
+    vector<int>::reverse_iterator ret = 
+            find_if( start, finish, bind2nd(less<int>(), 5) );
+    cout << *ret << endl;
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\rad]1
+\item[\rad]2
+\item[\rad]3
+\item[\rax]4
+\item[\rad]5
+\item[\rad]6
+\item[\rad]7
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Binders}
+%%%
+\Question{}
+\textbf{What kind of adaptors are binders?}
+\begin{itemize}
+\item[\rad]iterator adaptors
+\item[\rad]class adaptors
+\item[\rax]function adaptors
+\item[\rad]template adaptors
+\item[\rad]binders are not adaptors at all
+\end{itemize} 
+%%%
+\Question{}
+\textbf{What are binders used for?}
+\begin{itemize}
+\item[\rad]to convert a unary function object into binary
+\item[\rax]to convert a binary function object into unary
+\item[\rad]to change the logic of a unary function object
+\item[\rad]to change the logic of a binary function object
+\item[\rad]the binders are not used in STL at all
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select from this list STL binders only:}
+\begin{itemize}
+\item[\chk]bind
+\item[\chx]bind2nd
+\item[\chk]bind3rd
+\item[\chk]not1
+\item[\chx]bind1st
+\item[\chk]not2
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please enter the value that will be printed after the execution of the following code:}
+\begin{verbatim}
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {0,1,2,3,4,5,6,7};
+    vector<int> vec(fillValues, fillValues+sizeof(fillValues)/sizeof(int));
+    vector <int>::const_iterator reit = find_if( vec.begin(), vec.end(), 
+                                        bind2nd(greater<int>(), 5) );
+    cout << *reit << endl;
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\edt]\framebox[3in]{???}%6
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Negators}
+%%%
+\Question{}
+\textbf{STL Negator is:}
+\begin{itemize}
+\item[\rad]a template class
+\item[\rax]a function adaptor
+\item[\rad]a function binder
+\item[\rad]a template adaptor
+\item[\rad]a class binder
+\end{itemize} 
+%%%
+\Question{}
+\textbf{STL Negator is used}
+\begin{itemize}
+\item[\rad]to bind the function to the algorithm.
+\item[\rax]to reverse the sense of predicate.
+\item[\rad]to bind the functor to the algorithm.
+\item[\rad]to get negative values for a numeric algorithm.
+\item[\rad]to convert parameters to negative.
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select only correct STL Negators which exist in the library:}
+\begin{itemize}
+\item[\chx]not1()
+\item[\chx]not2()
+\item[\chk]not3()
+\item[\chk]xor1()
+\item[\chk]nor1()
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please enter the value that will be printed after the execution of the following code:}
+\begin{verbatim}
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+
+using namespace std;
+
+int main(int, char**)
+{
+    int fillValues[] = {0,1,2,3,4,5,6,7};
+    vector<int> vec(fillValues, fillValues+sizeof(fillValues)/sizeof(int));
+    vector <int>::const_iterator reit = find_if( vec.begin(), vec.end(), 
+                                        not1(bind2nd(greater<int>(), 5)) );
+    cout << *reit << endl;
+    return 0;
+}
+\end{verbatim}
+\begin{itemize}
+\item[\edt]\framebox[3in]{???}%0
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Adaptors for pointers to Functions}
+%%%
+\Question{}
+\textbf{What are Adaptors for pointers to Functions used for?}
+\begin{itemize}
+\item[\rad]to allow pointers to unary and binary functions work with STL containers.
+\item[\rad]to allow pointers to container members work with the functions of another STL container.
+\item[\rax]to allow pointers to unary and binary functions work with STL function adaptors.
+\item[\rad]to allow pointers to container members work with STL algorithms.
+\item[\rad]to define new template functions with type of the function adaptors
+\end{itemize} 
+%%%
+\Question{}
+\textbf{Please select only Adaptors for pointers to Functions:}
+\begin{itemize}
+\item[\chk]binary\_function
+\item[\chx]ptr\_fun
+\item[\chk]binder1st
+\item[\chx]mem\_fun
+\item[\chk]binder2nd
+\item[\chk]mem\_fun\_t 
+\item[\chx]mem\_fun\_ref
+\end{itemize} 
+
+%%%
+\Question{}
+\textbf{FINDME!!! Just for the cvs test...}
+\begin{itemize}
+\item[\chk]foo
+\item[\chx]bar
+\end{itemize} 
+
+
+\end{document}

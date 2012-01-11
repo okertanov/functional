@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>okertanov</Author>
+  <LastAuthor>okertanov</LastAuthor>
+  <Created>2005-09-28T07:57:27Z</Created>
+  <LastSaved>2005-09-28T08:31:34Z</LastSaved>
+  <Company>Unitech</Company>
+  <Version>11.6408</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12525</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>90</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font x:CharSet="204"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21">
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s22">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s23">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s24">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s25">
+   <Font x:CharSet="204" ss:Color="#008000"/>
+  </Style>
+  <Style ss:ID="s26">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s27">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Font x:CharSet="204" x:Family="Swiss"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s28">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font x:CharSet="204" x:Family="Swiss"/>
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s29">
+   <Font x:CharSet="204" x:Family="Swiss" ss:Color="#008000" ss:Bold="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="10" ss:ExpandedRowCount="1000" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="45"/>
+   <Column ss:AutoFitWidth="0" ss:Width="134.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="124.5"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="45"/>
+   <Column ss:AutoFitWidth="0" ss:Width="304.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="192"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="106.5"/>
+   <Row ss:StyleID="s21">
+    <Cell ss:Index="2"><Data ss:Type="String">Content</Data></Cell>
+    <Cell><Data ss:Type="String">Additional information</Data></Cell>
+    <Cell><Data ss:Type="String"># of questions</Data></Cell>
+    <Cell><Data ss:Type="String">Weight</Data></Cell>
+    <Cell ss:StyleID="s22"><Data ss:Type="String">Question</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">Answers</Data></Cell>
+    <Cell ss:StyleID="s24"/>
+    <Cell><Data ss:Type="String">Responsible person</Data></Cell>
+    <Cell><Data ss:Type="String">Remarks</Data></Cell>
+   </Row>
+
+<!-- BOI -->
+    
+   <Row ss:AutoFitHeight="0" ss:Height="102">
+    <Cell ss:StyleID="s21"><Data ss:Type="String">C++</Data></Cell>
+    <Cell ss:StyleID="s25"/>
+    <Cell ss:Index="6" ss:StyleID="s26"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">How to get <B>char*</B><Font> pointer from an existing </Font><B>std::string</B><Font>? For example having string </Font><B>str</B><Font>?</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s27"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">1. <B>char* ptr = str.c_str();</B><Font>&#10;2.</Font><B> char* ptr = str.get_string();</B><Font>&#10;3. </Font><B>char* ptr = str.to_string();</B><Font>&#10;4. </Font><B>char* ptr = str.CString();</B><Font>&#10;5. </Font><B>char* ptr;&#10; str.GetCString(ptr);</B><Font>&#10;6. </Font><B>char* ptr;&#10;str.bufferize(ptr);</B></ss:Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">Oleg Kertanov</Data></Cell>
+    <Cell><Data ss:Type="String">SINGLE</Data></Cell>
+   </Row>
+
+<!-- EOI -->
+   
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>300</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>1</SplitHorizontal>
+   <TopRowBottomPane>1</TopRowBottomPane>
+   <SplitVertical>1</SplitVertical>
+   <LeftColumnRightPane>1</LeftColumnRightPane>
+   <ActivePane>0</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>8</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
