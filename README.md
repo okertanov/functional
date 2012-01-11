@@ -61,6 +61,7 @@ More Terms
 * invariants
 * numeric tower
 * homoiconicity
+* meta-circular evaluator
 
 See also
 --------
