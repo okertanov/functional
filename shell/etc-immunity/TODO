@@ -1,0 +1,18 @@
+TODO
+====
+
+1.00
+----
+* /etc changes detection
+* git status/revert
+* tests
+* debug logging
+
+1.01
+----
+* documentation: README
+* documentation: /etc into git
+* generate: README  -> manpage
+* generate: git log -> changelog
+* generate: git tag -> version
+

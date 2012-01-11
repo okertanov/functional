@@ -1,0 +1,46 @@
+#!upstart
+# etc-immunity.conf - ubuntu upstart service
+# Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
+#
+# Core etc-immunity initscript
+# invoked by upstart
+# installed at /etc/init/etc-immunity.conf by the maintainer scripts
+
+description "etc-immunity protects /etc from accidental changes"
+author "Oleg Kertanov <okertanov@gmail.com>"
+
+env EI_RUNNING=yes
+
+emits etcimmunity
+
+start on startup
+stop on runlevel [!2345]
+
+pre-start script
+    . /etc/default/etc-immunity
+    logger -s "etc-immunity: pre-start: EI_ENABLED=${EI_ENABLED}, EI_RUNNING=${EI_RUNNING}"
+
+    test "$EI_ENABLED" = "yes" || { stop; exit 0; }
+end script
+
+post-start script
+    logger -s "etc-immunity: post-start"
+end script
+
+pre-stop script
+    logger -s "etc-immunity: pre-stop"
+end script
+
+post-stop script
+    logger -s "etc-immunity: post-stop"
+end script
+
+script
+    . /etc/default/etc-immunity
+    logger -s "etc-immunity: running..."
+
+    sleep 5
+
+    logger -s "etc-immunity: done."
+end script
+

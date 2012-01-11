@@ -1,0 +1,14 @@
+# etc-immunity.conf - ubuntu upstart service
+# Copyright (c) Oleg Kertanov <okertanov@gmail.com> 2011
+#
+# Defaults for etc-immunity initscript
+# sourced by /etc/init/etc-immunity.conf
+# installed at /etc/default/etc-immunity by the maintainer scripts
+
+# Options that are passed to the Daemon.
+#
+# EI_ENABLED - enable or disable etc-immunity script:
+#     yes - enabled
+#     no  - disabled
+EI_ENABLED=yes
+

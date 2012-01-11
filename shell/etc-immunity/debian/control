@@ -1,0 +1,14 @@
+Source: etc-immunity
+Section: admin
+Priority: extra
+Maintainer: Oleg Kertanov <okertanov@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.1
+Homepage: https://github.com/okertanov/etc-immunity
+
+Package: etc-immunity
+Architecture: all
+Depends: git-core, ssh, ${misc:Depends}
+Description: The etc-immunity project protects /etc from accidental changes.
+ It uses git to roll back /etc changes to the last good state 
+ when reboot wasn't completed successfully.

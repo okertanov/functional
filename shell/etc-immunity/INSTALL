@@ -1,0 +1,15 @@
+Installation
+============
+
+Debian/Ubuntu
+-------------
+    sudo apt-get install build-essential dh-make devscripts fakeroot
+    dh_make -e okertanov@gmail.com -c bsd -i -n -p etc-immunity_1.0.00
+    debuild -us -uc
+        or
+    dpkg-deb --build etc-immunity
+
+Unused
+------
+    find ./etc -type f -exec md5sum {} >> debian/md5sums \;
+

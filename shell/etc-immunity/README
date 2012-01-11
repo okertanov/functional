@@ -1,0 +1,7 @@
+The Debian/Ubuntu Package etc-immunity
+======================================
+
+The etc-immunity project protects /etc from accidental changes.
+It uses git to roll back /etc changes to the last good state 
+when reboot wasn't completed successfully.
+
