@@ -8,10 +8,10 @@
 
 #import "NQCWindow.h"
 
-@interface AppController : NSObject 
+@interface AppController : NSObject
 {
-	IBOutlet QCView* qcView;
-	IBOutlet NQCWindow* window;
+    IBOutlet QCView* qcView;
+    IBOutlet NQCWindow* window;
 }
 
 - (IBAction) changeColorToBlue:(id)sender;
@@ -20,3 +20,4 @@
 
 
 @end
+

@@ -7,19 +7,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NQCWindow : NSWindow 
+@interface NQCWindow : NSWindow
 {
-	NSRect origWinFrame;
-	NSUInteger origStyleMask;
-	bool isFullScreen;
+    NSRect origWinFrame;
+    NSUInteger origStyleMask;
+    bool isFullScreen;
 }
 
-- (id)   initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle 
-					 backing:(NSBackingStoreType)bufferingType 
-					 defer:(BOOL)flag;
+- (id)   initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle
+                     backing:(NSBackingStoreType)bufferingType
+                     defer:(BOOL)flag;
 - (BOOL) canBecomeKeyWindow;
 - (BOOL) canBecomeMainWindow;
 
 - (void) toggleFullScreen;
 
 @end
+
