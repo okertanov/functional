@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Terration' target in the 'Terration' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+    #import <Quartz/Quartz.h>
+#endif
