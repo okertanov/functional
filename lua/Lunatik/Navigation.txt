@@ -1,0 +1,12 @@
+http://ai-contest.com/forum/viewtopic.php?f=18&t=577
+http://github.com/albertz/planet_wars-cpp
+
+http://ai-contest.com/using_the_tools.php
+http://ai-contest.com/specification.php
+http://ai-contest.com/resources.php
+http://ai-contest.com/starter_packages.php
+http://ai-contest.com/rules.php
+
+http://code.google.com/p/ai-contest/source/browse/trunk/planet_wars/backend/compile_anything.py
+
+http://www.galcon.com/flash/play.php
