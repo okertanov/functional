@@ -61,6 +61,7 @@ More Terms
 * invariants
 * numeric tower
 * homoiconicity
+* self-interpreter or metainterpreter
 * meta-circular evaluator
 
 See also
