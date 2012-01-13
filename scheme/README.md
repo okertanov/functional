@@ -47,6 +47,8 @@ More FP Mumbo-jumbo
 * first-class function
 * higher-order functions
 * identity function
+* lexical scope
+* dynamic scope
 * apply
 * filter
 * map
