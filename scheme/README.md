@@ -72,6 +72,7 @@ More FP Mumbo-jumbo
 * reflective interpreter
 * partial evaluation
 * trampoline
+* hoisting
 
 See also
 --------
