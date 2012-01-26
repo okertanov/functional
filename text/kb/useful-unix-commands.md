@@ -211,6 +211,10 @@ Debug
     dmesg
     lsof
 
+Testing
+-------
+    ab -r30000 -c100 http://localhost:<port>/  -- Apache Bench
+
 Unsorted
 --------
 > rundll32 url.dll,FileProtocolHandler http://linux.org
