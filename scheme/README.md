@@ -93,3 +93,5 @@ See also
 
 [Gambit-C](http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page)  
 
+[Hyperpolyglot: Common Lisp, Scheme, Clojure, Emacs Lisp](http://hyperpolyglot.org/lisp)  
+
