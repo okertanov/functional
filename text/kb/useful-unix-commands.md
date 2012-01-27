@@ -228,3 +228,4 @@ Links
     http://www.mnxsolutions.com/quick-tip/how-little-you-know-and-some-useful-commands-for-the-week.html
     Основы Linux от основателя Gentoo. http://habrahabr.ru/blogs/linux/116907/
     http://wiki.fornex.com/index.php/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B_Linux
+    A Sysadmin's Unixersal Translator (ROSETTA STONE) OR   What do they call that in this world? http://bhami.com/rosetta.html
