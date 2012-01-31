@@ -32,8 +32,12 @@ FP Terms
 * Literate
 * Automata
 * Turing complete
+* Von Neumann architecture
+* Harvard architecture
 * STM
 * CPS
+* AST
+* ISA
 * DSL
 * AOP
 * REPL
@@ -73,8 +77,15 @@ More FP Mumbo-jumbo
 * partial evaluation
 * trampoline
 * hoisting
+
+Memes
+-----
+* Zawinski's Law
+* Greenspun's tenth rule
 * turing tarpit
 * code density
+* inner-platform effect
+* 80–20 rule
 
 See also
 --------
