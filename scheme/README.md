@@ -71,12 +71,19 @@ More FP Mumbo-jumbo
 * invariants
 * numeric tower
 * homoiconicity
+* reflection
 * self-interpreter or metainterpreter
 * meta-circular evaluator
 * reflective interpreter
 * partial evaluation
 * trampoline
 * hoisting
+
+Metaprogramming
+---------------
+1. expose the internals of the run-time engine  
+2. dynamic execution of expressions that contain programming commands  
+3. program transformation systems, which accept language descriptions  
 
 Memes
 -----
