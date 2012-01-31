@@ -73,7 +73,8 @@ More FP Mumbo-jumbo
 * homoiconicity
 * reflection
 * type introspection
-* self-interpreter or metainterpreter
+* self-interpreter
+* metainterpreter
 * meta-circular evaluator
 * reflective interpreter
 * partial evaluation
