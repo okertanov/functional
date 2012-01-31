@@ -72,6 +72,7 @@ More FP Mumbo-jumbo
 * numeric tower
 * homoiconicity
 * reflection
+* type introspection
 * self-interpreter or metainterpreter
 * meta-circular evaluator
 * reflective interpreter
