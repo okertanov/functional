@@ -73,6 +73,7 @@ More FP Mumbo-jumbo
 * partial evaluation
 * trampoline
 * hoisting
+* turing tarpit
 
 See also
 --------
