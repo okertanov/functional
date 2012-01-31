@@ -74,6 +74,7 @@ More FP Mumbo-jumbo
 * trampoline
 * hoisting
 * turing tarpit
+* code density
 
 See also
 --------

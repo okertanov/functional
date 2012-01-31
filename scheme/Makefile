@@ -13,21 +13,21 @@ SYSTEM ?= $(shell uname -o)
 #
 # Defines
 #
-CC      = gcc 
-CHICKEN = chicken 
+CC      = gcc
+CHICKEN = chicken
 ifeq ($(SYSTEM), Msys)
 	CFLAGSI = -IC:/MinGW/local/include/chicken -LC:/MinGW/local/lib
 	LDFLAGL = -Xlinker --enable-auto-import
 	MODEXT  = .exe
 else
-	CFLAGSI = 
-	LDFLAGL = 
-	MODEXT  = 
+	CFLAGSI =
+	LDFLAGL =
+	MODEXT  =
 endif
-CFLAGSW = -Wall -Wno-unused-variable 
+CFLAGSW = -Wall -Wno-unused-variable
 CFLAGS  = -O3 -fomit-frame-pointer -fno-strict-aliasing $(CFLAGSW) $(CFLAGSI)
-LDFLAGS = -lchicken $(LDFLAGL) 
-CHFLAGS = -feature srfi-1 
+LDFLAGS = -lchicken $(LDFLAGL)
+CHFLAGS = -feature srfi-1
 
 #
 # Files
@@ -50,13 +50,13 @@ $(MODULES): $(OBJS)
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
 %.o: %.c $(CSS)
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< -o $@
 
 %.c: %.ss $(SS)
-	$(CHICKEN) $< $(CHFLAGS) 
+	$(CHICKEN) $< $(CHFLAGS)
 
 run: $(MODULES)
-	-@echo Running: $(MODULES) 
+	-@echo Running: $(MODULES)
 	-@$(foreach file,$(MODULES), if [ -x $(file) ]; then echo $(file) | xargs -Ifile sh -c ./file ; fi; )
 
 clean:
