@@ -62,6 +62,8 @@ More FP Mumbo-jumbo
 * arity
 * predicates
 * macro system
+* hygienic macro
+* disjoint datatypes
 * scope
 * coroutine
 * continuation
