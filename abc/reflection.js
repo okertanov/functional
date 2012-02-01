@@ -1,0 +1,1 @@
+(new(eval('String'))()['split']())
