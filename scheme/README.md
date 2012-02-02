@@ -82,6 +82,7 @@ More FP Mumbo-jumbo
 * partial evaluation
 * trampoline
 * hoisting
+* transpiler
 
 Metaprogramming
 ---------------
