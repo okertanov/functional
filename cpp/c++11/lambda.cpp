@@ -14,25 +14,27 @@
 
 auto hof_make_iter() ->  std::function<void (std::string&)>
 {
-    std::cout << "Inside " << __PRETTY_FUNCTION__ << std::endl;
+    std::cout << "Inside " << __PRETTY_FUNCTION__ << ":" << __LINE__ << ": " << std::endl;
 
     int i = 0;
 
     return  [&i](std::string& s) -> void
             {
-                std::cout << "Inside " << __PRETTY_FUNCTION__ << ": " <<  i++ << " => " << s << std::endl;
+                std::cout << "Inside " << __PRETTY_FUNCTION__ << ":" << __LINE__ << ": "
+                    << i++ << " => " << s << std::endl;
             };
 }
 
 auto hof_val(int a) -> std::function<int (int)>
 {
-    std::cout << "Inside " << __PRETTY_FUNCTION__ << ": a = " << a << std::endl;
+    std::cout << "Inside " << __PRETTY_FUNCTION__ << ":" << __LINE__ << ": "
+        << ": a = " << a << std::endl;
 
     return [=](int b) -> int
     {
-        std::cout << "Inside " << __PRETTY_FUNCTION__ << ": "<<
-                     "a = " << a << " & " <<
-                     "b = " << b << std::endl;
+        std::cout << "Inside " << __PRETTY_FUNCTION__ << ":" << __LINE__ << ": " << ": "
+                  << "a = " << a << " & "
+                  << "b = " << b << std::endl;
         return (a * b);
     };
 }
