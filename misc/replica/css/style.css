@@ -1,0 +1,125 @@
+html {
+        height: 100%;
+}
+
+body {
+    font-family: Tahoma, Helvetica;
+    background: #ffffff; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cccccc'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #ffffff,  #cccccc); /* for firefox 3.6+ */
+}
+
+
+#wrapper {
+    width: 100%;
+    min-width: 600px;
+
+    /*bfmod*/
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /**/
+}
+
+
+#header {
+    height: 50px;
+    /*background-color: #E0E0E0;*/
+}
+
+
+#middle {
+    width: 100%;
+    height: 1%;
+
+    /*bfmod*/
+    padding: 0 0 50px;
+    /**/
+}
+#middle:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+#container {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#content {
+    width: 90%;
+    height: 90%;
+}
+
+#footer {
+    height: 50px;
+    /*background-color: #E0E0E0;*/
+
+    /*bfmod*/
+    margin: -50px auto 0;
+    min-width: 200px;
+    /**/
+}
+
+#centered
+{
+    position:absolute; 
+    top:50%; 
+    margin-top:-140px;
+
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+}
+
+#droptext 
+{ 
+    font-family: 'Droid Sans', arial, serif; 
+    font-weight: bold;
+    font-size: xx-large;
+
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+    padding-top:25px;
+    padding-bottom:25px;
+    padding-right:15px;
+    padding-left:15px;
+
+    border:2px dashed #A0A0A0;
+    background-color:#EEEEEE;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#droptext.dragging
+{
+    border:2px dashed #000000;
+    background-color:#FFFFAC;
+}
+
+#upload {
+            position:absolute;
+            top:0;
+            left:0;
+            width:260px;
+            height:180px;
+            filter:alpha(opacity=0);
+            -khtml-opacity:0;
+            -webkit-opacity:0;
+            -moz-opacity:0;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; // first!
+            filter: alpha(opacity=0); // second!
+}
+
+

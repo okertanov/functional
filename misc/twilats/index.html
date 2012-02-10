@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<title>twilats - Latvian Currency Exchange Rates in Twitter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="@twilats" />
+<meta name="description" content="Latvian Currency Exchange Rates in Twitter" />
+<meta name="verify-v1" content="uzOsHSpvLPeECGUgdbuRYKKBZ1+YdP0FEJgy2sg3NqA=" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+<!--[if IE]><script language="javascript" type="text/javascript" src="flot/excanvas.pack.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="flot/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+    <div id="sidebar">
+        <a href="https://twitter.com/twilats"><img width="73px" height="73px" border="0" align="middle" src="logo.png" alt="twilats logo" /></a>
+    </div>
+
+    <div id="container">
+        <div id="title">Latvian Currency Exchange Rates in Twitter<br />by <a href="https://twitter.com/twilats">@twilats</a></div>
+
+        <div id="content">
+            <h3>Currency Rates Graph</h3>
+            <div id="placeholder" style="width:800px;height:400px;"></div>
+        </div>
+    </div>
+
+</div>
+
+        <div class="push"></div>
+        <div id="footer">
+            <br />
+            <a href="#">Terms and Conditions</a> |
+            <a href="#">Contacts</a> |
+            &copy; 2009 <a href="https://twitter.com/twilats">@twilats</a>
+        </div>
+<!----------------------------------------------------------- -->
+<script id="source" language="javascript" type="text/javascript">
+$(function () {
+    var options = { lines: { show: true },
+                    points: { show: true },
+                    legend: { noColumns: 2, position: 'sw' },
+                    grid: { borderWidth: 0, hoverable: true, clickable: true },
+                    xaxis: { mode: 'time', timeformat: "%d/%m/%y", minTickSize: [1, "day"] },
+                    yaxis: { min: 0.45, max: 0.8, tickFormatter: function (v, axis) { return v.toFixed(axis.tickDecimals) +"LVL" }},
+                    selection: { mode: "x" } };
+
+    function showTooltip(x, y, contents) {
+        $('<div id="tooltip">' + contents + '</div>').css( {
+            position: 'absolute',
+            display: 'none',
+            top: y + 5,
+            left: x + 5,
+            border: '1px solid #fdd',
+            padding: '2px',
+            'background-color': '#fee',
+            opacity: 0.80
+        }).appendTo("body").fadeIn(200);
+    }
+
+    var previousPoint = null;
+    $("#placeholder").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(2));
+        $("#y").text(pos.y.toFixed(2));
+
+            if (item) {
+                if (previousPoint != item.datapoint) {
+                    previousPoint = item.datapoint;
+
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0],
+                        y = item.datapoint[1];
+
+                    var d = new Date(x);
+                    var curr_date = d.getDate()+'/'+ (d.getMonth()+1) + '/' + d.getFullYear();
+
+                    showTooltip(item.pageX, item.pageY,
+                                item.series.label + " on " + curr_date + " = " + y + " LVL");
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;
+            }
+    });
+
+    $.ajax({ url: "getrates.php", dataType: "json",
+          success: function(data)
+          {
+                plotdata = data;
+                $.plot($("#placeholder"), plotdata, options);
+          }
+    });
+});
+</script>
+<!----------------------------------------------------------- -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2131934-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

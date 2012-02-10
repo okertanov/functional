@@ -1,0 +1,1 @@
+@FOR /L %%U IN (6000,1,9879) DO @wget -a "session2.log" -O "user-%%U.html" --html-extension --keep-session-cookies --relative --load-cookies="Mozilla\Firefox\Profile\cookies.txt"  "http://honda.org.ua/forum/user-%%U.html"

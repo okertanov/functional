@@ -1,0 +1,81 @@
+Моему .vimrc уже больше восьми лет. Он помнит времена PentiumII,  Debian Potato и gcc настолько древнего, что я уже и не помню его версии. Он развивался с пятой версии Vim, приобретал полезные фрагменты и избавлялся от ненужных. И вот внезапно захотелось поделиться с вами его содержимым. Весь файл я показывать пока не буду, лишь пройдусь по некоторым, на мой взгляд, интересным моментам.
+<habracut />
+<h5>Сохранность и доступность</h5>
+Последнее время я храню его в svn на одном из своих хостов. На нужной мне машине я просто достаю его из репозитория и работаю:
+<code>
+$ cd ~
+$ svn ls svn+ssh://svn.example.com/var/svn/repo/trunk/profile ./
+.vimrc
+vimrc
+$ svn co svn+ssh://svn.example.com/var/svn/repo/trunk/profile ./
+</code>
+<h5>Раз и навсегда добавляем удобных настроек</h5>
+Настроим кол-во символов пробелов, которые будут заменять \t
+<b>set tabstop=4
+set shiftwidth=4
+set smarttab</b>
+<b>set et</b> - включим автозамену по умолчанию
+
+<b>set wrap</b> - попросим Vim переносить длинные строки
+
+<b>set ai</b> - включим автоотступы для новых строк
+<b>set cin</b> - включим отступы в стиле Си
+
+Далее настроим поиск и подсветку результатов поиска и совпадения скобок
+<b>set showmatch
+set hlsearch
+set incsearch
+set ignorecase</b>
+
+<b>set lz</b> - ленивая перерисовка экрана при выполнении скриптов
+
+
+Показываем табы в начале строки точками
+<b>set  listchars=tab:··
+set list</b>
+
+<h5>Порядок применения кодировок и формата файлов</h5>
+<b>set ffs=unix,dos,mac
+set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866</b>
+
+<h5>Взаимодействие и элементы интерфейса</h5>
+Я часто выделяю мышкой содержимое экрана в Putty, но перехват мышки в Vim мне иногда мешает. Отключаем функционал вне графического режима:
+<b>if !has('gui_running')
+set mouse=
+endif</b>
+
+Избавляемся от меню и тулбара:
+<b>set guioptions-=T</b>
+<b>set guioptions-=m</b>
+
+В разных графических системах используем разные шрифты:
+<b>if has('gui')
+    colorscheme darkblue
+    if has('win32')
+        set guifont=Lucida_Console:h12:cRUSSIAN::
+    else
+        set guifont=Terminus\ 14
+    endif
+endif</b>
+
+Пытаемся занять максимально большое пространство на экране. Как водится, по-разному на разных системах:
+<b>if has('gui')
+    if has('win32')
+        au GUIEnter * call libcallnr('maximize', 'Maximize', 1)
+    elseif has('gui_gtk2')
+        au GUIEnter * :set lines=99999 columns=99999
+    endif
+endif</b>
+
+Опять же, системы сборки для разных платформ могут быть переопределены:
+<b>if has('win32')
+set         makeprg=nmake
+compiler   msvc
+else
+set         makeprg=make
+compiler   gcc
+endif</b>
+
+
+:wq
+<img src="http://tvivo.espectrale.com/download.php?file=/images/empty-1x1.png" />

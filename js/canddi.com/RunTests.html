@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--
+        2011-07-13 (c) 2011 Campaign and Digital Intelligence (http://canddi.com)
+-->
+
+<html>
+<head>
+  <title>canddi.com::Socket.js Jasmine Suite</title>
+
+  <!-- Jasmine UI Core -->
+  <link rel="shortcut icon" type="image/png" href="jasmine/images/jasmine_favicon.png">
+  <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-core/jasmine.css">
+
+  <!-- Jasmine Core -->
+  <script type="text/javascript" src="jasmine/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src="jasmine/lib/jasmine-core/jasmine-html.js"></script>
+
+  <!-- canddi.com::Socket.js Source code -->
+  <script type="text/javascript" src="CANDDi.Node.Mock.js"></script>
+  <script type="text/javascript" src="CANDDi.Node.Socket.js"></script>
+
+  <!-- canddi.com::SocketSpec.js Spec code -->
+  <script type="text/javascript" src="CANDDi.Node.SocketSpec.js"></script>
+
+  <!-- Suite runner -->
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>

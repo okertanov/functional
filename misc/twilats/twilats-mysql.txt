@@ -1,0 +1,32 @@
+CREATE DATABASE twilats CHARACTER SET utf8;
+use twilats;
+show tables;
+
+create table rates (id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id), date TIMESTAMP, eur1 DOUBLE, eur2 DOUBLE, eur3 DOUBLE, sek1 DOUBLE, sek2 DOUBLE, sek3 DOUBLE, usd1 DOUBLE, usd2 DOUBLE, usd3 DOUBLE);
+select * from rates;
+
+GRANT ALL PRIVILEGES ON twilats.* TO "twilats"@"localhost"
+IDENTIFIED BY "SecurePassword";
+FLUSH PRIVILEGES;
+
+-------------------
+insert into rates (date, eur1, eur2, eur3, sek1, sek2, sek3, usd1, usd2, usd3) values (STR_TO_DATE("28 Apr 2009 9:00","%d %b %Y %T"), 0.7046,0.7143,0.7028, 0.0651,0.0679,0.0650, 0.5390,0.5516,0.5340);
+insert into rates (date, eur1, eur2, eur3, sek1, sek2, sek3, usd1, usd2, usd3) values (STR_TO_DATE("27 Apr 2009 11:50","%d %b %Y %T"), 0.7047,0.7144,0.7028, 0.0643,0.0670,0.0648, 0.5321,0.5447,0.5340);
+insert into rates (date, eur1, eur2, eur3, sek1, sek2, sek3, usd1, usd2, usd3) values (STR_TO_DATE("26 Apr 2009 8:00","%d %b %Y %T"), 0.7047,0.7144,0.7028, 0.0639,0.0667,0.0640, 0.5316,0.5442,0.5400);
+insert into rates (date, eur1, eur2, eur3, sek1, sek2, sek3, usd1, usd2, usd3) values (STR_TO_DATE("25 Apr 2009 10:00","%d %b %Y %T"), 0.7047,0.7144,0.7028, 0.0639,0.0667,0.0640, 0.5316,0.5442,0.5400);
+insert into rates (date, eur1, eur2, eur3, sek1, sek2, sek3, usd1, usd2, usd3) values (STR_TO_DATE("24 Apr 2009 20:48","%d %b %Y %T"), 0.7047,0.7144,0.7028, 0.0639,0.0667,0.0640, 0.5316,0.5442,0.5400);
+-------------------
+
+-------------------
+--DELETE FROM rates WHERE id=4;
+-------------------
+
+select * from rates;
+
+---------------------------
+use twilats;
+describe rates;
+alter table rates add column gbp1 DOUBLE;
+alter table rates add column gbp2 DOUBLE;
+alter table rates add column gbp3 DOUBLE;
+

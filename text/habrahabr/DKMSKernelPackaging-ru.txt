@@ -1,0 +1,53 @@
+<h5>Краткая компиляция irc-чата в рамках Ubuntu Developer Week на тему "Packaging Kernel modules with DKMS"</h5>
+<a href="https://wiki.ubuntu.com/MeetingLogs/devweek0901/DKMSKernelPackaging">Пакуем модули ядра с DKMS</a>. Докладчик: уже известный нам <a href="https://launchpad.net/~ben-collins">Ben Collins</a>
+
+Смотрю я на список материалов январского <a href="https://wiki.ubuntu.com/UbuntuDeveloperWeek">Ubuntu Developer Week</a> и глаз радуется. Много хорошего материала было рассмотрено в добровольно-принудительном общении разработчиков с комьюнити. Начнем сегодня с разговора о ядерных модулях и одном <a href="http://linux.dell.com/dkms/">замечательном фреймворке</a> для ухода за ними.
+<habracut />
+DKMS - это, по мнению докладчика, программа, позволяющая легко управлять исходниками модулей и автоматически собирать их с требуемой версией ядра. В основном эту систему используют те, кто нуждается в сторонних модулях для дистрибутивного ядра. Еще DKMS используют с модулями от производителей железа, содержащих в себе бинарные или закрытые части (broadcom, fglrx, nvidia). 
+
+Ну что сказать, казалось бы интересная тема абсолютно не вызвала ажиотажа у слушателей. Бен дал ссылку на свою презентацию, вкратце рассказал о 2х технических нюансах и на этом все закончилось. 
+Ни единого вопроса.
+
+Ок, пока качается видео ролик презентации от Бена, рассмотрим тему сами. У меня как раз есть в системе подходящий модуль на роль подопытного. Ядро моей Убунты не содержит драйвера веб-камеры ноутбука, поэтому пройдем все этапы его сборки с применением DKMS.
+
+<b>Устанавливаем сам фреймворк:</b>
+<code>sudo aptitude install dkms</code>
+<b>Смотрим что у нас есть:</b>
+<code>dkms status</code>
+<b>Получаем исходники драйвера прямо из апстрима:</b>
+<code>sudo git clone  http://repo.or.cz/r/microdia.git /usr/src/microdia-v2009.01</code>
+<b>Создаем по шаблону конфигурацию:</b>
+<code>sudo cp /usr/share/doc/dkms/sample.conf /usr/src/microdia-v2009.01/dkms.conf</code>
+<b>Затем редактируем:</b>
+<code>sudo vim /usr/src/microdia-v2009.01/dkms.conf </code>
+<b>Приводим dkms.conf к следующему виду:</b>
+<code>
+PACKAGE_VERSION="v2009.01"
+PACKAGE_NAME="microdia"
+
+MAKE[0]="make -C ${kernel_source_dir} SUBDIRS=${dkms_tree}/${PACKAGE_NAME}/${PACKAGE_VERSION}/build modules"
+CLEAN="make -C ${kernel_source_dir} SUBDIRS=${dkms_tree}/${PACKAGE_NAME}/${PACKAGE_VERSION}/build clean"
+
+BUILT_MODULE_NAME[0]="sn9c20x"
+DEST_MODULE_LOCATION[0]="/kernel/drivers/media/video/usbvideo/"
+
+REMAKE_INITRD="no"
+AUTOINSTALL="yes"
+</code>
+<b>Делаем <i>1-2-3</i>:</b>
+<code>sudo dkms add -m microdia -v v2009.01
+sudo dkms build -m microdia -v v2009.01
+sudo dkms install -m microdia -v v2009.01</code>
+<b>Смотрим на статус:</b>
+<code>dkms status</code>
+<b>Проверяем работоспособность:</b>
+<code>sudo ls /lib/modules/`uname -r`/updates/dkms
+sudo modprobe sn9c20x
+ls -l /dev/video0
+LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so mplayer tv:// -tv driver=v4l2:width=320:height=240:fps=25:device=/dev/video0 -vo xv</code>
+
+Теперь ждем когда очередное обновление ядра Jaunty протестирует эту автосборку. А пока радуемся рабочей веб-камере и не забываем, что у Дебиана(а значит и Убунту) есть родной module-assistant для подобных целей.
+
+
+<h6>Начиная с этого поста, буду публиковать в Убунтариум, а то <a href="http://oletorr.habrahabr.ru/blog/">прошлые заметки</a> об Open Week многие не увидели.</h6>
+
