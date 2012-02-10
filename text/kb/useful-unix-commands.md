@@ -223,6 +223,57 @@ Unsorted
 >
 > curl http://ajax.googleapis.com/ajax/services/language/translate\?langpair\=en\|ru\&v\=1.0\&q\=hello
 
+
+From my Track
+-------------
+### Unix time to Local one
+    date -d@1234567890
+    python -c 'import time; print time.ctime(1234567890)'
+    perl -e 'print scalar localtime(1234567890),"\n";'
+
+### GCC Optimization Flags dump
+    gcc -march=native -Q --help=target
+    gcc -march=native -Q --help=optimizers
+
+### Commandline Mail with an attachment
+    mailx -s "This is it" someone@someplace < somefile
+    uuencode file.txt file.txt | mail email@address.com
+
+### Создание резервного образа жесткого диска
+    dd if=/dev/hda | gzip > /mnt/hdb1/system_drive_backup.img.gz
+### обратное действие:
+    gzip -dc /mnt/hdb1/system_drive_backup.img.gz | dd of=/dev/hda
+
+### Образ диска через SSH
+    plink okertanov@crater.espectrale.com "sudo dd if=/dev/sda1 | gzip" > crater-sda1-12.05.2009.img.gz
+
+### DD over SSH
+    iPhone# dd if=/dev/rdisk0s1 bs=1M | ssh -c arcfour root@imac dd of=/tmp/102root.dd
+    imac# dd if=102root.dd | ssh root@iphone dd of=/dev/rdisk0s1 bs=1M
+
+### Заблокировать TCP порт
+    sudo iptables -A OUTPUT -p TCP -d 192.168.1.101 --dport 80 -j DROP
+
+### Выполнять комманду shell в цикле
+    while : ; do ls './' ; done
+    for i in {1..10}; do ./something &; done
+
+### RSync example
+    #!/bin/bash
+    FROM='/Users/okertanov/Sites/www.espectrale.com/'
+    TO='okertanov@crater.espectrale.com:/home/okertanov/public_html/www.espectrale.com/public'
+    OPTIONS='--progress --stats --compress --recursive --times --perms --links --archive --delete'
+    SHELL='--rsh=ssh'
+    EXCLUDE='--exclude "*bak" --exclude "*~"'
+    rsync --verbose $SHELL $OPTIONS $EXCLUDE $FROM $TO
+
+### Close vim you left open remotely
+    DISPLAY=:0 vim --servername GVIM --remote-send '<Esc>:wqa<CR>'
+
+### Fetchmail with Imap .fetchmailrc line
+    poll imap.gmail.com protocol IMAP user "username@gmail.com" there with password "password" nofetchall keep ssl
+
+
 Links
 -----
     http://www.mnxsolutions.com/quick-tip/how-little-you-know-and-some-useful-commands-for-the-week.html
