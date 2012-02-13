@@ -92,3 +92,7 @@ undefined = 42;
 parseInt('06') == 6
 parseInt('08') == 0
 
+
+var x = [-10, -5, 0, 5, 10]; x.sort(); // now what's x?”
+var x = [-10, -5, 0, 5, 10]; x.sort(function(a,b){return a>b});
+

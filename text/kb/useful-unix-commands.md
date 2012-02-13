@@ -217,11 +217,11 @@ Testing
 
 Unsorted
 --------
-> rundll32 url.dll,FileProtocolHandler http://linux.org
->
-> ``GET "http://www.google.com/dictionary?langpair=en|ru&q=work&hl=ru&aq=f" | grep dct-tt | sed /'class=\"dct-e/d' | sed '/<a\ href/d' | sed 's/<span class="dct-tt">//g' |sed 's/<\/span>//' | sed '/<span /d' | head -n 3d 's/``
->
-> curl http://ajax.googleapis.com/ajax/services/language/translate\?langpair\=en\|ru\&v\=1.0\&q\=hello
+    rundll32 url.dll,FileProtocolHandler http://linux.org
+
+    curl http://ajax.googleapis.com/ajax/services/language/translate\?langpair\=en\|ru\&v\=1.0\&q\=hello
+
+    until diff <(cat /dev/urandom|strings|dd bs=1 count=$(stat -c %s hamlet.txt) 2>/dev/null) hamlet.txt;do type;done # infinity monkeys -- /via @climagic
 
 
 From my Track
