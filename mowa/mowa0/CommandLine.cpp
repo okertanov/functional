@@ -22,23 +22,6 @@ bool Commandline::CompareArguments::operator()(const Argument& a, const Argument
 Commandline::Argument Commandline::options_prefix_short = "-";
 Commandline::Argument Commandline::options_prefix_long  = "--";
 
-Commandline::Commandline() :
-    parameters_()
-{
-    try
-    {
-        throw CommandlineException(WHERE, "Nothing to Parse.");
-    }
-    catch(std::exception& e)
-    {
-        throw CommandlineException(e);
-    }
-    catch(...)
-    {
-        throw CommandlineException(WHERE);
-    }
-}
-
 Commandline::Commandline(int argc, char** argv, const Arguments& options) :
     parameters_()
 {

@@ -72,7 +72,6 @@ class Commandline
         static Argument options_prefix_long;
 
     public:
-        Commandline();
         Commandline(int argc, char** argv, const Arguments& options);
         virtual ~Commandline();
 
