@@ -41,10 +41,10 @@ class EnvironmentException :
 };
 
 /**
-    @var mowa0::GlobalEnvironment
+    @var mowa0::global_environment
     @brief
 */
-extern mowa0::Environment GlobalEnvironment;
+extern mowa0::Environment global_environment;
 
 }
 

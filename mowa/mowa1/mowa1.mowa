@@ -1,3 +1,44 @@
-##    Copyright (C) 2012 Oleg Kertanov <okertanov@gmail.com>
-##    All rights reserved.
+;;
+;;    Copyright (C) 2012 Oleg Kertanov <okertanov@gmail.com>
+;;    All rights reserved.
+;;
+
+;;
+;; Packages
+;;
+;;(require mowa/lang mowa/base)
+
+;;
+;; Primitive Tests
+;;
+
+; Dotted pairs
+'(1 . (2 . (3 . null)))
+
+; Lists
+(list 1 2 3)
+
+; Construct
+(cons 1 2)
+
+; Math
+(+ 1 2 3)
+
+; Application
+(apply + '(1 2 3))
+
+; Lambda
+(define sum
+  (lambda (a b)
+    (+ a b)))
+
+; Short version
+(define (sum a b)
+  (+ a b))
+
+; HOF
+(define create-op
+  (lambda (op)
+    (lambda (a b)
+      (op a b))))
 

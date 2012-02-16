@@ -14,6 +14,12 @@
 namespace mowa0
 {
 
+/**
+    @var mowa0::global_environment
+    @brief
+*/
+Environment global_environment;
+
 Environment::Environment()
 {
 }
@@ -21,12 +27,6 @@ Environment::Environment()
 Environment::~Environment()
 {
 }
-
-/**
-    @var mowa0::GlobalEnvironment
-    @brief
-*/
-Environment GlobalEnvironment;
 
 }
 

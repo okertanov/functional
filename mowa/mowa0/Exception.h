@@ -21,8 +21,13 @@ class Exception :
     public std::exception
 {
     public:
-        Exception(const std::string& what) :
-            what_(what)
+        explicit Exception(std::exception& e) :
+            message_(e.what())
+        {
+        }
+
+        explicit Exception(const std::string& where = WHERE, const std::string& what = "") :
+            message_(where + (what.empty() ? "Unknown Exception" : what))
         {
         }
 
@@ -30,13 +35,13 @@ class Exception :
         {
         }
 
-        virtual const char * what() const throw()
+        virtual const char *what() const throw()
         {
-            return what_.c_str();
+            return message_.c_str();
         }
 
     private:
-        const std::string what_;
+        const std::string message_;
 };
 
 }

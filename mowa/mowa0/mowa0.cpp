@@ -10,18 +10,69 @@
     @see LICENSE file
 */
 
-#include "Reader.h"
-#include "Evaluator.h"
-#include "Printer.h"
-#include "CommandLine.h"
+#include "mowa0.h"
 
-/**
-    @fn usage()
-    @brief Brief usage listing
+int main(int argc, char** argv)
+{
+    // Posix retcode
+    int rc = EXIT_FAILURE;
 
-    @return EXIT_SUCCESS, EXIT_FAILURE
-*/
-void usage(const std::list<std::string>& args)
+    // Valid command-line Parameters are:
+    static mowa0::Commandline::Arguments valid_arguments =
+    {
+        "--repl",
+        "--interpret",
+        "--compile",
+        "--source",
+        "--output",
+        "--help",
+        "--version"
+    };
+
+    try
+    {
+        // Parse parameters
+        mowa0::Commandline parameters(argc, argv, valid_arguments);
+
+        // Create source reader
+        mowa0::Reader reader(parameters["--source"]);
+
+        // Read input and build AST
+        mowa0::SyntaxTree tree = reader.Read();
+
+        // Evaluate AST using top-level Global environment and return new environment
+        mowa0::Environment environment = mowa0::Evaluator().Eval(tree, mowa0::global_environment);
+
+        // Everything is OK, returning 0 to the caller
+        rc = EXIT_SUCCESS;
+    }
+    catch(mowa0::CommandlineException& e)
+    {
+        LOG(LOG_ERROR, e.what());
+
+        usage(valid_arguments);
+    }
+    catch(mowa0::LexerException& e)
+    {
+        LOG(LOG_ERROR, e.what());
+    }
+    catch(mowa0::ParserException& e)
+    {
+        LOG(LOG_ERROR, e.what());
+    }
+    catch(std::exception& e)
+    {
+        LOG(LOG_ERROR, e.what());
+    }
+    catch(...)
+    {
+        LOG(LOG_ERROR, "Unknown error.");
+    }
+
+    return (rc);
+}
+
+static void usage(const mowa0::Commandline::Arguments& args)
 {
     // Create prologue
     std::string usagemsg(
@@ -42,71 +93,5 @@ void usage(const std::list<std::string>& args)
 
     // Display the message
     LOG(LOG_STDOUT, usagemsg);
-}
-
-/**
-    @fn main()
-    @brief Main entry point
-
-    @param[in] argc - arguments count
-    @param[in] argv - arguments vector
-    @return EXIT_SUCCESS, EXIT_FAILURE
-*/
-int main(int argc, char** argv)
-{
-    int rc = EXIT_FAILURE;
-
-    try
-    {
-        // Parse parameters
-        mowa0::CommandLine parameters(argc, argv);
-
-        // Valid command-line Parameters are:
-        static std::list<std::string> valid_arguments = {
-                    "--compile",
-                    "--interpret",
-                    "--repl",
-                    "--source",
-                    "--output",
-                    "--help",
-                    "--version"
-        };
-
-        usage(valid_arguments);
-
-        // Create source reader
-        mowa0::Reader reader(parameters["source"]);
-
-        // Read input and build AST
-        mowa0::SyntaxTree tree = reader.Read();
-
-        // Evaluate AST using top-level Global environment and return new environment
-        mowa0::Environment environment = mowa0::Evaluator().Eval(tree, mowa0::GlobalEnvironment);
-
-        // Everything is OK, returning 0 to the caller
-        rc = EXIT_SUCCESS;
-    }
-    catch(mowa0::CommandLineException& e)
-    {
-        LOG(LOG_ERROR, e.what());
-    }
-    catch(mowa0::LexerException& e)
-    {
-        LOG(LOG_ERROR, e.what());
-    }
-    catch(mowa0::ParserException& e)
-    {
-        LOG(LOG_ERROR, e.what());
-    }
-    catch(std::exception& e)
-    {
-        LOG(LOG_ERROR, e.what());
-    }
-    catch(...)
-    {
-        LOG(LOG_ERROR, "Unknown error.");
-    }
-
-    return (rc);
 }
 

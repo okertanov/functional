@@ -1,5 +1,5 @@
 /**
-    @file       CommandLine.h
+    @file       Commandline.h
     @brief      Command-line parser
 
     @author     Oleg Kertanov <okertanov@gmail.com>
@@ -19,33 +19,93 @@ namespace mowa0
 {
 
 /**
-    @class mowa0::CommandLine
-    @brief CommandLine class
+    @class mowa0::Commandline
+    @brief Commandline class
 */
-class CommandLine
+class Commandline
 {
     public:
-        CommandLine();
-        CommandLine(int argc, char** argv);
-        virtual ~CommandLine();
+        /**
+            @typedef mowa0::Commandline::Value
+            @brief
+        */
+        typedef std::string Value;
 
-        std::string operator[](const std::string& param);
-        std::wstring operator[](const std::wstring& param);
+        /**
+            @typedef mowa0::Commandline::Argument
+            @brief
+        */
+        typedef std::string Argument;
+
+        /**
+            @typedef mowa0::Commandline::Arguments
+            @brief
+        */
+        typedef std::list<Argument> Arguments;
+
+        /**
+            @typedef mowa0::Commandline::Parameters
+            @brief
+        */
+        typedef std::map<Argument, Value> Parameters;
+
+        /**
+            @class mowa0::Commandline::CompareArguments
+            @brief CompareArguments functor
+        */
+        class CompareArguments
+        {
+            public:
+                bool operator()(const Argument& a, const Argument& b) const;
+        };
+
+        /**
+            @var mowa0::Commandline::options_prefix_short
+            @brief
+        */
+        static Argument options_prefix_short;
+
+        /**
+            @var mowa0::Commandline::options_prefix_long
+            @brief
+        */
+        static Argument options_prefix_long;
+
+    public:
+        Commandline();
+        Commandline(int argc, char** argv, const Arguments& options);
+        virtual ~Commandline();
+
+        std::string operator[](const Argument& key) const;
 
     private:
-        void Parse();
+        void Parse(int argc, char** argv, const Arguments& options);
 
     private:
-        const std::map<std::wstring, std::wstring> cmdline_;
+        mutable Parameters parameters_;
 };
 
 /**
-    @class mowa0::CommandLineException
-    @brief CommandLineException class
+    @class mowa0::CommandlineException
+    @brief CommandlineException class
 */
-class CommandLineException :
+class CommandlineException :
     public mowa0::Exception
 {
+    public:
+        explicit CommandlineException(std::exception& e) :
+            Exception(e)
+        {
+        }
+
+        explicit CommandlineException(const std::string& where = WHERE, const std::string& what = "") :
+            Exception(where, what)
+        {
+        }
+
+        virtual ~CommandlineException() throw()
+        {
+        }
 };
 
 }
