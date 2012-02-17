@@ -45,6 +45,14 @@ auto pow2(const T x) -> decltype(x)
     return (x * x);
 }
 
+auto friday_lambda()
+{
+    {{}[=](...){_:&&_;}();{}}
+
+    auto L = [&](...)->int{return 0;};
+    L(1,2,3);
+}
+
 auto main(int argc, char** argv) -> int
 {
     // 1. new init style
