@@ -29,17 +29,15 @@ class Reader
 {
     public:
         Reader();
-        Reader(const std::string& path);
-        Reader(const std::wstring& path);
+        Reader(const mowa0::String& path);
         virtual ~Reader();
 
         mowa0::SyntaxTree Read();
-        mowa0::SyntaxTree Read(const std::string& chunk);
-        mowa0::SyntaxTree Read(const std::wstring& chunk);
+        mowa0::SyntaxTree Read(const mowa0::String& chunk);
 
     private:
-        const std::wstring path_;
-        const std::wstring chunk_;
+        const mowa0::String path_;
+        const mowa0::String chunk_;
 };
 
 /**

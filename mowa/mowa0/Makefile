@@ -10,7 +10,7 @@ MODULE_NAME := mowa0
 
 CXX_CFLAGS  := -Wall -Wextra -Wcast-align -Wundef -std=c++0x \
                -DTARGET_POSIX=1 -march=native -mtune=native  \
-               -D_FORTIFY_SOURCE=2 -g -DDEBUG
+               -D_FORTIFY_SOURCE=2 -g -DDEBUG -D_UNICODE
 
 SOURCES :=           \
     Lexer.cpp        \

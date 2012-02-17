@@ -19,8 +19,8 @@ bool Commandline::CompareArguments::operator()(const Argument& a, const Argument
     return (a < b);
 }
 
-Commandline::Argument Commandline::options_prefix_short = "-";
-Commandline::Argument Commandline::options_prefix_long  = "--";
+Commandline::Argument Commandline::options_prefix_short = _T("-");
+Commandline::Argument Commandline::options_prefix_long  = _T("--");
 
 Commandline::Commandline(int argc, char** argv, const Arguments& options) :
     parameters_()
@@ -43,7 +43,7 @@ Commandline::~Commandline()
 {
 }
 
-std::string Commandline::operator[](const Argument& key) const
+Commandline::Argument Commandline::operator[](const Argument& key) const
 {
     return parameters_[key];
 }
@@ -59,7 +59,15 @@ void Commandline::Parse(int argc, char** argv, const Arguments& options)
             throw CommandlineException(WHERE, "Nothing to Parse.");
 
         // Catch raw data and remove argv[0] aka the name of the program.
-        const Arguments commandline(argv + 1, argv + argc);
+        // 1st ansi version: const Arguments commandline(argv + 1, argv + argc);
+        Arguments commandline(argc - 1);
+        std::transform(argv + 1, argv + argc, commandline.begin(),
+                [](char*& item) -> Argument
+                {
+                    std::string tmp(item);
+                    return Argument(tmp.begin(), tmp.end());
+                }
+        );
 
         // Check parameters validity thru valid arguments list.
         if ( !commandline.empty() && !options.empty() )
@@ -104,7 +112,7 @@ void Commandline::Parse(int argc, char** argv, const Arguments& options)
         // Captured with the closure to be look-ahead key storage
         // for the value if it follows the key.
         // Empty key is also ok, it's used to capture values w/o parameters.
-        Argument prev_key = "";
+        Argument prev_key = Argument();
 
         // Cons Arguments list onto Parameters map.
         // Start over with original commandline list.
@@ -119,7 +127,7 @@ void Commandline::Parse(int argc, char** argv, const Arguments& options)
                 {
                     // When item is parameter's name, then store it without value,
                     // then overwrite and propogate current off this closure.
-                    result[item] = "";
+                    result[item] = Argument();
                     prev_key = item;
                 }
                 else

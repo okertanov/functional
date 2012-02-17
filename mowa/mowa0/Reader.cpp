@@ -20,13 +20,7 @@ Reader::Reader() :
 {
 }
 
-Reader::Reader(const std::string& path) :
-    path_(std::wstring(path.begin(), path.end())),
-    chunk_()
-{
-}
-
-Reader::Reader(const std::wstring& path) :
+Reader::Reader(const mowa0::String& path) :
     path_(path),
     chunk_()
 {
@@ -43,16 +37,7 @@ mowa0::SyntaxTree Reader::Read()
     return (tree);
 }
 
-mowa0::SyntaxTree Reader::Read(const std::string& chunk)
-{
-    mowa0::SyntaxTree tree;
-
-    UNUSED(chunk);
-
-    return (tree);
-}
-
-mowa0::SyntaxTree Reader::Read(const std::wstring& chunk)
+mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
 {
     mowa0::SyntaxTree tree;
 

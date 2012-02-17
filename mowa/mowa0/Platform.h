@@ -41,16 +41,31 @@
 #define TOSTRING(x) STRINGIFY(x)
 #define WHERE __FILE__ "(" TOSTRING(__LINE__) "): "
 
+#ifdef _UNICODE
+#define _T(X) L##X
+#else
+#define _T(X) X
+#endif
+
+#ifdef _UNICODE
+#define tcout wcout
+#define tcerr wcerr
+#else
+#define tcout cout
+#define tcerr cerr
+#endif
+
+
 /**
     @brief Quick-fix definitions, should be implemented
 */
 #define ASSERT(E)               assert(E)
 #define UNUSED(X)               (void)X
 #define LOG(L, M)               LOG1(L, M)
-#define LOG1(L, M)              do {std::cerr << M << std::endl;} while(0)
-#define LOG2(L, M, N)           do {std::cerr << M << N << std::endl;} while(0)
-#define LOG3(L, M, N, O)        do {std::cerr << M << N << O << std::endl;} while(0)
-#define LOG4(L, M, N, O, P)     do {std::cerr << M << N << O << P << std::endl;} while(0)
+#define LOG1(L, M)              do {std::tcerr << M << std::endl;} while(0)
+#define LOG2(L, M, N)           do {std::tcerr << M << N << std::endl;} while(0)
+#define LOG3(L, M, N, O)        do {std::tcerr << M << N << O << std::endl;} while(0)
+#define LOG4(L, M, N, O, P)     do {std::tcerr << M << N << O << P << std::endl;} while(0)
 
 #define DUMP(T, C)              do {\
                                         LOG(LOG_STDERR, "Dumping '" STRINGIFY(C) "'");          \
@@ -74,6 +89,11 @@
 
 namespace mowa0
 {
+#ifdef _UNICODE
+    typedef std::wstring String;
+#else
+    typedef std::string  String;
+#endif
 }
 
 #endif // PLATFORM_H_INCLUDED

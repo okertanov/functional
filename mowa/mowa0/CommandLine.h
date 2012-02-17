@@ -29,13 +29,13 @@ class Commandline
             @typedef mowa0::Commandline::Value
             @brief
         */
-        typedef std::string Value;
+        typedef mowa0::String Value;
 
         /**
             @typedef mowa0::Commandline::Argument
             @brief
         */
-        typedef std::string Argument;
+        typedef mowa0::String Argument;
 
         /**
             @typedef mowa0::Commandline::Arguments
@@ -75,7 +75,7 @@ class Commandline
         Commandline(int argc, char** argv, const Arguments& options);
         virtual ~Commandline();
 
-        std::string operator[](const Argument& key) const;
+        Argument operator[](const Argument& key) const;
 
     private:
         void Parse(int argc, char** argv, const Arguments& options);

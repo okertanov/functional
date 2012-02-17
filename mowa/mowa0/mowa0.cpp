@@ -20,13 +20,13 @@ int main(int argc, char** argv)
     // Valid command-line Parameters are:
     static mowa0::Commandline::Arguments valid_arguments =
     {
-        "--repl",
-        "--interpret",
-        "--compile",
-        "--source",
-        "--output",
-        "--help",
-        "--version"
+        _T("--repl"),
+        _T("--interpret"),
+        _T("--compile"),
+        _T("--source"),
+        _T("--output"),
+        _T("--help"),
+        _T("--version")
     };
 
     try
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
         mowa0::Commandline parameters(argc, argv, valid_arguments);
 
         // Create source reader
-        mowa0::Reader reader(parameters["--source"]);
+        mowa0::Reader reader(parameters[_T("--source")]);
 
         // Read input and build AST
         mowa0::SyntaxTree tree = reader.Read();
@@ -75,18 +75,18 @@ int main(int argc, char** argv)
 static void usage(const mowa0::Commandline::Arguments& args)
 {
     // Create prologue
-    std::string usagemsg(
-        "\nUsage: \n"
-        "\tmowa0 [parameters] [source file], where parameters are:\n"
+    mowa0::String usagemsg(
+        _T("\nUsage: \n")
+        _T("\tmowa0 [parameters] [source file], where parameters are:\n")
     );
 
     ASSERT(args.size());
 
     // Construct the message
     usagemsg = std::accumulate(args.begin(), args.end(), usagemsg,
-            [](std::string& result, const std::string& item) -> std::string
+            [](mowa0::String& result, const mowa0::Commandline::Argument& item) -> mowa0::String
             {
-                result.append("\t\t").append(item).append("\n");
+                result.append(_T("\t\t")).append(item).append(_T("\n"));
                 return (result);
             }
     );
