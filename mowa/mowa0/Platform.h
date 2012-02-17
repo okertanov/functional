@@ -94,6 +94,8 @@ namespace mowa0
 #else
     typedef std::string  String;
 #endif
+
+std::string WtoA(const mowa0::String& in);
 }
 
 #endif // PLATFORM_H_INCLUDED

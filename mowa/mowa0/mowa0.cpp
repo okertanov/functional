@@ -14,6 +14,10 @@
 
 int main(int argc, char** argv)
 {
+
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
     // Posix retcode
     int rc = EXIT_FAILURE;
 
@@ -35,10 +39,10 @@ int main(int argc, char** argv)
         mowa0::Commandline parameters(argc, argv, valid_arguments);
 
         // Create source reader
-        mowa0::Reader reader(parameters[_T("--source")]);
+        mowa0::Reader reader;
 
         // Read input and build AST
-        mowa0::SyntaxTree tree = reader.Read();
+        mowa0::SyntaxTree tree = reader.ReadFile(parameters[_T("--source")]);
 
         // Evaluate AST using top-level Global environment and return new environment
         mowa0::Environment environment = mowa0::Evaluator().Eval(tree, mowa0::global_environment);
@@ -68,6 +72,9 @@ int main(int argc, char** argv)
     {
         LOG(LOG_ERROR, "Unknown error.");
     }
+
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
 
     return (rc);
 }

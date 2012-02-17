@@ -29,17 +29,15 @@ class Reader
 {
     public:
         Reader();
-        Reader(const mowa0::String& path);
         virtual ~Reader();
 
-        mowa0::SyntaxTree Read();
         mowa0::SyntaxTree Read(const mowa0::String& chunk);
+        mowa0::SyntaxTree ReadFile(const mowa0::String& file);
 
     private:
-        const mowa0::String path_;
-        const mowa0::String chunk_;
+        mowa0::String file_;
+        mowa0::String chunk_;
 };
-
 /**
     @class mowa0::ReaderException
     @brief ReaderException class
@@ -47,6 +45,20 @@ class Reader
 class ReaderException :
     public mowa0::Exception
 {
+    public:
+        explicit ReaderException(std::exception& e) :
+            Exception(e)
+        {
+        }
+
+        explicit ReaderException(const std::string& where = WHERE, const std::string& what = "") :
+            Exception(where, what)
+        {
+        }
+
+        virtual ~ReaderException() throw()
+        {
+        }
 };
 
 
