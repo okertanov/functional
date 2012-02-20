@@ -13,9 +13,10 @@ CXX_CFLAGS  := -Wall -Wextra -Wcast-align -Wundef -std=c++0x \
                -D_FORTIFY_SOURCE=2 -g -DDEBUG -D_UNICODE
 
 SOURCES :=           \
+    Tokens.cpp       \
     Lexer.cpp        \
     Parser.cpp       \
-    Syntax.cpp       \
+    SyntaxTree.cpp   \
     Environment.cpp  \
     Reader.cpp       \
     Evaluator.cpp    \

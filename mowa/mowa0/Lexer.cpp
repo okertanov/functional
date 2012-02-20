@@ -15,12 +15,8 @@ namespace mowa0
 {
 
 Lexer::Lexer() :
-    chunk_()
-{
-}
-
-Lexer::Lexer(const mowa0::String& chunk) :
-    chunk_(chunk)
+    chunk_(),
+    tokens_()
 {
 }
 
@@ -28,12 +24,17 @@ Lexer::~Lexer()
 {
 }
 
-void Lexer::Scan()
+
+Lexer& Lexer::Tokenize(const mowa0::String& chunk)
 {
+    chunk_ = chunk;
+
+    return *this;
 }
 
-void Lexer::Tokenize()
+const Tokens& Lexer::GetTokens() const
 {
+    return tokens_;
 }
 
 }

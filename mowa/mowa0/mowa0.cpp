@@ -42,10 +42,10 @@ int main(int argc, char** argv)
         mowa0::Reader reader;
 
         // Read input and build AST
-        mowa0::Syntax tree = reader.ReadFile(parameters[_T("--source")]);
+        mowa0::SyntaxTree ast = reader.ReadFile(parameters[_T("--source")]);
 
         // Evaluate AST using top-level Global environment and return new environment
-        mowa0::Environment environment = mowa0::Evaluator().Eval(tree, mowa0::global_environment);
+        mowa0::Environment environment = mowa0::Evaluator().Eval(ast, mowa0::global_environment);
 
         // Everything is OK, returning 0 to the caller
         rc = EXIT_SUCCESS;

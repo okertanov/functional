@@ -14,7 +14,7 @@
 
 #include "Platform.h"
 #include "Exception.h"
-#include "Syntax.h"
+#include "SyntaxTree.h"
 #include "Lexer.h"
 #include "Parser.h"
 
@@ -31,8 +31,8 @@ class Reader
         Reader();
         virtual ~Reader();
 
-        mowa0::Syntax Read(const mowa0::String& chunk);
-        mowa0::Syntax ReadFile(const mowa0::String& file);
+        mowa0::SyntaxTree Read(const mowa0::String& chunk);
+        mowa0::SyntaxTree ReadFile(const mowa0::String& file);
 
     private:
         mowa0::String file_;

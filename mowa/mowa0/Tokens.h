@@ -1,5 +1,5 @@
 /**
-    @file       Syntax.h
+    @file       Tokens.h
     @brief      AST
 
     @author     Oleg Kertanov <okertanov@gmail.com>
@@ -9,8 +9,8 @@
     @see LICENSE file
 */
 
-#ifndef SYNTAX_H_INCLUDED
-#define SYNTAX_H_INCLUDED
+#ifndef TOKENS_H_INCLUDED
+#define TOKENS_H_INCLUDED
 
 #include "Platform.h"
 #include "Exception.h"
@@ -19,42 +19,42 @@ namespace mowa0
 {
 
 /**
-    @class mowa0::Syntax
-    @brief Syntax class
+    @class mowa0::Tokens
+    @brief Tokens class
 */
-class Syntax
+class Tokens
 {
     public:
-        Syntax();
-        virtual ~Syntax();
+        Tokens();
+        virtual ~Tokens();
 
     private:
 };
 
 /**
-    @class mowa0::SyntaxException
-    @brief SyntaxException class
+    @class mowa0::TokensException
+    @brief TokensxException class
 */
-class SyntaxException :
+class TokensException :
     public mowa0::Exception
 {
     public:
-        explicit SyntaxException(std::exception& e) :
+        explicit TokensException(std::exception& e) :
             Exception(e)
         {
         }
 
-        explicit SyntaxException(const std::string& where = WHERE, const std::string& what = "") :
+        explicit TokensException(const std::string& where = WHERE, const std::string& what = "") :
             Exception(where, what)
         {
         }
 
-        virtual ~SyntaxException() throw()
+        virtual ~TokensException() throw()
         {
         }
 };
 
 }
 
-#endif // SYNTAX_H_INCLUDED
+#endif // TOKENS_H_INCLUDED
 

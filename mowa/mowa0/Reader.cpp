@@ -35,13 +35,18 @@ Reader::~Reader()
 {
 }
 
-mowa0::Syntax Reader::Read(const mowa0::String& chunk)
+mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
 {
-    mowa0::Syntax ast;
+    mowa0::SyntaxTree ast;
 
     try
     {
         chunk_ = chunk;
+
+        Lexer lexer;
+        lexer.Tokenize(chunk_);
+        Parser parser;
+        ast = parser.Parse(lexer.GetTokens());
     }
     catch(std::exception& e)
     {
@@ -55,9 +60,9 @@ mowa0::Syntax Reader::Read(const mowa0::String& chunk)
     return (ast);
 }
 
-mowa0::Syntax Reader::ReadFile(const mowa0::String& file)
+mowa0::SyntaxTree Reader::ReadFile(const mowa0::String& file)
 {
-    mowa0::Syntax ast;
+    mowa0::SyntaxTree ast;
 
     try
     {
@@ -75,7 +80,7 @@ mowa0::Syntax Reader::ReadFile(const mowa0::String& file)
                     std::back_inserter(chunk));
         ifs.close();
 
-        Read(chunk);
+        ast = Read(chunk);
     }
     catch(std::exception& e)
     {

@@ -14,7 +14,7 @@
 
 #include "Platform.h"
 #include "Exception.h"
-#include "Syntax.h"
+#include "SyntaxTree.h"
 #include "Environment.h"
 
 namespace mowa0
@@ -30,7 +30,7 @@ class Evaluator
         Evaluator();
         virtual ~Evaluator();
 
-        Environment Eval(const Syntax& ast, const Environment& env);
+        Environment Eval(const SyntaxTree& ast, const Environment& env);
 
     private:
 };

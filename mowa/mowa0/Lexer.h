@@ -14,6 +14,7 @@
 
 #include "Platform.h"
 #include "Exception.h"
+#include "Tokens.h"
 
 namespace mowa0
 {
@@ -26,14 +27,15 @@ class Lexer
 {
     public:
         Lexer();
-        Lexer(const mowa0::String& chunk);
         virtual ~Lexer();
 
-        void Scan();
-        void Tokenize();
+        Lexer& Tokenize(const mowa0::String& chunk);
+
+        const Tokens& GetTokens() const;
 
     private:
-        const mowa0::String chunk_;
+        mowa0::String chunk_;
+        Tokens tokens_;
 };
 
 /**

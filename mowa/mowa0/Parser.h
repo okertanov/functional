@@ -14,9 +14,26 @@
 
 #include "Platform.h"
 #include "Exception.h"
+#include "Tokens.h"
+#include "SyntaxTree.h"
 
 namespace mowa0
 {
+
+/**
+    @class mowa0::Parser
+    @brief Parser class
+*/
+class Parser
+{
+    public:
+        Parser();
+        virtual ~Parser();
+
+        const SyntaxTree Parse(const Tokens& tokens);
+
+    private:
+};
 
 /**
     @class mowa0::ParserException

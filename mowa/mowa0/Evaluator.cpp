@@ -22,7 +22,7 @@ Evaluator::~Evaluator()
 {
 }
 
-Environment Evaluator::Eval(const Syntax& ast, const Environment& env)
+Environment Evaluator::Eval(const SyntaxTree& ast, const Environment& env)
 {
     mowa0::Environment res_env;
 

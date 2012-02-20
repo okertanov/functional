@@ -13,5 +13,23 @@
 
 namespace mowa0
 {
+
+Parser::Parser()
+{
+}
+
+Parser::~Parser()
+{
+}
+
+const SyntaxTree Parser::Parse(const Tokens& tokens)
+{
+    SyntaxTree ast;
+
+    UNUSED(tokens);
+
+    return (ast);
+}
+
 }
 
