@@ -15,7 +15,7 @@ CXX_CFLAGS  := -Wall -Wextra -Wcast-align -Wundef -std=c++0x \
 SOURCES :=           \
     Lexer.cpp        \
     Parser.cpp       \
-    SyntaxTree.cpp   \
+    Syntax.cpp       \
     Environment.cpp  \
     Reader.cpp       \
     Evaluator.cpp    \

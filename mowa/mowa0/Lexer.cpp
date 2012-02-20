@@ -19,7 +19,7 @@ Lexer::Lexer() :
 {
 }
 
-Lexer::Lexer(const std::wstring& chunk) :
+Lexer::Lexer(const mowa0::String& chunk) :
     chunk_(chunk)
 {
 }

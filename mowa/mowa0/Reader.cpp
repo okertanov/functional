@@ -1,6 +1,6 @@
 /**
     @file       Reader.cpp
-    @brief      Reader implementation.
+    @brief      Reader implementation: recursive-descent parser.
 
     @author     Oleg Kertanov <okertanov@gmail.com>
     @date       Feb 2012
@@ -35,9 +35,9 @@ Reader::~Reader()
 {
 }
 
-mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
+mowa0::Syntax Reader::Read(const mowa0::String& chunk)
 {
-    mowa0::SyntaxTree tree;
+    mowa0::Syntax ast;
 
     try
     {
@@ -52,12 +52,12 @@ mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
         throw ReaderException(WHERE);
     }
 
-    return (tree);
+    return (ast);
 }
 
-mowa0::SyntaxTree Reader::ReadFile(const mowa0::String& file)
+mowa0::Syntax Reader::ReadFile(const mowa0::String& file)
 {
-    mowa0::SyntaxTree tree;
+    mowa0::Syntax ast;
 
     try
     {
@@ -86,7 +86,7 @@ mowa0::SyntaxTree Reader::ReadFile(const mowa0::String& file)
         throw ReaderException(WHERE);
     }
 
-    return (tree);
+    return (ast);
 }
 
 }

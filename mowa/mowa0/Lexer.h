@@ -26,14 +26,14 @@ class Lexer
 {
     public:
         Lexer();
-        Lexer(const std::wstring& chunk);
+        Lexer(const mowa0::String& chunk);
         virtual ~Lexer();
 
         void Scan();
         void Tokenize();
 
     private:
-        const std::wstring chunk_;
+        const mowa0::String chunk_;
 };
 
 /**

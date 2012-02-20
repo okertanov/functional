@@ -1,5 +1,5 @@
 /**
-    @file       SyntaxTree.cpp
+    @file       Syntax.cpp
     @brief      AST implementation.
 
     @author     Oleg Kertanov <okertanov@gmail.com>
@@ -9,16 +9,16 @@
     @see LICENSE file
 */
 
-#include "SyntaxTree.h"
+#include "Syntax.h"
 
 namespace mowa0
 {
 
-SyntaxTree::SyntaxTree()
+Syntax::Syntax()
 {
 }
 
-SyntaxTree::~SyntaxTree()
+Syntax::~Syntax()
 {
 }
 
