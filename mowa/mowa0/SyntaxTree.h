@@ -20,6 +20,47 @@ namespace mowa0
 {
 
 /**
+    @brief Forward declarations
+*/
+class SyntaxNode;
+class SyntaxTree;
+
+/**
+    @typedef mowa0::SyntaxNodePtr
+    @brief
+*/
+typedef std::shared_ptr<SyntaxNode> SyntaxNodePtr;
+
+/**
+    @typedef mowa0::SyntaxNodeList
+    @brief
+*/
+typedef std::list<SyntaxNodePtr> SyntaxNodeList;
+
+/**
+    @typedef mowa0::SyntaxNodeListPtr
+    @brief
+*/
+typedef std::shared_ptr<SyntaxNodeList> SyntaxNodeListPtr;
+
+/**
+    @class mowa0::SyntaxNode
+    @brief SyntaxNode class
+*/
+class SyntaxNode
+{
+    public:
+        SyntaxNode();
+        ~SyntaxNode();
+
+        SyntaxNodeList& Children();
+
+    private:
+        Token token_; //TODO: subject to change
+        SyntaxNodeListPtr children_;
+};
+
+/**
     @class mowa0::SyntaxTree
     @brief SyntaxTree class
 */
@@ -29,7 +70,10 @@ class SyntaxTree
         SyntaxTree();
         virtual ~SyntaxTree();
 
+        SyntaxNode& Root();
+
     private:
+        SyntaxNodePtr root_;
 };
 
 /**

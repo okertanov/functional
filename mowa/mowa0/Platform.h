@@ -20,6 +20,8 @@
 #include <cstring>
 #include <cassert>
 
+#include <new>
+#include <memory>
 #include <fstream>
 #include <sstream>
 #include <iomanip>

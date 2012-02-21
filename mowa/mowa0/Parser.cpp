@@ -26,7 +26,25 @@ const SyntaxTree Parser::Parse(const Tokens& tokens)
 {
     SyntaxTree ast;
 
-    UNUSED(tokens);
+    try
+    {
+        if ( !tokens.empty() )
+        {
+            for (const Token& token : tokens)
+            {
+                mowa0::String dump = mowa0::String(1, token.type_ + 32) + _T("->") + token.body_;
+                LOG(LOG_DEBUG, dump);
+            }
+        }
+    }
+    catch(std::exception& e)
+    {
+        throw ParserException(e);
+    }
+    catch(...)
+    {
+        throw ParserException(WHERE);
+    }
 
     return (ast);
 }

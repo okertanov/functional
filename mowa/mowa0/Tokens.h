@@ -24,18 +24,19 @@ namespace mowa0
 */
 enum TokenType
 {
-    TOKEN_PARLEFT,      /* Left parenthesis     (       */
-    TOKEN_PARRIGHT,     /* Right parenthesis    )       */
-    TOKEN_BRACKLEFT,    /* Left bracket         [       */
-    TOKEN_BRACKRIGHT,   /* Right bracket        ]       */
-    TOKEN_NUMBER,       /* Number               0-9     */
-    TOKEN_STRING,       /* String               "abc"   */
-    TOKEN_SYMBOL,       /* Symbol               symbol  */
-    TOKEN_DOT,          /* Dot                  .       */
-    TOKEN_COMMA,        /* Comma                ,       */
-    TOKEN_QUOTATION,    /* Quotation            '       */
-    TOKEN_WHITESPACE,   /* Whitespace           _       */
-    TOKEN_COMMENT       /* Comment              ;;      */
+    TOKEN_WHITESPACE,   /* Whitespace           _               */
+    TOKEN_COMMENT,      /* Comment              ;;              */
+    TOKEN_PARLEFT,      /* Left parenthesis     (               */
+    TOKEN_PARRIGHT,     /* Right parenthesis    )               */
+    TOKEN_BRACKLEFT,    /* Left bracket         [               */
+    TOKEN_BRACKRIGHT,   /* Right bracket        ]               */
+    TOKEN_ATOM,         /* Atom                 any of below    */
+    TOKEN_NUMBER,       /* Number               0-9             */
+    TOKEN_STRING,       /* String               "abc"           */
+    TOKEN_SYMBOL,       /* Symbol               symbol          */
+    TOKEN_DOT,          /* Dot                  .               */
+    TOKEN_COMMA,        /* Comma                ,               */
+    TOKEN_QUOTATION     /* Quotation            '               */
 };
 
 /**

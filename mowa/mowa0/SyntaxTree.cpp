@@ -14,12 +14,33 @@
 namespace mowa0
 {
 
-SyntaxTree::SyntaxTree()
+SyntaxNode::SyntaxNode() :
+    token_(),
+    children_(std::make_shared<SyntaxNodeList>())
+{
+}
+
+SyntaxNode::~SyntaxNode()
+{
+}
+
+SyntaxNodeList& SyntaxNode::Children()
+{
+    return (*children_);
+}
+
+SyntaxTree::SyntaxTree() :
+    root_(std::make_shared<SyntaxNode>())
 {
 }
 
 SyntaxTree::~SyntaxTree()
 {
+}
+
+SyntaxNode& SyntaxTree::Root()
+{
+    return (*root_);
 }
 
 }

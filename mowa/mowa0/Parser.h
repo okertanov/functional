@@ -1,6 +1,6 @@
 /**
     @file       Parser.h
-    @brief      The Syntax Parser: issued to convert Tokens -> Syntax tree
+    @brief      The Syntax LL(1) Parser: issued to convert Tokens -> Syntax tree
 
     @author     Oleg Kertanov <okertanov@gmail.com>
     @date       Feb 2012
@@ -42,6 +42,20 @@ class Parser
 class ParserException :
     public mowa0::Exception
 {
+    public:
+        explicit ParserException(std::exception& e) :
+            Exception(e)
+        {
+        }
+
+        explicit ParserException(const std::string& where = WHERE, const std::string& what = "") :
+            Exception(where, what)
+        {
+        }
+
+        virtual ~ParserException() throw()
+        {
+        }
 };
 
 }

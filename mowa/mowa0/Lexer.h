@@ -1,7 +1,7 @@
 /**
     @file       Lexer.h
-    @brief      Lexer LL(1) of the context-free grammars.
-                The part of the Parser: issued to convert Characters -> Tokens
+    @brief      Lexer for the context-free grammars.
+                The part of the LL(1) Parser: issued to convert Characters -> Tokens
 
     @author     Oleg Kertanov <okertanov@gmail.com>
     @date       Feb 2012
