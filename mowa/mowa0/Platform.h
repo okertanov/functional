@@ -90,10 +90,19 @@
 namespace mowa0
 {
 #ifdef _UNICODE
-    typedef std::wstring String;
+    typedef std::wstring    String;
+    typedef wchar_t         CharType;
 #else
-    typedef std::string  String;
+    typedef std::string     String;
+    typedef char            CharType;
 #endif
+
+
+/**
+    @typedef mowa0::TriState
+    @brief
+*/
+typedef enum {TRI_INTERMIDIATE = -1, TRI_FALSE = 0, TRI_TRUE = 1}   TriState;
 
 std::string WtoA(const mowa0::String& in);
 }

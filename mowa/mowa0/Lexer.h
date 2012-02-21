@@ -1,6 +1,7 @@
 /**
     @file       Lexer.h
-    @brief      Lexer part of the Parser: issued to convert Characters -> Tokens
+    @brief      Lexer LL(1) of the context-free grammars.
+                The part of the Parser: issued to convert Characters -> Tokens
 
     @author     Oleg Kertanov <okertanov@gmail.com>
     @date       Feb 2012
@@ -45,6 +46,20 @@ class Lexer
 class LexerException :
     public mowa0::Exception
 {
+    public:
+        explicit LexerException(std::exception& e) :
+            Exception(e)
+        {
+        }
+
+        explicit LexerException(const std::string& where = WHERE, const std::string& what = "") :
+            Exception(where, what)
+        {
+        }
+
+        virtual ~LexerException() throw()
+        {
+        }
 };
 
 }

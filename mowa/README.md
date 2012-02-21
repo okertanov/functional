@@ -86,6 +86,9 @@ Naming
 * lamed
 * bicycle-like
 
-??
---
+TODO
+----
 crucially based -- which uses an infinite tower of interpreters;
+
+Inject/hoist minimally needed forms into the global ctx.
+cons, define, lambda, etc...

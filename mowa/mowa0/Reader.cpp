@@ -44,8 +44,9 @@ mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
         chunk_ = chunk;
 
         Lexer lexer;
-        lexer.Tokenize(chunk_);
         Parser parser;
+
+        lexer.Tokenize(chunk_);
         ast = parser.Parse(lexer.GetTokens());
     }
     catch(std::exception& e)

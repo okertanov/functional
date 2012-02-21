@@ -1,6 +1,6 @@
 /**
     @file       Tokens.cpp
-    @brief      AST implementation.
+    @brief      Token & TokenList implementation.
 
     @author     Oleg Kertanov <okertanov@gmail.com>
     @date       Feb 2012
