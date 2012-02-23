@@ -1,0 +1,8 @@
+(How to Write a (Lisp) Interpreter (in Python))
+
+by Peter Norvig
+
+This page has two purposes: to describe how to implement computer language interpreters in general, and in particular to show how to implement a subset of the Scheme dialect of Lisp using Python. I call my interpreter Lispy (lis.py). Years ago, I showed how to write a Scheme interpreter in Java as well as one in Common Lisp. This time around the goal is to demonstrate, as concisely and accessibly as possible, what Alan Kay called "Maxwell's Equations of Software." (If you like this treatment, there is a followup essay with a more complex interpreter.
+
+http://norvig.com/lispy.html
+

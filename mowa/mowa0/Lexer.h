@@ -47,8 +47,8 @@ class LexerException :
     public mowa0::Exception
 {
     public:
-        explicit LexerException(std::exception& e) :
-            Exception(e)
+        explicit LexerException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 

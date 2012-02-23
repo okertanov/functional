@@ -21,8 +21,8 @@ class Exception :
     public std::exception
 {
     public:
-        explicit Exception(std::exception& e) :
-            message_(e.what())
+        explicit Exception(const std::string& where, std::exception& e) :
+            message_(where + e.what())
         {
         }
 

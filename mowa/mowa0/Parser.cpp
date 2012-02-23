@@ -39,7 +39,7 @@ const SyntaxTree Parser::Parse(const Tokens& tokens)
     }
     catch(std::exception& e)
     {
-        throw ParserException(e);
+        throw ParserException(WHERE, e);
     }
     catch(...)
     {

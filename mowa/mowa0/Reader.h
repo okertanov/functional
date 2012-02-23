@@ -46,8 +46,8 @@ class ReaderException :
     public mowa0::Exception
 {
     public:
-        explicit ReaderException(std::exception& e) :
-            Exception(e)
+        explicit ReaderException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 

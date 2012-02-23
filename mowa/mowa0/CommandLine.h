@@ -92,8 +92,8 @@ class CommandlineException :
     public mowa0::Exception
 {
     public:
-        explicit CommandlineException(std::exception& e) :
-            Exception(e)
+        explicit CommandlineException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 

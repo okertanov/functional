@@ -7,10 +7,10 @@ if __name__ == "__main__":
     fmt = "png"
     width, height = 142, 74 # 50 x 26 mm
 
-    str_fmt = "0000{0} LV"
+    str_fmt = "0000{0}LV"
 
-    range_begin = 60001
-    range_end   = 75001 + 1
+    range_begin = 62519
+    range_end   = 63619 + 1
 
     for i in range(range_begin, range_end):
         code = str_fmt.format(i)

@@ -183,7 +183,7 @@ Lexer& Lexer::Tokenize(const mowa0::String& chunk)
     }
     catch(std::exception& e)
     {
-        throw LexerException(e);
+        throw LexerException(WHERE, e);
     }
     catch(...)
     {

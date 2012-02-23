@@ -100,8 +100,8 @@ class TokensException :
     public mowa0::Exception
 {
     public:
-        explicit TokensException(std::exception& e) :
-            Exception(e)
+        explicit TokensException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 

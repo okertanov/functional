@@ -64,6 +64,10 @@ int main(int argc, char** argv)
     {
         LOG(LOG_ERROR, e.what());
     }
+    catch(mowa0::ReaderException& e)
+    {
+        LOG(LOG_ERROR, e.what());
+    }
     catch(std::exception& e)
     {
         LOG(LOG_ERROR, e.what());

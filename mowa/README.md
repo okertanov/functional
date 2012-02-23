@@ -92,3 +92,11 @@ crucially based -- which uses an infinite tower of interpreters;
 
 Inject/hoist minimally needed forms into the global ctx.
 cons, define, lambda, etc...
+
+
+Links
+[Lexing and Parsing with Marpa](http://savage.net.au/Ron/html/graphviz2.marpa/Lexing.and.Parsing.with.Marpa.html)
+[Lexing](http://en.wikipedia.org/wiki/Lexing)
+[LL_parser](http://en.wikipedia.org/wiki/LL_parser)
+[The most minimal LISP? - closed](http://stackoverflow.com/questions/4589366/the-most-minimal-lisp)
+[How many primitives does it take to build a LISP machine? Ten, seven or five?](http://stackoverflow.com/questions/3482389/how-many-primitives-does-it-take-to-build-a-lisp-machine-ten-seven-or-five)

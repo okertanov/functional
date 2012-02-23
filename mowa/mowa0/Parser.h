@@ -43,8 +43,8 @@ class ParserException :
     public mowa0::Exception
 {
     public:
-        explicit ParserException(std::exception& e) :
-            Exception(e)
+        explicit ParserException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 

@@ -23,7 +23,7 @@ Reader::Reader() :
     }
     catch(std::exception& e)
     {
-        throw ReaderException(e);
+        throw ReaderException(WHERE, e);
     }
     catch(...)
     {
@@ -51,7 +51,7 @@ mowa0::SyntaxTree Reader::Read(const mowa0::String& chunk)
     }
     catch(std::exception& e)
     {
-        throw ReaderException(e);
+        throw ReaderException(WHERE, e);
     }
     catch(...)
     {
@@ -85,7 +85,7 @@ mowa0::SyntaxTree Reader::ReadFile(const mowa0::String& file)
     }
     catch(std::exception& e)
     {
-        throw ReaderException(e);
+        throw ReaderException(WHERE, e);
     }
     catch(...)
     {

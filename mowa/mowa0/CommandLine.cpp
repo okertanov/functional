@@ -31,7 +31,7 @@ Commandline::Commandline(int argc, char** argv, const Arguments& options) :
     }
     catch(std::exception& e)
     {
-        throw CommandlineException(e);
+        throw CommandlineException(WHERE, e);
     }
     catch(...)
     {
@@ -142,7 +142,7 @@ void Commandline::Parse(int argc, char** argv, const Arguments& options)
     }
     catch(std::exception& e)
     {
-        throw CommandlineException(e);
+        throw CommandlineException(WHERE, e);
     }
     catch(...)
     {

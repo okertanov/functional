@@ -84,8 +84,8 @@ class SyntaxTreeException :
     public mowa0::Exception
 {
     public:
-        explicit SyntaxTreeException(std::exception& e) :
-            Exception(e)
+        explicit SyntaxTreeException(const std::string& where, std::exception& e) :
+            Exception(where, e)
         {
         }
 
