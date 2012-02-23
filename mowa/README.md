@@ -143,3 +143,4 @@ Links
 [LL_parser](http://en.wikipedia.org/wiki/LL_parser)
 [The most minimal LISP? - closed](http://stackoverflow.com/questions/4589366/the-most-minimal-lisp)
 [How many primitives does it take to build a LISP machine? Ten, seven or five?](http://stackoverflow.com/questions/3482389/how-many-primitives-does-it-take-to-build-a-lisp-machine-ten-seven-or-five)
+[What the Read Function Accepts](http://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node188.html)
