@@ -93,6 +93,9 @@ Posix Shell
     echo {1..10}
     touch /tmp/{a,b,c}
 
+### Files
+    mkdir -p Maildir/{new,cur,tmp}
+
 ### Find, grep
     find ./* -maxdepth 1 -prune -type d -print0 | xargs -0 -Ii ls -d i
     find ./  -maxdepth 2 -name .git -print | while read repo; do cd $(dirname $repo); git pull; done
