@@ -226,6 +226,8 @@ Unsorted
 
     until diff <(cat /dev/urandom|strings|dd bs=1 count=$(stat -c %s hamlet.txt) 2>/dev/null) hamlet.txt;do type;done # infinity monkeys -- /via @climagic
 
+    grep 938a03a76c531f49fa9e303578796158 <(md5sum *) # Check which files if any in current directory have provided md5sum. /via @climagic
+
 
 From my Track
 -------------
