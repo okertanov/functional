@@ -83,6 +83,7 @@ More FP Mumbo-jumbo
 * trampoline
 * hoisting
 * transpiler
+* immediately-invoked function
 
 Metaprogramming
 ---------------
