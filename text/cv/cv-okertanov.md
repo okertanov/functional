@@ -13,36 +13,11 @@ Professional Skills
 -------------------
 
 ### Programming languages:
-* С/C++
-* Python
-* JavaScript
-* Lua
-* Perl
-* Scheme
-* Objective-C
-* ARM Assembler
+C/C++, Python, JavaScript, Lua, Perl, Scheme, Objective-C, ARM Assembler
 
 ### Operating systems:
 * Windows (CE/WinMobile, NT, 2000, XP, Seven)
-* Unix (Linux/RT Linux, FreeBSD, Solaris)
-* OS X, iOS
-
-### Tools and technologies:
-* Microsoft Visual Studio.NET
-* GNU GCC, automake, Scons
-* Xcode
-* vim
-* git/cvs/svn
-* Jira, Mantis
-
-### Embedded tools and technologies:
-* JTAG debug
-* ARM ADS
-* eSim RAPID
-* Lauterbach Trace32
-* X86/ARM optimization
-* Performance profiling
-* Nucleus OS
+* Unix (Linux/RT Linux, FreeBSD, OS X, Solaris)
 
 ### Technologies, API and foundations:
 * stl, boost
@@ -70,6 +45,23 @@ Professional Skills
 * SIP
 * RTP, RTSP
 
+### Development tools:
+* Microsoft Visual Studio.NET
+* GNU GCC, automake, Scons
+* Xcode
+* vim
+* git/cvs/svn
+* Jira, Mantis
+
+### Embedded tools:
+* JTAG debug
+* ARM ADS
+* eSim RAPID
+* Lauterbach Trace32
+* X86/ARM optimization
+* Performance profiling
+* Nucleus OS
+
 ### Office and productivity applications:
 Microsoft Office, Open Office, TeX, MS Project, MS Sharepoint, Google Docs
 
@@ -79,14 +71,14 @@ Agile/XP, Classic Waterfall model, basic RUP knowledge
 Employment Experience
 ---------------------
 
-### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 – present)
+### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - present)
 * I've been involved in the Video Surveillance system development.
 * Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
 * Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser.
 
 ---------------------------------------
 
-### Senior Software Engineer: ISS International, Riga, Latvia (2007 – 2010)
+### Senior Software Engineer: ISS International, Riga, Latvia (2007 - 2010)
 * Unix/Linux/Networking Software development & Integration (ha network services)
 * Image/Video/Audio processing application development (ffmpeg/libavcodec)
 * rtp/rtsp and SIP protocol implementation and integration (own sip stack)
@@ -95,7 +87,7 @@ Employment Experience
 
 ---------------------------------------
 
-### Senior Software Engineer: Flextronics Design Ukraine, Kiev, Ukraine (2004 – 2007)
+### Senior Software Engineer: Flextronics Design Ukraine, Kiev, Ukraine (2004 - 2007)
 * Developed applications for embedded platforms: TI OMAP310, Intel XSCALE
 PXA800F, CEVA TeakLite.
 * Designed interface and system components for an embedded operating system for
@@ -105,7 +97,7 @@ different embedded devices. Porting the system onto Intel Manitoba XScale-based
 hardware platform. On-site support and integration.
 * Participated in the development and support of a cross-platform build system and in
 project integration.
-* DECT 6.0 cordless phone. Caller ID core logic development and customization – FSK,
+* DECT 6.0 cordless phone. Caller ID core logic development and customization - FSK,
 Bellcore and DTMF standards
 * Reference design for EDCT cordless device named “USB Dongle”, which serves as the
 main integration point for EDCT cordless network and PC-side internet applications:
@@ -123,7 +115,7 @@ Code (4,500 files) from VxWorks to compile with U-Boot
 
 ---------------------------------------
 
-### Lead Programmer: Cresotech Inc., Dublin, Ireland – Kiev, Ukraine (2000-2003)
+### Lead Programmer: Cresotech Inc., Dublin, Ireland - Kiev, Ukraine (2000-2003)
 * Developed multimedia applications for the PC/Windows platform.
 * Developed multimedia applications for the Pocket PC/Windows CE platform.
 * Developed network applications and Microsoft SMB network access tools for Pocket PC
@@ -138,7 +130,7 @@ development tools and technologies, porting methods.
 
 Education
 ---------
-### CIM, Cherkassy, Ukraine
+### CIM, Ukraine
 * Specialist: Information Technologies in Economics (five-year degree, 1999)
 * Bachelor: Economics (four-year degree, 1998)
 
