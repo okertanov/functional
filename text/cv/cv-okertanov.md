@@ -179,7 +179,6 @@ MSN Messenger, Skype, Yahoo Messeger
 * Developed multimedia applications for the Pocket PC/Windows CE platform.
 * Developed network applications and Microsoft SMB network access tools for Pocket PC devices.
 * Implemented a protection system for the Pocket PC platform.
-* Participated in www.threesold.com web-project as a programmer.
 * Developed business solutions for the Pocket PC / Windows CE platform
  - bar code scanners,
  - network access for mobile devices,
@@ -189,6 +188,7 @@ MSN Messenger, Skype, Yahoo Messeger
  - software and hardware,
  - development tools and technologies,
  - porting methods.
+* Participated in web-projects as a programmer.
 
 Education
 ---------
