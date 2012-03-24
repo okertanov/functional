@@ -113,6 +113,7 @@ Professional skills and expertise
 * apply, filter, map, reduce, fold and zip HOF's
 * LISP
 * MATLAB
+
 #### What I don't understand exactly:
 * Fixed point combinator
 * Monads
@@ -208,9 +209,9 @@ International Certificates
 HR Disclaimer
 -------------
 Personally I don't like some interview questions like:
-> "Why on earth for what reason that round things are round?"
-> "Huh, take pen and quickly write quick sort algorithm impl, pls."
-> "Is there kinda of virtual constructor? And what about destructor?"
+    "Why on earth for what reason that round things are round?"
+    "Huh, take pen and quickly write quick sort algorithm impl, pls."
+    "Is there kinda of virtual constructor? And what about destructor?"
 Please no "light bulb", mazes, etc, if you dare.
 
 Thank You!
