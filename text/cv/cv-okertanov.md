@@ -43,8 +43,7 @@ Professional skills and expertise
  - Apple OS X/iOS
  - Sun Solaris
 * Windows
- - NT/2000/XP
- - Seven/Eight
+ - NT, 2000, XP, Seven, Eight
  - CE/WinMobile/Windows Phone
 * Virtualization
  - XEN PV/HVM with LVM
@@ -94,31 +93,16 @@ Professional skills and expertise
 * WWW/Proxy servers, LAMP, Web2.0
 * Mail gateways
 * PPP/RAS, VPN
-* SIP
-* RTP, RTSP
+* SIP, RTP, RTSP
 
 ### Computation, Computer science, Functional calculus
-####I exactly understand and successfully applying it:
-* Lambda calculus
-* Higher-order functions
-* Currying
-* Closure
-* Continuation
-* Tail recursion
-* Homoiconicity
-* Reflection
-* Declarative programming
-* Literate programming
+* Lambda calculus, Currying, Closures, Continuations, Tail recursion
 * DSL, AOP, STM
 * apply, filter, map, reduce, fold and zip HOF's
+* Homoiconicity, Reflection
+* Declarative programming, Literate programming
 * LISP
 * MATLAB
-
-#### What I don't understand exactly:
-* Fixed point combinator
-* Monads
-* Prolog
-* Some design patterns
 
 ### Office and productivity applications:
 \LaTeX, MS Office, Open Office, MS Project, MS Sharepoint, Google Docs
@@ -147,21 +131,20 @@ Employment Experience
 * rtp/rtsp and SIP protocol implementation and integration (own sip stack)
  - C, Python, PHP, ffmpeg/libavcodec
 * Sun Lustre Cluster Filesytem integration & linux kernel porting.
- - (detailed project information cannot be disclosed).
+ - (detailed project information cannot be disclosed)
 
 ------------------------------------------------------------------------------
 
 ### Senior Software Engineer: Flextronics Design Ukraine, Kiev, Ukraine (2004 - 2007)
 * Developed applications for embedded platforms: TI OMAP310, Intel XSCALE PXA800F, CEVA TeakLite.
 * Designed interface and system components for an embedded operating system for mobile devices.
-Full stack of development tools and libraries for developing MMI applications for
-different embedded devices. Porting the system onto Intel Manitoba XScale-based
-hardware platform. On-site support and integration.
+    Full stack of development tools and libraries for developing MMI applications for
+    different embedded devices. Porting the system onto Intel Manitoba XScale-based
+    hardware platform. On-site support and integration.
 * Participated in the development and support of a cross-platform build system and in project integration.
 * DECT 6.0 cordless phone. Caller ID core logic development and customization - FSK, Bellcore and DTMF standards.
 * Reference design for EDCT cordless device named “USB Dongle”,
-which serves as the main integration point for EDCT cordless network and PC-side internet applications:
-MSN Messenger, Skype, Yahoo Messeger
+    which serves as the main integration point for EDCT cordless network and PC internet applications: MSN Messenger, Skype, Yahoo Messeger.
 * Make U-Boot work with BSP Code. Port MARVELL Network Packet Processor BSP Code (4,500 files) from VxWorks to compile with U-Boot.
 * Provided client support to companies in Israel and South Korea.
 
@@ -170,7 +153,7 @@ MSN Messenger, Skype, Yahoo Messeger
 ### Senior Software Engineer: Malva Closed Joint-Stock Company, Kiev, Ukraine (2004)
 * Developed Windows NT/Unix cross-platform applications
 * Philips Mifare Smart Card protocol implementation and auth infrastructure
- - (project information cannot be disclosed).
+ - (project information cannot be disclosed)
 
 ------------------------------------------------------------------------------
 
@@ -200,21 +183,6 @@ Languages
 ---------
 * Russian - native
 * English - strong communication skills, computer-related technical lexic
-
-International Certificates
---------------------------
-* Brainbench: C++ Programmer
-* Brainbench: Unix Administrator
-
-HR Disclaimer
--------------
-Personally I don't like some interview questions like:
-
-    "Why on earth for what reason that round things are round?"
-    "Huh, take pen and quickly write quick sort algorithm impl, pls."
-    "Is there kinda of virtual constructor? And what about destructor?"
-
-Please no "light bulb", mazes, etc, if you dare.
 
 Thank You!
 ----------
