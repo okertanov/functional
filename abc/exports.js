@@ -1,3 +1,5 @@
+// via Oliver Caldwell, http://oli.me.uk/2012/03/14/writing-great-javascript
+
 ;(function(exports) {
     'use strict';
 
