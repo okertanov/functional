@@ -9,8 +9,8 @@ if __name__ == "__main__":
 
     str_fmt = "0000{0}LV"
 
-    range_begin = 62519
-    range_end   = 63619 + 1
+    range_begin = 63168
+    range_end   = 64267 + 1
 
     for i in range(range_begin, range_end):
         code = str_fmt.format(i)

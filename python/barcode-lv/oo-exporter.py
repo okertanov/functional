@@ -38,7 +38,7 @@ cursor = text.createTextCursor()
 def InjectBarcode(i):
     str_fmt = "0000%dLV"
     #path_fmt = "file:///Users/nata/projects/barcode-lv.git/%s.png"
-    path_fmt = "file:///C:/okertanov/projects/_unsupported_/barcode-lv.git/%s.png"
+    path_fmt = "file:///C:/okertanov/projects/_unsupported_/github/functional.git/python/barcode-lv/%s.png"
 
     code = str_fmt % i
     path = path_fmt % code
@@ -70,9 +70,9 @@ def InjectBarcode(i):
     #range_begin = 62519
     #range_end   = 63520 + 1
 
-range_begin = 62519
-range_end   = 63619 + 1
-break_at = 11230
+range_begin = 63168
+range_end   = 64267 + 1
+break_at = 12230
 npages = 1
 
 for i in range(range_begin, range_end):
