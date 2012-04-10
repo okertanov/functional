@@ -139,9 +139,17 @@ cons, define, lambda, etc...
 
 Links
 -----
-[Lexing and Parsing with Marpa](http://savage.net.au/Ron/html/graphviz2.marpa/Lexing.and.Parsing.with.Marpa.html)
-[Lexing](http://en.wikipedia.org/wiki/Lexing)
-[LL_parser](http://en.wikipedia.org/wiki/LL_parser)
-[The most minimal LISP? - closed](http://stackoverflow.com/questions/4589366/the-most-minimal-lisp)
-[How many primitives does it take to build a LISP machine? Ten, seven or five?](http://stackoverflow.com/questions/3482389/how-many-primitives-does-it-take-to-build-a-lisp-machine-ten-seven-or-five)
-[What the Read Function Accepts](http://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node188.html)
+[hyperpolyglot.org](http://hyperpolyglot.org/)  
+[Lexing and Parsing with Marpa](http://savage.net.au/Ron/html/graphviz2.marpa/Lexing.and.Parsing.with.Marpa.html)  
+[Lexing](http://en.wikipedia.org/wiki/Lexing)  
+[LL parser](http://en.wikipedia.org/wiki/LL_parser)  
+[The most minimal LISP? - closed](http://stackoverflow.com/questions/4589366/the-most-minimal-lisp)  
+[How many primitives does it take to build a LISP machine? Ten, seven or five?](http://stackoverflow.com/questions/3482389/how-many-primitives-does-it-take-to-build-a-lisp-machine-ten-seven-or-five)  
+[What the Read Function Accepts](http://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node188.html)  
+[javascript syntax tree visualization with esprima](http://ariya.ofilabs.com/2012/04/javascript-syntax-tree-visualization-with-esprima.html)  
+[Outlet is a programming language. It is Lisp-like in nature and compiles to both javascript and lua.](https://github.com/jlongster/outlet)  
+[(How to Write a (Lisp) Interpreter (in Python))](http://norvig.com/lispy.html)  
+[Lispy: Scheme Interpreter in Python](http://norvig.com/lis.py)  
+[Перевод статьи "(How to Write a (Lisp) Interpreter (in Python))" Питера Норвига](http://habrahabr.ru/post/115206/)  
+[Python syntax and semantics](http://en.wikipedia.org/wiki/Python_syntax_and_semantics)  
+
