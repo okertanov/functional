@@ -70,8 +70,8 @@ def InjectBarcode(i):
     #range_begin = 62519
     #range_end   = 63520 + 1
 
-range_begin = 63168
-range_end   = 64267 + 1
+range_begin = 65368
+range_end   = 66467 + 1
 break_at = 12230
 npages = 1
 
