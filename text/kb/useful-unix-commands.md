@@ -49,6 +49,7 @@ Network
 -------
 ### Config files
     /etc/host.aliases
+
 ### Monitoring
     mtr www.google.com
     ab http://google.com/
@@ -63,6 +64,13 @@ Network
 
 ### Access
     cat /dev/dsp | ssh me@remotebox "cat > /dev/dsp"
+
+### Optimized resolv.conf
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+    nameserver 4.2.2.2
+    option rotate
+    option timeout:1
 
 Services control
 ----------------
