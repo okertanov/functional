@@ -1,0 +1,85 @@
+% This template from http://www.vel.co.nz
+%
+% Commands:
+% \daysep - Inserts a horizontal line into the day box
+% \setcounter{calendardate}{1} - Resets the calendar's day count back to 1, useful for wrapping from 31 to 1
+% \BlankDay - Inserts a day without a number but does still increase the count by one day, can be reset with above
+%
+
+\documentclass[landscape,letterpaper]{article}
+
+\usepackage{calendar}
+\usepackage[landscape,margin=0.5in]{geometry}
+
+\begin{document}
+  \noindent
+  \begin{center}
+    \textsc{\LARGE Title}\\ % Title
+    \textsc{\large Subtitle} % Subtitle
+  \end{center}
+  \StartingDayNumber=1 % Start the calendar on a Sunday (this is the default)
+  \begin{calendar}{\hsize}
+    \setcounter{calendardate}{1}
+   
+   \day{}{\textbf{9am-5pm} \daysep Work at McDonald's} % Sunday
+   % ----------------
+   \day{}{ % Monday
+   \textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\
+   \textbf{10am-11am} \daysep BIOSCI 104 - LLT \\
+   %\textbf{11am-12pm} \daysep No Lecture \\
+   \textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\
+   %\textbf{1pm-2pm} \daysep No Lecture \\
+   \textbf{2pm-5pm} \daysep BIOSCI101 Laboratory \\
+   %\textbf{3pm-4pm} \daysep BIOSCI101 Laboratory \\
+   %\textbf{4pm-5pm} \daysep BIOSCI101 Laboratory
+   } 
+   % ----------------
+   \day{}{ % Tuesday
+   \textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\
+   \textbf{10am-11am} \daysep BIOSCI 104 - LLT \\
+   %\textbf{11am-12pm} \daysep No Lecture \\
+   %\textbf{12pm-1pm} \daysep No Lecture \\
+   %\textbf{1pm-2pm} \daysep No Lecture \\
+   \textbf{2pm-3pm} \daysep GEO101 - HSB1 \\
+   %\textbf{3pm-4pm} \daysep No Lecture \\
+   %\textbf{4pm-5pm} \daysep No Lecture
+   } 
+   % ----------------
+   \day{}{ % Wednesday
+   %\textbf{9am-10am} \daysep No Lecture \\
+   \textbf{10am-11am} \daysep BIOSCI 104 - LLT \\
+   %\textbf{11am-12pm} \daysep No Lecture \\
+   \textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\
+   %\textbf{1pm-2pm} \daysep No Lecture \\
+   \textbf{2pm-3pm} \daysep GEO101 - HSB1 \\
+   %\textbf{3pm-4pm} \daysep No Lecture \\
+   %\textbf{4pm-5pm} \daysep No Lecture
+   } 
+   % ----------------
+   \day{}{ % Thursday
+   %\textbf{9am-10am} \daysep No Lecture \\
+   \textbf{10am-11am} \daysep BIOSCI 104 - LLT \\
+   %\textbf{11am-12pm} \daysep No Lecture \\
+   %\textbf{12pm-1pm} \daysep No Lecture \\
+   %\textbf{1pm-2pm} \daysep No Lecture \\
+   \textbf{2pm-3pm} \daysep GEO101 - HSB1 \\
+   %\textbf{3pm-4pm} \daysep No Lecture \\
+   %\textbf{4pm-5pm} \daysep No Lecture
+   } 
+   % ----------------
+   \day{}{ % Friday
+   \textbf{9am-10am} \daysep BIOSCI101 - BLT100 \\
+   \textbf{10am-11am} \daysep BIOSCI 104 - LLT \\
+   %\textbf{11am-12pm} \daysep No Lecture \\
+   \textbf{12pm-1pm} \daysep BIOSCI105 - BLT204 \\
+   %\textbf{1pm-2pm} \daysep No Lecture \\
+   %\textbf{2pm-3pm} \daysep No Lecture \\
+   \textbf{3pm-4pm} \daysep GEO101 Tutorial \\ Room A \\
+   %\textbf{4pm-5pm} \daysep No Lecture
+   } 
+   % ----------------
+   \day{}{} % Saturday
+    
+    \finishCalendar
+  \end{calendar}
+\end{document}

@@ -1,0 +1,78 @@
+% This template from http://www.vel.co.nz
+%
+% Commands 
+% \setcounter{calendardate}{1} - Resets the calendar's day count back to 1, useful for wrapping from 31 to 1
+% \BlankDay - Inserts a day without a number but does still increase the count by one day, can be reset with above
+%
+
+\documentclass[landscape,letterpaper]{article}
+
+\usepackage{calendar}
+\usepackage[landscape,margin=0.5in]{geometry}
+
+\begin{document}
+  \noindent
+  \begin{center}
+    \textsc{\LARGE Month}\\ % Month
+    \textsc{\large Year} % Year
+  \end{center}
+  \StartingDayNumber=1 % Start the calendar on a Sunday (this is the default)
+  \begin{calendar}{\hsize}
+    \setcounter{calendardate}{1}
+    
+   % Un-comment the right number of \BlankDay's to move the first of the month to the right place
+   \BlankDay
+   \BlankDay
+   %\BlankDay
+   %\BlankDay
+   %\BlankDay
+   %\BlankDay
+   
+   \setcounter{calendardate}{1}
+   
+   % The bottom lines can be commented if the month has less than 31 days
+   % Change the vspace value if the calendar becomes too large for the page
+   \day{}{\vspace{2.5cm}} % 1
+   \day{}{\vspace{2.5cm}} % 2
+   \day{}{\vspace{2.5cm}} % 3
+   \day{}{\vspace{2.5cm}} % 4
+   \day{}{\vspace{2.5cm}} % 5
+   \day{}{\vspace{2.5cm}} % 6
+   \day{}{\vspace{2.5cm}} % 7
+   \day{}{\vspace{2.5cm}} % 8
+   \day{}{\vspace{2.5cm}} % 9
+   \day{}{\vspace{2.5cm}} % 10
+   \day{}{\vspace{2.5cm}} % 11
+   \day{}{\vspace{2.5cm}} % 12
+   \day{}{\vspace{2.5cm}} % 13
+   \day{}{\vspace{2.5cm}} % 14
+   \day{}{\vspace{2.5cm}} % 15
+   \day{}{\vspace{2.5cm}} % 16
+   \day{}{\vspace{2.5cm}} % 17
+   \day{}{\vspace{2.5cm}} % 18
+   \day{}{\vspace{2.5cm}} % 19
+   \day{}{\vspace{2.5cm}} % 20 
+   \day{}{\vspace{2.5cm}} % 21
+   \day{}{\vspace{2.5cm}} % 22
+   \day{}{\vspace{2.5cm}} % 23
+   \day{}{\vspace{2.5cm}} % 24
+   \day{}{\vspace{2.5cm}} % 25
+   \day{}{\vspace{2.5cm}} % 26
+   \day{}{\vspace{2.5cm}} % 27
+   \day{}{\vspace{2.5cm}} % 28
+   \day{}{\vspace{2.5cm}} % 29 
+   \day{}{\vspace{2.5cm}} % 30 
+   \day{}{\vspace{2.5cm}} % 31
+   
+   % Un-comment if the bottom line of the calendar is missing
+   %\BlankDay
+   
+   % Un-comment to start counting again after 31
+   %\setcounter{calendardate}{1}
+   %\day{}{\vspace{2.5cm}} % 1
+   %\day{}{\vspace{2.5cm}} % 2
+   %\day{}{\vspace{2.5cm}} % 3
+    
+    \finishCalendar
+  \end{calendar}
+\end{document}
