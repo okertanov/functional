@@ -28,6 +28,8 @@ Environment Evaluator::Eval(const SyntaxTree& ast, const Environment& env)
 
     UNUSED(ast), UNUSED(env);
 
+    // TODO: graph reduction
+
     return res_env;
 }
 
