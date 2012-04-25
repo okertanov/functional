@@ -152,4 +152,4 @@ Links
 [Lispy: Scheme Interpreter in Python](http://norvig.com/lis.py)  
 [Перевод статьи "(How to Write a (Lisp) Interpreter (in Python))" Питера Норвига](http://habrahabr.ru/post/115206/)  
 [Python syntax and semantics](http://en.wikipedia.org/wiki/Python_syntax_and_semantics)  
-
+[Learning to Write a Compiler](http://stackoverflow.com/questions/1669/learning-to-write-a-compiler)  

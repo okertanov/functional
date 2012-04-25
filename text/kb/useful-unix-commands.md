@@ -244,10 +244,12 @@ lsof
     kill -9 `lsof -t -u daniel` -- You can also use the -t with -u to kill everything a user has open
     lsof +L1 -- +L1 shows you all open files that have a link count less than 1, often indicative of a cracker trying to hide something
 
-
-
-
-
+Netcat
+------
+    nc -l 8080 -- server mode on a specified port listening for incoming connections
+    nc localhost 8080 -- client mode trying to connect on the port(2389) just opened
+    nc -l 2389 > test, cat testfile | nc localhost 2389 -- use netcat to transfer files
+    nc -4 -u -l 2389, nc -4 -u localhost 2389 -- use netcat with UDP protocol
 
 Unsorted
 --------
