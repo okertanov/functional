@@ -399,6 +399,7 @@ Uncategorized topics
 ``git clean -fd`` - clean unversioned files  
 ``git clean -fdx`` - clean gitignored files  
 ``git gc`` - repo optimization & repackage  
+``git filter-branch --tag-name-filter cat --env-filter "export GIT_AUTHOR_NAME='New name';export GIT_AUTHOR_EMAIL='New email'" -- --all``
 
 Git Applications
 ----------------
