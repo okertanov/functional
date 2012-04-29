@@ -116,8 +116,6 @@ See also
 [Y Combinator in Scheme](http://www.ece.uc.edu/~franco/C511/html/Scheme/ycomb.html)  
 [RosettaCode Wiki Y Combinator](http://rosettacode.org/wiki/Y_combinator)  
 [Collected Lambda Calculus Functions](http://jwodder.freeshell.org/lambda.html)  
-
 [Gambit-C](http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page)  
-
 [Hyperpolyglot: Common Lisp, Scheme, Clojure, Emacs Lisp](http://hyperpolyglot.org/lisp)  
-
+http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki/1550#1550  
