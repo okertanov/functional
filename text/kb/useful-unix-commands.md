@@ -57,6 +57,7 @@ Network
     sudo netstat -lntp
     sudo netstat -n --listening --program
     iftop
+    iptraf
 
 ### Discovery
     nmap -sP 10.0.0.0/16 # 10.0.0.0/16 ping scan using nmap.
