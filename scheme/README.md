@@ -16,6 +16,7 @@ FP Terms
 --------
 * Parentheses :)
 * Lambda calculus
+* Church encoding
 * Fixed point combinator
 * Currying
 * Closure
