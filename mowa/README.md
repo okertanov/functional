@@ -154,3 +154,4 @@ Links
 [Python syntax and semantics](http://en.wikipedia.org/wiki/Python_syntax_and_semantics)  
 [Learning to Write a Compiler](http://stackoverflow.com/questions/1669/learning-to-write-a-compiler)  
 [Bootstrapping a simple compiler from nothing](http://homepage.ntlworld.com/edmund.grimley-evans/bcompiler.html)  
+[Kernel underground](http://axisofeval.blogspot.com/2011/09/kernel-underground.html)  

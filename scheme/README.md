@@ -120,3 +120,8 @@ See also
 [Gambit-C](http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page)  
 [Hyperpolyglot: Common Lisp, Scheme, Clojure, Emacs Lisp](http://hyperpolyglot.org/lisp)  
 http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki/1550#1550  
+[Successful Lisp: How to Understand and Use Common Lisp](http://www.psg.com/~dlamkins/sl/)  
+[The Nature of Lisp](http://www.defmacro.org/ramblings/lisp.html)  
+[The Clojure Toolbox - categorised directory of libraries and tools for Clojure](http://www.clojure-toolbox.com/)  
+[Rich Hickey: STMs vs Locks 2008](http://www.azulsystems.com/blog/cliff/2008-05-27-clojure-stms-vs-locks)  
+[Scheme without special forms: a metacircular adventure](http://mainisusuallyafunction.blogspot.com/2012/04/scheme-without-special-forms.html)  
