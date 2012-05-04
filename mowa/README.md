@@ -155,3 +155,8 @@ Links
 [Learning to Write a Compiler](http://stackoverflow.com/questions/1669/learning-to-write-a-compiler)  
 [Bootstrapping a simple compiler from nothing](http://homepage.ntlworld.com/edmund.grimley-evans/bcompiler.html)  
 [Kernel underground](http://axisofeval.blogspot.com/2011/09/kernel-underground.html)  
+[Church encodings, the U combinator and the Y combinator in JavaScript ](http://matt.might.net/articles/js-church/)  
+[Особенности написания и возможные фичи LR-генераторов](http://habrahabr.ru/post/140441/)  
+[Написание компилятора LALR(1)-парсеров. Описание LR-генераторов](http://habrahabr.ru/post/140339/)  
+[Создание языка программирования с использованием LLVM. Часть 1: Введение и лексический анализ](http://habrahabr.ru/post/119850/)  
+[Reader Algorithm](http://www.lispworks.com/documentation/HyperSpec/Body/02_b.htm)  

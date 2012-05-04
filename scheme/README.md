@@ -125,3 +125,9 @@ http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-
 [The Clojure Toolbox - categorised directory of libraries and tools for Clojure](http://www.clojure-toolbox.com/)  
 [Rich Hickey: STMs vs Locks 2008](http://www.azulsystems.com/blog/cliff/2008-05-27-clojure-stms-vs-locks)  
 [Scheme without special forms: a metacircular adventure](http://mainisusuallyafunction.blogspot.com/2012/04/scheme-without-special-forms.html)  
+[Перевод на русский язык замечательной книги Practical Common Lisp](http://lisper.ru/pcl/)  
+[Successful Lisp: How to Understand and Use Common Lisp](http://psg.com/~dlamkins/sl/contents.html)  
+[On Lisp in Clojure ch 3 ](http://onbeyondlambda.blogspot.com/2012/03/on-lisp-in-clojure-ch-3.html)  
+[Getting started with ClojureScript and Noir #1](http://djhworld.github.com/2012/02/12/getting-started-with-clojurescript-and-noir.html)  
+[Fractals in Clojure - Buddhabrot Fractal](http://nakkaya.com/2009/10/04/fractals-in-clojure-buddhabrot-fractal/)  
+

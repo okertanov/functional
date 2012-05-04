@@ -1,0 +1,46 @@
+
+<!--
+    via http://christianheilmann.com/2012/03/06/sidebar-tutorial/
+-->
+
+<html>
+    <head>
+        <style>
+            #sb {
+                  position: relative;
+                  -webkit-perspective: 800px;
+                     -moz-perspective: 800px;
+                      -ms-perspective: 800px;
+                       -o-perspective: 800px;
+                          perspective: 800px;
+                }
+                #rot {
+                  -webkit-transform: rotateY(-15deg);
+                     -moz-transform: rotateY(-15deg);
+                      -ms-transform: rotateY(-15deg);
+                       -o-transform: rotateY(-15deg);
+                          transform: rotateY(-15deg);
+                  -webkit-transition: -webkit-transform 1s;
+                     -moz-transition: -moz-transform 1s;
+                      -ms-transition: -ms-transform 1s;
+                       -o-transition: -o-transform 1s;
+                          transition: transform 1s;
+                }
+                #rot:hover {
+                  -webkit-transform: rotateY(0deg);
+                     -moz-transform: rotateY(0deg);
+                      -ms-transform: rotateY(0deg);
+                       -o-transform: rotateY(0deg);
+                          transform: rotateY(0deg);
+                }
+        </style>
+    </head>
+    <body>
+        <div class="yui-b" id="sb">
+          <div id="rot">
+            ...
+          </div>
+        </div>
+    </body>
+</html>
+

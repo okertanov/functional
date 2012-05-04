@@ -1,0 +1,170 @@
+/*
+    via http://www.netmagazine.com/tutorials/discover-power-css3-selectors
+*/
+
+a[href^="http://"] {
+   background:url(img/external.png) 100% 50% no-repeat;
+   padding-right:15px;
+}
+
+a[href^="http://"] {
+   background:url(img/external.png) 100% 50% no-repeat;
+   padding-right:15px;
+}
+a[href^="http://mysite.com"], a[href^="http://www.mysite.com"] {
+   background:none;
+   padding-right:0;
+}
+
+a[href^="mailto:"] {
+   background:url(img/email.png) 100% 50% no-repeat;
+   padding-right:15px;
+}
+
+a[href$=".pdf"] {
+   background:url(img/pdf.png) 100% 50% no-repeat;
+   padding-right:18px;
+}
+
+a[href*="twitter"] {
+   background:url(img/twitter.png) 100% 50% no-repeat;
+   padding-right:20px;
+}
+
+a[href*="chrisdavidmills"] {
+   background:url(img/twitter.png) 100% 50% no-repeat;
+   padding-right:20px;
+   color:#ff0;
+}
+
+a[rel*="friend"] {
+   background:url(img/friend.png) 100% 50% no-repeat;
+   padding-right:20px;
+}
+
+a[rel*="friend"] {
+   background:
+    url(img/friend.png) 100% 50% no-repeat,
+    url(img/twitter.png) 85% 50% no-repeat;
+   padding-right:40px;
+}
+
+nav li:last-child {
+   border-right:0;
+}
+
+tr:nth-child(even) td {
+   background-color:#eee;
+}
+
+tr:nth-child(2n) td {
+   background-color:#eee;
+}
+
+tr:nth-child(odd) td {
+   background-color:#eee;
+}
+tr:nth-child(2n+1) td {
+   background-color:#eee;
+}
+
+tr:nth-child(4n) td {
+   background-color:#eee;
+}
+
+tr:nth-child(4n+2) td {
+   background-color:#eee;
+}
+
+tr:nth-child(-n+5) td {
+   background-color:#eee;
+}
+
+tr:nth-last-child(-n+5) td {
+   background-color:#eee;
+}
+
+ul li:only-child {
+   margin-bottom:2em;
+}
+
+#introduction p:first-of-type {
+   font-size:18px;
+   font-weight:bold;
+}
+
+#introduction p:first-of-type::first-letter {
+   font-size:60px;
+   float:left; width:auto;
+   height:50px;
+   line-height:1;
+   margin-right:5px;
+}
+
+nav li:last-of-type {
+   border-right:0;
+}
+
+/*
+<section id="animals">
+<h1>Animals in Space</h1>
+<ul>
+ <li><img src="img/fly.png" alt="Fruit Flies" /></li>
+ <li><img src="img/albert.png" alt="Albert II" /></li>
+ <li><img src="img/mouse.png" alt="Mouse" /></li>
+ <li><img src="img/tsygan.png" alt="Tsygan" /></li> <li><img src="img/laika.png" alt="Laika" /></li>
+ [...]
+</ul>
+</section>
+
+*/
+
+#animals ul {
+   list-style-type:none;
+   width:670px;
+}
+#animals li {
+   float:left;
+   width:200px;
+   text-align:center;
+   margin-right:35px;
+   margin-bottom:35px;
+}
+
+#animals li:nth-of-type(3n) {
+   margin-right:0;
+}
+
+#animals li:nth-last-of-type(1) {
+   margin-left:235px;
+}
+
+article img:only-of-type {
+   width:100%;
+}
+
+aside:empty {
+   display:none;
+}
+
+input:not([type="submit"]) {
+   width:250px;
+   border:1px solid #333;
+}
+
+abbr:not([title]) {
+   outline:2px dotted red;
+}
+
+ul li:nth-child(3n), ul li.last {
+ margin-right: 0;
+}
+
+ul li:nth-child(3n) {
+  margin-right: 0;
+}
+ul li.last {
+  margin-right: 0;
+}
+
+
