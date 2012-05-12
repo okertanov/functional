@@ -6,7 +6,6 @@ System
 
 Users
 -----
-    useradd - TBD
     usermod -a -G developers user
 
 Environment
@@ -52,7 +51,7 @@ Network
 
 ### Monitoring
     mtr www.google.com
-    ab http://google.com/
+    ab -n 1000 -c 100 http://localhost:<port>/
     curl ifconfig.me
     sudo netstat -lntp
     sudo netstat -n --listening --program
@@ -215,16 +214,9 @@ Development
     ltrace - a library call tracer
     strace - a system calls runtime monitor
     objdump - displays information about object files
-
-Debug
------
     strace
     ldd
     dmesg
-
-Testing
--------
-    ab -r30000 -c100 http://localhost:<port>/  -- Apache Bench
 
 lsof
 ----
@@ -282,10 +274,8 @@ From my Track
     dd if=/dev/hda | gzip > /mnt/hdb1/system_drive_backup.img.gz
 ### обратное действие:
     gzip -dc /mnt/hdb1/system_drive_backup.img.gz | dd of=/dev/hda
-
 ### Образ диска через SSH
     plink okertanov@crater.espectrale.com "sudo dd if=/dev/sda1 | gzip" > crater-sda1-12.05.2009.img.gz
-
 ### DD over SSH
     iPhone# dd if=/dev/rdisk0s1 bs=1M | ssh -c arcfour root@imac dd of=/tmp/102root.dd
     imac# dd if=102root.dd | ssh root@iphone dd of=/dev/rdisk0s1 bs=1M
@@ -311,7 +301,6 @@ From my Track
 
 ### Fetchmail with Imap .fetchmailrc line
     poll imap.gmail.com protocol IMAP user "username@gmail.com" there with password "password" nofetchall keep ssl
-
 
 Links
 -----
