@@ -254,6 +254,8 @@ Unsorted
 
     grep 938a03a76c531f49fa9e303578796158 <(md5sum *) # Check which files if any in current directory have provided md5sum. /via @climagic
 
+    /usr/lib/xscreensaver/apple2 -text -fast -program $SHELL # Another one to try. Thanks @ghalfacree
+
 
 From my Track
 -------------
