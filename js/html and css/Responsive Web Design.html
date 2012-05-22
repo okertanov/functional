@@ -1,0 +1,56 @@
+<html>
+    <!-- see http://pixelstech.net/article/index.php?id=1336046380 -->
+
+<head>
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <style>
+        /* Relative font size */
+        body {
+            font: normal 100% Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        small {
+            font-size: 0.875em;
+        }
+
+        /* Fluid grid */
+        .main {
+            float: right;
+            width: 70%;
+        }
+
+        .leftBar {
+            float: left;
+            width: 25%;
+        }
+
+        /* Selective loading CSS */
+        @import url("tinyScreen.css") screen and (max-device-width: 400px);
+
+        /* @media of CSS */
+        @media screen and (max-device-width: 400px) {
+            .column {
+                float: none;
+                width:auto;
+            }
+
+            #sidebar {
+                display:none;
+            }
+        }
+
+        /* Fluid image */
+        img, object {
+            width: 100%;
+            max-width: 100%;
+            -ms-interpolation-mode: bicubic;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
