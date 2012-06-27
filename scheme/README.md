@@ -42,6 +42,7 @@ FP Terms
 * DSL
 * AOP
 * REPL
+* ACID
 
 More FP Mumbo-jumbo
 -------------------
