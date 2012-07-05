@@ -131,4 +131,4 @@ http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-
 [On Lisp in Clojure ch 3 ](http://onbeyondlambda.blogspot.com/2012/03/on-lisp-in-clojure-ch-3.html)  
 [Getting started with ClojureScript and Noir #1](http://djhworld.github.com/2012/02/12/getting-started-with-clojurescript-and-noir.html)  
 [Fractals in Clojure - Buddhabrot Fractal](http://nakkaya.com/2009/10/04/fractals-in-clojure-buddhabrot-fractal/)  
-
+[The Macronomicon presentation](http://www.slideshare.net/fullscreen/fogus/the-macronomicon-10171952)  
