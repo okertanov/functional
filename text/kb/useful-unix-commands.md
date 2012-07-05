@@ -7,6 +7,7 @@ Boot
 * /linuxrc
 * /sbin/init
 * /etc/inittab
+* /etc/init.d/rcS
 
 * 0 halt
 * 1 single user
