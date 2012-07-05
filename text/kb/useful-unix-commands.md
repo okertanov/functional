@@ -1,6 +1,20 @@
 The Unix command-line snippets by chaotic order.
 ================================================
 
+Boot
+----
+* /init
+* /linuxrc
+* /sbin/init
+* /etc/inittab
+
+* 0 halt
+* 1 single user
+* 2-4 user defined
+* 5 X11
+* 6 Reboot
+* Default is defined in /etc/inittab, eg: id:3:initdefault:
+
 System
 ------
 
