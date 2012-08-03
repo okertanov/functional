@@ -60,7 +60,7 @@ typedef std::deque<int>             IntegerArray;
     @typedef Exec::Add1Result
     @brief
 */
-typedef std::typle<size_t, size_t>  Add1Result;
+typedef std::tuple<size_t, size_t>  Add1Result;
 
 /**
     @fn Exec::add1_impl()
@@ -84,12 +84,12 @@ Add1Result add1_impl(const InputIterator& begin,  const InputIterator& end, cons
 
         if ( found != end )
         {
-            (*found)++;
+            (*found)++, matched++;
         }
     }
     while ( --count > 0 && found != end );
 
-    return std::make_typle(count, matched);
+    return std::make_tuple(count, matched);
 }
 
 /**
