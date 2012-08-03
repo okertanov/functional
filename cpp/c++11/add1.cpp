@@ -51,24 +51,24 @@ namespace Exec
 {
 
 /**
-    @typedef Exec::IntegerArray
+    @typedef Exec::integer_array_t
     @brief
 */
-typedef std::deque<int>             IntegerArray;
+typedef std::deque<int>             integer_array_t;
 
 /**
-    @typedef Exec::Add1Result
+    @typedef Exec::add1_result_t
     @brief
 */
-typedef std::tuple<size_t, size_t>  Add1Result;
+typedef std::tuple<size_t, size_t>  add1_result_t;
 
 /**
     @fn Exec::add1_impl()
     @brief
 */
-template <typename T, typename InputIterator>
-Add1Result add1_impl(const InputIterator& begin, const InputIterator& end,
-                     const typename T::value_type& value, const signed long n)
+template <typename T, typename input_iterator_t>
+add1_result_t add1_impl(const input_iterator_t& begin, const input_iterator_t& end,
+                        const typename T::value_type& value, const signed long n)
 {
     auto found = begin;
     size_t count = ( n ? std::abs(n) : std::distance(begin, end) ),
@@ -101,7 +101,7 @@ Add1Result add1_impl(const InputIterator& begin, const InputIterator& end,
 template <typename T>
 T add1(T& array, const typename T::value_type& value, const signed long n)
 {
-    Add1Result ares = n < 0 ?
+    add1_result_t ares = n < 0 ?
         add1_impl<T>(array.rbegin(), array.rend(), value, n) :
         add1_impl<T>(array.begin(), array.end(), value, n);
 
@@ -114,7 +114,7 @@ T add1(T& array, const typename T::value_type& value, const signed long n)
     @fn ::operator<< ()
     @brief
 */
-std::ostream& operator<< (std::ostream& os, const Exec::IntegerArray& array)
+std::ostream& operator<< (std::ostream& os, const Exec::integer_array_t& array)
 {
     std::copy(array.begin(), array.end(), std::ostream_iterator<int>(os, " "));
     return os;
@@ -128,11 +128,11 @@ auto main(int argc, char* argv[]) -> int
 {
     try
     {
-        const Exec::IntegerArray reference_vec = {1, 4, 1, 5, 1};
+        const Exec::integer_array_t reference_vec = {1, 4, 1, 5, 1};
 
-        Exec::IntegerArray test_vec1(reference_vec),
-                           test_vec2(reference_vec),
-                           test_vec3(reference_vec);
+        Exec::integer_array_t test_vec1(reference_vec),
+                              test_vec2(reference_vec),
+                              test_vec3(reference_vec);
 
         std::cout << test_vec1 << std::endl
                   << test_vec2 << std::endl
