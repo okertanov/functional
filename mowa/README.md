@@ -160,3 +160,5 @@ Links
 [Написание компилятора LALR(1)-парсеров. Описание LR-генераторов](http://habrahabr.ru/post/140339/)  
 [Создание языка программирования с использованием LLVM. Часть 1: Введение и лексический анализ](http://habrahabr.ru/post/119850/)  
 [Reader Algorithm](http://www.lispworks.com/documentation/HyperSpec/Body/02_b.htm)  
+[Javathcript](http://kybernetikos.github.com/Javathcript/)  
+
