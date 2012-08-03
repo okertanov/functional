@@ -71,6 +71,7 @@ Add1Result add1_impl(const InputIterator& begin,  const InputIterator& end, cons
 {
     auto found = begin;
     size_t count = ( n ? std::abs(n) : std::distance(begin, end) ),
+           limit = count,
            matched = 0L;
 
     do
@@ -89,9 +90,7 @@ Add1Result add1_impl(const InputIterator& begin,  const InputIterator& end, cons
     }
     while ( --count > 0 && found != end );
 
-    std::cout << count << " " << matched << std::endl;
-
-    return std::make_tuple(count, matched);
+    return std::make_tuple(limit, matched);
 }
 
 /**
