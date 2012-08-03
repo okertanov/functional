@@ -89,6 +89,8 @@ Add1Result add1_impl(const InputIterator& begin,  const InputIterator& end, cons
     }
     while ( --count > 0 && found != end );
 
+    std::cout << count << " " << matched << std::endl;
+
     return std::make_tuple(count, matched);
 }
 
