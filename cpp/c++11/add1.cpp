@@ -67,7 +67,8 @@ typedef std::tuple<size_t, size_t>  Add1Result;
     @brief
 */
 template <typename T, typename InputIterator>
-Add1Result add1_impl(const InputIterator& begin,  const InputIterator& end, const typename T::value_type& value, const signed long n)
+Add1Result add1_impl(const InputIterator& begin, const InputIterator& end,
+                     const typename T::value_type& value, const signed long n)
 {
     auto found = begin;
     size_t count = ( n ? std::abs(n) : std::distance(begin, end) ),
