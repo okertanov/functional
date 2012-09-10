@@ -301,6 +301,9 @@ Bootstrapping sample
     echo "xen-blkfront" >> /etc/initramfs-tools/modules
     update-initramfs -u
 
+    or
+    sudo xen-create-image --hostname=tallinn.xlan  --role=udev --size=8Gb --swap=2Gb --arch=i386 --lvm=zion_vg --dist=precise --pygrub
+
 XEN Flavors
 -----------
 * Xensource XEN
