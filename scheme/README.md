@@ -86,6 +86,7 @@ More FP Mumbo-jumbo
 * hoisting
 * transpiler
 * immediately-invoked function
+* activation record
 
 Metaprogramming
 ---------------
