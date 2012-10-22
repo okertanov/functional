@@ -117,6 +117,7 @@ XEN
 * VMM  -- Virtual machine monitor
 * PV   -- Paravirtualized virtual machine
 * HVM  -- Hardware virtual machine
+* PV-on-HVM -- HVM guests with PV drivers
 * Dom0 -- A special privileged virtual machine that Xen hypervisor always loads on host startup
 * DomU -- Xen guests
 * SR   -- Storage repository (hdd, nfs, iscsi)
