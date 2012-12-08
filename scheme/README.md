@@ -87,6 +87,7 @@ More FP Mumbo-jumbo
 * transpiler
 * immediately-invoked function
 * activation record
+* terminal and nonterminal
 
 Metaprogramming
 ---------------
