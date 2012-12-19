@@ -140,6 +140,7 @@ cons, define, lambda, etc...
 Links
 -----
 [hyperpolyglot.org](http://hyperpolyglot.org/)  
+[program-transformation.org](http://www.program-transformation.org/)  
 [Lexing and Parsing with Marpa](http://savage.net.au/Ron/html/graphviz2.marpa/Lexing.and.Parsing.with.Marpa.html)  
 [Lexing](http://en.wikipedia.org/wiki/Lexing)  
 [LL parser](http://en.wikipedia.org/wiki/LL_parser)  
@@ -161,4 +162,5 @@ Links
 [Создание языка программирования с использованием LLVM. Часть 1: Введение и лексический анализ](http://habrahabr.ru/post/119850/)  
 [Reader Algorithm](http://www.lispworks.com/documentation/HyperSpec/Body/02_b.htm)  
 [Javathcript](http://kybernetikos.github.com/Javathcript/)  
+[cucu: a compiler you can understand (part 1)](http://zserge.com/blog/cucu-part1.html)  
 
