@@ -163,4 +163,4 @@ Links
 [Reader Algorithm](http://www.lispworks.com/documentation/HyperSpec/Body/02_b.htm)  
 [Javathcript](http://kybernetikos.github.com/Javathcript/)  
 [cucu: a compiler you can understand (part 1)](http://zserge.com/blog/cucu-part1.html)  
-
+[A Lisp in 27 lines of Ruby](http://fogus.github.com/ulithp/)  
