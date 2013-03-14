@@ -129,6 +129,9 @@ Posix Shell
 
     find source \( -name CVS -prune \) -o \( -type f -print \)
 
+### Replace, sed
+    find . -type f -exec sed -i 's/hello/goodbye/g' {} +
+
 ### Unix time
     date -d@1234567890
     or
