@@ -165,3 +165,5 @@ Links
 [cucu: a compiler you can understand (part 1)](http://zserge.com/blog/cucu-part1.html)  
 [A Lisp in 27 lines of Ruby](http://fogus.github.com/ulithp/)  
 [An opinionated guide to scheme implementations](http://wingolog.org/archives/2013/01/07/an-opinionated-guide-to-scheme-implementations)  
+[Syntax and Semantics of Programming Languages](http://homepage.cs.uiowa.edu/~slonnegr/plf/Book/)  
+
