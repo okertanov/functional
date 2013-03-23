@@ -88,6 +88,7 @@ More FP Mumbo-jumbo
 * immediately-invoked function
 * activation record
 * terminal and nonterminal
+* lambda lifting
 
 Metaprogramming
 ---------------
