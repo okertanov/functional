@@ -13,7 +13,8 @@ Professional skills and expertise
 -------------------
 
 ### Programming languages
-* C/C++ - is my L1 language
+
+#### C/C++ - is my L1 language
  - OOP, templates
  - std library (algorithms, iostream, containers, iterators, functional, exceptions)
  - boost (asio, regex, shared pointers, spirit/qi)
@@ -22,49 +23,48 @@ Professional skills and expertise
  - Ritchie, Thompson, Stroustrup, Alexandrescu, Sutter, Meyers, Josuttis - Yes, I know for sure who these gentlemen are
  and what they are telling about.
 
-* Python - the good parts of it
+
+#### Python - the good parts of it
  - Classes, decorators, functional idioms, double underscore methods.
 
 
-* JavaScript
+#### JavaScript
  - I've wrote tons of JS code, have used hundreds of libraries.
 
 
-* Lua
+#### Lua
  - I'm embedding it since circa Y2000.
  - Using my own C++ to Lua interop library and object system.
 
 
-* Lisp, Closure, Scheme
+#### Lisp, Closure, Scheme
  - I do like Lisps a lot, but i've never been using it commercially.
 
 
-* Objective-C
+#### Objective-C
  - I'll just place this here. See on your AppStore.
 
 
-* Perl
+#### Perl
  - That tricky one-liners, you know.
 
 
-* ARM Assembler
+#### ARM Assembler
  - That's my hobby.
 
 
 ### Operating systems
-* Unix - I have more than 20 years of the experience
+### Unix - I have more than 20 years of the experience
  - GNU Linux/RT Linux, Debian, Ubuntu, RH
  - FreeBSD
  - Apple OS X/iOS
  - Sun Solaris
 
-
-* Windows
+### Windows
  - NT, 2000, XP, Seven, Eight
  - CE/WinMobile/Windows Phone
 
-
-* Virtualization
+### Virtualization
  - XEN PV/HVM with LVM
 
 
