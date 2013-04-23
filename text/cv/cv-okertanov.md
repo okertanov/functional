@@ -7,7 +7,7 @@ Oleg E. Kertanov
 
 Objective
 ---------
-Seeking position as a software engineer, system analyst
+Seeking position as a software engineer, technical consultant
 
 Professional skills and expertise
 -------------------
@@ -19,20 +19,28 @@ Professional skills and expertise
  - boost (asio, regex, shared pointers, spirit/qi)
  - C++11 goodies (move semantic, initializers, lambdas)
  - RAII, RTTI
- - Ritchie, Thompson, Stroustrup, Alexandrescu, Sutter, Meyers, Josuttis - Yes, I know for sure who these gentlemen are.
+ - Ritchie, Thompson, Stroustrup, Alexandrescu, Sutter, Meyers, Josuttis - Yes, I know for sure who these gentlemen are
+ and what they are telling about.
+
 * Python - the good parts of it
  - Classes, decorators, functional idioms, double underscore methods.
+
 * JavaScript
  - I've wrote tons of JS code, have used hundreds of libraries.
+
 * Lua
  - I'm embedding it since circa Y2000.
  - Using my own C++ to Lua interop library and object system.
-* Lisp, Closure, Scheme
+
+ * Lisp, Closure, Scheme
  - I do like Lisps a lot, but i've never been using it commercially.
+
 * Objective-C
- - I'll just place this here.
+ - I'll just place this here. See on your AppStore.
+
 * Perl
  - That tricky one-liners, you know.
+
 * ARM Assembler
  - That's my hobby.
 
@@ -42,18 +50,19 @@ Professional skills and expertise
  - FreeBSD
  - Apple OS X/iOS
  - Sun Solaris
+
 * Windows
  - NT, 2000, XP, Seven, Eight
  - CE/WinMobile/Windows Phone
+
 * Virtualization
  - XEN PV/HVM with LVM
 
 ### Technologies, API and foundations
-* stl, boost
+* c++ stl, boost
 * POSIX API
 * Win32 API
-* QT
-* COM/DCOM, ATL/WTL
+* COM/DCOM, ATL/WTL, QT
 * ffmpeg, libavcodec: h263, h264 codecs
 * Google GAE
 * Google V8
@@ -64,22 +73,22 @@ Professional skills and expertise
 * Cocoa/Cocoa Touch
 * Quartz Composer
 * HTML5, CSS
-* XML/XSLT/DOM/XUL
-* SOAP
+* XML/XSLT/DOM/XUL/SOAP
 
 ### Development tools
 * Microsoft Visual Studio
 * GNU GCC, automake, Scons
 * NetBeans
 * Xcode
-* vim, emacs
+* vim
+* emacs
 * git, svn, hg, cvs
 * Jira, Mantis, Bugzilla
 
 ### Embedded tools
 * GNU EABI Toolchains
 * Mentor Graphics Sourcery Tools
-* uClibc
+* uClibc, newlib
 * Android NDK
 * ARM ADS
 * eSim RAPID
@@ -90,40 +99,46 @@ Professional skills and expertise
 
 ### Internet / Intranet technologies
 * TCP/IP
-* WWW/Proxy servers, LAMP, Web2.0
-* Mail gateways
+* WWW, Proxy servers, LAMP, node/npm
+* SNMP, service monitoring
+* SMPT, Mail gateways
 * PPP/RAS, VPN
-* SIP, RTP, RTSP
+* SIP, RTP, RTSP, RTMP
 
 ### Computation, Computer science, Functional calculus
-* Lambda calculus, Currying, Closures, Continuations, Tail recursion
+* Functional: Lambda calculus, Currying, Closures, Continuations, Tail recursion - that's my belief
 * DSL, AOP, STM
-* apply, filter, map, reduce, fold and zip HOF's
+* HOF's: apply, filter, map, reduce, fold and zip
 * Homoiconicity, Reflection
-* Declarative programming, Literate programming
-* LISP
+* Declarative and Literate programming
+* LISP, Scheme
 * MATLAB
 
 ### Office and productivity applications:
 \LaTeX, MS Office, Open Office, MS Project, MS Sharepoint, Google Docs
 
 ### Project Management:
-Agile/XP, Classic Waterfall model, basic RUP knowledge
+Agile/XP, Classic WF model, basic RUP knowledge
 
 Employment Experience
 ---------------------
 
-### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - present)
+### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
 * I've been involved in the Video Surveillance system development.
- - C++, ATL
+ - C++, ATL, COM.
+
 * Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
- - C++, boost::asio, ATL, libavcodec
+ - C++, boost::asio, ATL, libavcodec.
+
 * Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser.
- - JavaScript, DHTML/Ajax, Lua
+ - JavaScript, DHTML/Ajax, Lua.
+
+* C# and WCF/WPF
+ - Client-side Video Surveillance system.
 
 ------------------------------------------------------------------------------
 
-### Senior Software Engineer: ISS International, Riga, Latvia (2007 - 2010)
+### SSE, ISS International, Riga, Latvia (2007 - 2010)
 * Unix/Linux/Networking Software development & Integration (ha network services)
  - C, POSIX
 * Image/Video/Audio processing application development
@@ -173,17 +188,16 @@ Employment Experience
  - porting methods.
 * Participated in web-projects as a programmer.
 
+
 Education
 ---------
 ### CIM, Ukraine
 * Specialist: Information Technologies in Economics (five-year degree, 1999)
 * Bachelor: Economics (four-year degree, 1998)
 
+
 Languages
 ---------
 * Russian - native
 * English - strong communication skills, computer-related technical lexic
-
-Thank You!
-----------
 
