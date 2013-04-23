@@ -25,24 +25,31 @@ Professional skills and expertise
 * Python - the good parts of it
  - Classes, decorators, functional idioms, double underscore methods.
 
+
 * JavaScript
  - I've wrote tons of JS code, have used hundreds of libraries.
+
 
 * Lua
  - I'm embedding it since circa Y2000.
  - Using my own C++ to Lua interop library and object system.
 
- * Lisp, Closure, Scheme
+
+* Lisp, Closure, Scheme
  - I do like Lisps a lot, but i've never been using it commercially.
+
 
 * Objective-C
  - I'll just place this here. See on your AppStore.
 
+
 * Perl
  - That tricky one-liners, you know.
 
+
 * ARM Assembler
  - That's my hobby.
+
 
 ### Operating systems
 * Unix - I have more than 20 years of the experience
@@ -51,12 +58,15 @@ Professional skills and expertise
  - Apple OS X/iOS
  - Sun Solaris
 
+
 * Windows
  - NT, 2000, XP, Seven, Eight
  - CE/WinMobile/Windows Phone
 
+
 * Virtualization
  - XEN PV/HVM with LVM
+
 
 ### Technologies, API and foundations
 * c++ stl, boost
