@@ -16,12 +16,10 @@ Professional skills and expertise
 
 #### C/C++ - is my L1 language
  - OOP, templates
- - std library (algorithms, iostream, containers, iterators, functional, exceptions)
+ - std library
  - boost (asio, regex, shared pointers, spirit/qi)
  - C++11 goodies (move semantic, initializers, lambdas)
  - RAII, RTTI
- - Ritchie, Thompson, Stroustrup, Alexandrescu, Sutter, Meyers, Josuttis - Yes, I know for sure who these gentlemen are
- and what they are telling about.
 
 
 #### Python - the good parts of it
@@ -49,7 +47,7 @@ Professional skills and expertise
  - That tricky one-liners, you know.
 
 
-#### ARM Assembler
+#### ARM
  - That's my hobby.
 
 
@@ -65,25 +63,24 @@ Professional skills and expertise
  - CE/WinMobile/Windows Phone
 
 ### Virtualization
- - XEN PV/HVM with LVM
+ - XEN PV/HVM
 
 
 ### Technologies, API and foundations
-* c++ stl, boost
+* C++ stl, boost
 * POSIX API
 * Win32 API
 * COM/DCOM, ATL/WTL, QT
 * ffmpeg, libavcodec: h263, h264 codecs
-* Google GAE
 * Google V8
+* Google GAE
 * Node.js
 * REST, Ajax, jQuery, jQTouch
 * backbone.js, underscore.js
 * Ext JS, Sencha/Sencha Touch
-* Cocoa/Cocoa Touch
-* Quartz Composer
-* HTML5, CSS
+* Cocoa/Cocoa Touch, Quartz Composer
 * XML/XSLT/DOM/XUL/SOAP
+* HTML5, CSS
 
 ### Development tools
 * Microsoft Visual Studio
@@ -112,7 +109,6 @@ Professional skills and expertise
 * WWW, Proxy servers, LAMP, node/npm
 * SNMP, service monitoring
 * SMPT, Mail gateways
-* PPP/RAS, VPN
 * SIP, RTP, RTSP, RTMP
 
 ### Computation, Computer science, Functional calculus
@@ -128,7 +124,7 @@ Professional skills and expertise
 \LaTeX, MS Office, Open Office, MS Project, MS Sharepoint, Google Docs
 
 ### Project Management:
-Agile/XP, Classic WF model, basic RUP knowledge
+Agile/XP, Classic WF model, basic RUP
 
 Employment Experience
 ---------------------
