@@ -1,0 +1,232 @@
+ifconfig
+
+sudo aptitude update && sudo aptitude dist-upgrade
+sudo aptitude search kvm
+sudo aptitude remove --purge kvm qemu-kvm
+sudo aptitude remove --purge libvirt-bin libvirt0 python2.7-libvirt
+sudo aptitude remove --purge landscape-common landscape-client
+
+touch ~/.hushlogin
+sudo grep -iR "Welcome to" /etc/
+sudo grep -iR "update-motd" /etc/
+sudo dpkg -S update-motd.d
+sudo vim /etc/init/mounted-run.conf
+sudo vim /etc/motd
+sudo mv /etc/update-motd.d /etc/unused-update-motd.d
+
+sudo vim /etc/issue /etc/issue.net
+
+lsmod
+lspci
+sudo vim /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet drm_kms_helper.poll=0 nofb headless"
+sudo update-grub2
+
+sudo vim /etc/hostname
+
+
+mradmin@zion:~$ uname -a
+Linux zion 3.0.0-10-server #16-Ubuntu SMP Fri Sep 2 18:51:05 UTC 2011 x86_64 x86_64 x86_64 GNU/Linux
+
+
+sudo aptitude install xen-hypervisor xen-tools xen-utils xen-utils
+sudo aptitude install xenwatch xenstore-utils xen-docs
+
+sudo vim /etc/default/grub
+GRUB_SAVEDEFAULT=true
+GRUB_DEFAULT=saved
+GRUB_HIDDEN_TIMEOUT=5
+
+
+ssh-keygen -t rsa -b 1024
+pyttygen -> Generate -> DSA/1024
+vim ~/.ssh/authorized_keys -> paste openssh pub key
+Putty -> Connection -> SSH -> Auth -> Private key file = ~/.ssh/id_dsa-zion-private.ppk
+
+mradmin/mradminqaz/qazwsxedc
+mrtester/mrtesterabc
+vnc/mradminvnc
+
+sudo aptitude install git-core
+cd /etc && sudo git init
+sudo git add .gitignore
+sudo vim .gitignore -> ld.so.cache, .pwd.lock
+sudo git commit -m "initial /etc under the git control"
+sudo git status
+
+sudo aptitude install ufw
+#sudo ufw allow ssh
+#sudo ufw allow from 192.168.1.0/24
+sudo ufw allow from 192.168.1.0/24 to any port 22 # ssh
+sudo ufw allow from 192.168.1.0/24 to any port 9363 # XenApi
+sudo ufw allow from 192.168.1.0/24 to any port 5900 #VNC
+sudo ufw allow from 192.168.1.0/24 to any port 5901 #VNC
+sudo ufw allow from 192.168.1.0/24 to any port 5902 #VNC
+sudo ufw allow from 192.168.1.0/24 to any port 5903 #VNC
+sudo ufw default deny
+sudo ufw logging on
+sudo ufw enable
+sudo ufw status numbered
+sudo ufw app list
+
+
+sudo mkdir -p /srv/xen/{config,templates,domains}
+
+sudo vim /etc/xen/xend-config.sxp
+sudo vim /etc/xen-tools/xen-tools.conf
+sudo vim /etc/xen-tools/role.d
+sudo /etc/init.d/xend restart
+
+
+ - sudo xen-create-image --hostname=helsinki.xlan --role=gdm --lvm=zion_vg
+ - sudo xen-create-image --hostname=tallinn.xlan  --role=minimal --size=8Gb --swap=1Gb --arch=i386 --dist=lucid
+ - sudo xen-create-image --hostname=tallinn.xlan --size=12Gb --swap=2Gb --dist=lucid --role=gdm
+   sudo xen-create-image --hostname=tallinn.xlan --dist=lucid --lvm=zion_vg --role=udev
+
+  sudo xen-create-image --hostname=tallinn.xlan  --role=udev --size=8Gb --swap=2Gb --arch=i386 --lvm=zion_vg --dist=precise --pygrub
+
+sudo xm create -c /srv/xen/config/helsinki.xlan
+sudo xm list
+sudo xm console
+sudo xentop
+sudo xm shutdown
+
+
+brctl show
+sudo modprobe xen-blkback
+sudo modprobe xen-netback
+
+
+vfb = ["type=vnc,vncunused=1,vnclisten=0.0.0.0,vncpasswd=passwd"]
+
+vnc=1
+vnclisten="0.0.0.0"
+vncpasswd="passwd"
+vncdisplay=1 or vncunused=1
+vncconsole=1
+
+netstat -l | grep tcp
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DomU - PV Linux
+
+pwconv
+
+sudo aptitude update && sudo aptitude dist-upgrade
+sudo aptitude install vim-nox nmap
+sudo tasksel -> Ubuntu desktop
+
+vim /etc/X11/gdm/gdm.conf
+vim /etc/gdm/Init/Default
+vim /etc/gdm/custom.conf
+vim /etc/X11/Xsession
+
+
+sudo modinfo xen-fbfront
+sudo depmod -a
+sudo modprobe xen-fbfront
+sudo vim /etc/modprobe.d/xen-fbfront.conf -> options xen-fbfront video=32,1280,1024
+                                                                    or 1024,768
+or
+cat /etc/modprobe.d/xen-fbfront.conf
+options xen-fbfront video=32,1280,1024
+
+
+sudo vim /etc/initramfs-tools/modules
+
+sudo update-initramfs -u
+
+sudo scp root@192.168.1.65:/boot/* domains/tallinn.xlan/boot/
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DomU - HVM WinXP
+
+sudo vim /etc/sysctl.conf
+
+sudo vim /etc/xen/scripts/qemu-ifup
+
+sudo xm block-configure redmond.xlan file:/domains/redmond.xlan/VS2008SP1ENUX1512962.iso  hdc:cdrom r
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DomU - HVM OSX
+
+sudo xm block-list -l cupertino.xlan
+sudo xm block-detach cupertino.xlan 5632 -f
+sudo xm block-attach cupertino.xlan file:/srv/xen/domains/cupertino.xlan/OSX106x86Image.iso /dev/hdc r
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Gmail KB
+
+vif = [ 'mac=aa:bb:cc :dd :dd :dd, type=ioemu, bridge=bridge0', 'type=ioemu, bridge=bridge1' ]
+
+use the --scsi option that makes the VM use normal SCSI HD names like sda*
+
+sudo vim /etc/sysctl.conf
+net.ipv4.ip_forward=1
+net.ipv4.conf.all.proxy_arp=1
+
+GRUB_DISABLE_OS_PROBER=true
+
+
+pv-grub in xen-4.1.0 cannot boot kernel in graphical mode
+http://bugzilla.xensource.com/bugzilla/show_bug.cgi?id=1779
+extra = '(hd0,0)/grub/menu.lst console=hvc0'
+extra = 'xencons=tty'
+
+
+iptables -L
+
+192.168.0.1:~# tcpdump | grep 10.0.0.1
+
+
+xen bridge
+https://www.os3.nl/2010-2011/students/aleksandar_petrov_kasabov/inr/week1
+and
+http://wiki.kartbuilding.net/index.php/Xen_Networking
+and
+http://wiki.xen.org/xenwiki/XenNetworking
+
+xgu.ru wiki on WindowsXP in Xen
+http://osdir.com/ml/attachments/txt0btjDVkDCR.txt
+
+Networking configurations used by libvirt based applications
+http://wiki.libvirt.org/page/Networking
+
+Windows Paravirtualized Drivers
+http://wiki.xensource.com/xenwiki/XenWindowsGplPv
+
+Host Configuration: Networking
+http://wiki.xen.org/xenwiki/HostConfiguration/Networking
+
+Best Practices for Xen
+http://wiki.xensource.com/xenwiki/XenBestPractices
+
+Как поднять общую сеть в XEN Dom0+DomU+интернет?
+http://www.linux.org.ru/forum/general/4728067
+
+
+-------------------------------------------------------------------------
+I personnally use network-dummy as the network-script in xend-config.sxp
+and configure Debian to setup a bridge at startup like this:
+
+auto xenbr0
+iface xenbr0 inet static
+       address 192.168.x.y
+       netmask 255.255.a.b
+       broadcast 192.168.x.255
+       gateway 192.168.x.z
+       bridge_ports eth0
+       bridge_fd 3
+       bridge_maxwait 5
+
+This config allow HVM (here a vista host) to access network with the
+following in its configfile:
+
+vif = [ 'bridge=xenbr0' ]
+
+Hope it helps.
+-------------------------------------------------------------------------
+
+
