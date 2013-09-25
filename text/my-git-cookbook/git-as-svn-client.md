@@ -37,6 +37,7 @@ Installation
 #### Install using Homebrew:
 1. Install Homebrew ([link](http://brew.sh/))
 2. Install git with the command:
+
     brew install git
 
 #### Install using XCode:
@@ -45,6 +46,7 @@ Installation
 
 ### For Linux (Debian/Ubuntu)
 1. In the command prompt run the following:
+
     sudo aptitude install git-core
 
 ### Other GUI clients
@@ -66,6 +68,7 @@ If you personally prefers rich user interface over the command line you may inst
 Configure your Git
 ------------------
 ### Introduce yourself
+
     git config --global user.name "Name Surname" # Insert your real name here
     git config --global user.email "recipient@example.com" # Insert your valid email address
 
@@ -73,43 +76,53 @@ Configure your Git
 Start using Git like SVN client
 -------------------------------
 ### First rule - Is it works for you
+
     git --version
 
 ### Second rule - Know your repo
+
     svn info # Inside your project
 
 ### Third rule - Stay in your working directory
+
     cd ~/projects
 
 ### Initial checkout or Cloning
+
     git svn clone https://svn.example.com/svn/projects/trunk LocalProjectName
 
 
 Daily workflow
 --------------
 ### Update your local snapshot from SVN repo
+
     git svn rebase
 
 ### Modify code to complete the task, bug fix, or other coding activity
 Use your IDE or the editors as usual, like
+
    vim file1.cpp file2.cpp
    ...
 
 ### Stage your local changes
+
     git add ModifiedFile.txt OtherModifiedCode.cpp AndMore.cs AndEvenMore.m
     git add Other/Path/And.a.File.txt
     git add .
 
 ### Commit your changes to your local repo
+
     git commit
 
 ### Push your changes to the central SVN repo
+
     git svn rebase
     git svn dcommit
 
 
 Git only goodies (uncategorized)
 --------------------------------
+
     git help
     git help any-git-command-here
     git clone
@@ -135,6 +148,7 @@ Git only goodies (uncategorized)
 Other useful tasks
 ------------------
 ### Generate and use SSH key
+
     ssh-keygen -t rsa -b 1024 -C "recipient@example.com"
     cat ~/.ssh/id_rsa.pub | pbcopy
 
