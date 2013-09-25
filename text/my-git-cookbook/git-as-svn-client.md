@@ -38,7 +38,9 @@ Installation
 1. Install Homebrew ([link](http://brew.sh/))
 2. Install git with the command:
 
-    `brew install git`
+```
+    brew install git
+```
 
 #### Install using XCode:
 1. Launch XCode
@@ -47,7 +49,9 @@ Installation
 ### For Linux (Debian/Ubuntu)
 1. In the command prompt run the following:
 
-    `sudo aptitude install git-core`
+```
+    sudo aptitude install git-core
+```
 
 ### Other GUI clients
 If you personally prefers rich user interface over the command line you may install one of the following:
@@ -100,10 +104,10 @@ Daily workflow
 
 ### Modify code to complete the task, bug fix, or other coding activity
 Use your IDE or the editors as usual, like
-
-
+```
    vim file1.cpp file2.cpp
    ...
+```
 
 ### Stage your local changes
 
@@ -157,6 +161,8 @@ Other useful tasks
 Resources
 ---------
 [Git Home page](http://git-scm.com/)
+
 [Try Git](http://try.github.io/)
+
 [Git via Git :)](https://github.com/git/git)
 
