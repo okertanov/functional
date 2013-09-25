@@ -39,6 +39,7 @@ Installation
 2. Install git with the command:
 
     brew install git
+    
 
 #### Install using XCode:
 1. Launch XCode
@@ -48,6 +49,7 @@ Installation
 1. In the command prompt run the following:
 
     sudo aptitude install git-core
+    
 
 ### Other GUI clients
 If you personally prefers rich user interface over the command line you may install one of the following:
