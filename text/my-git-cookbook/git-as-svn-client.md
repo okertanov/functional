@@ -99,7 +99,6 @@ Daily workflow
 --------------
 ### Update your local snapshot from SVN repo
 
-    git svn fetch
     git svn rebase
 
 ### Modify code to complete the task, bug fix, or other coding activity
