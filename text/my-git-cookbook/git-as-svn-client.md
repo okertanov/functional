@@ -17,13 +17,14 @@ Also distributed means that everyone who cares (and have permissions to) may acc
  * Powerful
  * Well documented
  * Easy to start using it
+ * Flexible workflow
  * Works locally on your computer
  * Supports lightweight branches with COW
  * Works on the top of secure and reliable networking protocols
  * Have biggest user base
  * Have best hosting service: github
  * Activelly developed
- * Have built-in cvs and svn support
+ * Have built-in perforce, svn and cvs support
  * IBM, Google, Apple, Microsoft, Apache, Eclipse, Linux, Facebook, Twitter, Intel, Mozilla, Amazon, Samsung...
 
 
@@ -37,7 +38,6 @@ Installation
 #### Install using Homebrew:
 1. Install Homebrew ([link](http://brew.sh/))
 2. Install git with the command:
-
 ```
     brew install git
 ```
@@ -48,7 +48,6 @@ Installation
 
 ### For Linux (Debian/Ubuntu)
 1. In the command prompt run the following:
-
 ```
     sudo aptitude install git-core
 ```
@@ -100,6 +99,7 @@ Daily workflow
 --------------
 ### Update your local snapshot from SVN repo
 
+    git svn fetch
     git svn rebase
 
 ### Modify code to complete the task, bug fix, or other coding activity
@@ -129,7 +129,6 @@ Git only goodies (uncategorized)
 --------------------------------
 
     git help
-    git help any-git-command-here
     git clone
     git init
     git add
@@ -137,6 +136,8 @@ Git only goodies (uncategorized)
     git status
     git log
     git diff
+    git grep
+    git blame
     git fetch
     git pull
     git push
@@ -148,10 +149,22 @@ Git only goodies (uncategorized)
     git stash
     git remote
     git cherry-pick
+    git submodule
+    git clean
 
 
 Other useful tasks
 ------------------
+### Test drive your commit without actually commiting
+```
+    git svn dcommit --dry-run
+```
+
+### Generate .gitignore from SVN
+```
+    git svn create-ignore
+```
+
 ### Generate and use SSH key
 
     ssh-keygen -t rsa -b 1024 -C "recipient@example.com"
@@ -160,9 +173,9 @@ Other useful tasks
 
 Resources
 ---------
-[Git Home page](http://git-scm.com/)
-
-[Try Git](http://try.github.io/)
-
-[Git via Git :)](https://github.com/git/git)
-
+[Git Home page](http://git-scm.com/)  
+[Try Git](http://try.github.io/)  
+[Pro Git book](http://git-scm.com/book)  
+[Git via Git :)](https://github.com/git/git)  
+[Git Wiki: Main page](https://git.wiki.kernel.org/index.php/Main_Page)  
+[Git Wiki: Git interfaces, frontends, and tools](https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools)  
