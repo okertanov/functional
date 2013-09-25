@@ -10,6 +10,8 @@ Git is revision control system like Perforce or SVN, but in some distributed fla
 Distributed means that Git is capable to manage your repository in-place, without having central repo.
 Also distributed means that everyone who cares (and have permissions to) may access your repo to read and write code changes.
 
+![screenshot](https://raw.github.com/okertanov/functional/master/text/my-git-cookbook/git-svn-repos.png "svn vs git")
+
 ### Comparing to other RCS/SCM it's:
  * Fast
  * Free
