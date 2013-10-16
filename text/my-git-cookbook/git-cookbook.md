@@ -400,6 +400,7 @@ Uncategorized topics
 ``git clean -fdx`` - clean gitignored files  
 ``git gc`` - repo optimization & repackage  
 ``git filter-branch --tag-name-filter cat --env-filter "export GIT_AUTHOR_NAME='New name';export GIT_AUTHOR_EMAIL='New email'" -- --all``
+``git log --no-merges --pretty=format:%aN --since=7months | sort | uniq -c | sort -nr``
 
 Git Applications
 ----------------
