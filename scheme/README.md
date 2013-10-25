@@ -89,6 +89,7 @@ More FP Mumbo-jumbo
 * activation record
 * terminal and nonterminal
 * lambda lifting
+* frp
 
 Metaprogramming
 ---------------
