@@ -90,6 +90,7 @@ More FP Mumbo-jumbo
 * terminal and nonterminal
 * lambda lifting
 * frp
+* covariance
 
 Metaprogramming
 ---------------
