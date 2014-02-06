@@ -43,6 +43,7 @@ FP Terms
 * AOP
 * REPL
 * ACID
+* ADT
 
 More FP Mumbo-jumbo
 -------------------
