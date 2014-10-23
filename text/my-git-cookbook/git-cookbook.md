@@ -393,14 +393,17 @@ Manage a site with git
 >     url = ssh://server.example.org/home/ams/website.git  
 >     url = ssh://other.example.org/home/foo/website.git  
 
+
 Uncategorized topics
 --------------------
 ``git add -p`` - interactive add with review  
 ``git clean -fd`` - clean unversioned files  
 ``git clean -fdx`` - clean gitignored files  
 ``git gc`` - repo optimization & repackage  
-``git filter-branch --tag-name-filter cat --env-filter "export GIT_AUTHOR_NAME='New name';export GIT_AUTHOR_EMAIL='New email'" -- --all``
-``git log --no-merges --pretty=format:%aN --since=7months | sort | uniq -c | sort -nr``
+``git filter-branch --tag-name-filter cat --env-filter "export GIT_AUTHOR_NAME='New name';export GIT_AUTHOR_EMAIL='New email'" -- --all``  
+``git log --no-merges --pretty=format:%aN --since=7months | sort | uniq -c | sort -nr``  
+``git repack -a -d -f --depth=512 --window=512``  
+
 
 Git Applications
 ----------------
