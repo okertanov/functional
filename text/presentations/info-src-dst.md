@@ -2,12 +2,18 @@
 Information sources / gathering / tooling
 =========================================
 
+Intro
+-----
+ - Better to try and fail than fail to try
+ - Define a process (even not optimal one) then try to automate it
+ - The significant problems we face cannot be solved at the same level of thinking that created them
+
 Sources
 -------
  - RSS/Atom
     * HN
     * Companies: Google blogs, Apple, Microsoft, OSF
-    * Developers
+    * Developer blogs
     * Habr
     * LOR
 
@@ -40,7 +46,6 @@ Processing
     * Manual Starring
     * Gmail smart tabs
  - Send to evernote
- - Send to tumblr
 
 Storage
 -------
@@ -56,6 +61,7 @@ Storage
     * CalDav sync
  - Google Alerts
     * Search results
+
  - Instapaper, Read Lated
     * Articles
  - Apple Notes
@@ -73,12 +79,14 @@ Storage
  - Twitter
     * Share with other
     * Notes to self (download archive)
+
  - GitHub
     * Code
     * Snippets
     * Own articles
     * Tech KB
     * Stars
+    * Online editor
  - Checkbox/Lists apps on iOS
     * Clear
     * List Weaver
@@ -88,6 +96,7 @@ Storage
     * RSS
  - DropBox
     * Important images, Books
+    * Org/ttt for Vim buffer
     * ID/Doc Scans
     * Tickets
     * Secure storage: encrypted dmg, TrueCrypt
@@ -108,6 +117,7 @@ Storage
  - Youtube
     * Watch Later
     * Own Uploads
+
  - Own Hosting
     * Private repos
     * Sites
@@ -117,6 +127,9 @@ Storage
  - Torrents
     * Video/Audio
     * Books
+ - Gadgets
+    * Android/iPhone/iPad
+    * VPS
 
 Tools
 -----
@@ -125,13 +138,21 @@ Tools
  - Gmail todo
  - If This Then That
  - MindMap Apps
+ - eBook Readers
+ - Org Mode
 
 Big No
 ------
- - Google+ (Google Notebook, Greader, Wave, Buzz)
+ - Information overloading (Shift-A)
+ - When driving
+ - Notifications
+ - Do not marry with the services/tools: Google+ Google Notebook, Greader, Wave, Buzz, Picasa
  - LJ, FB, VK, Odnoklassniki
  - Politic
  - Sex, Porn, CP, Mamba
  - 9Gag, 4chan, Demotivators, Fishki, Yaplakal, BOR, Otveti
  - Flash video
  - App downloads (app archives, shareware, torrents)
+ - Audiobooks
+ - Moleskine
+
