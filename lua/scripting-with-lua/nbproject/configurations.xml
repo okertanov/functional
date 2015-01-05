@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="91">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="lua">
+        <df name="src">
+          <in>lapi.c</in>
+          <in>lauxlib.c</in>
+          <in>lbaselib.c</in>
+          <in>lbitlib.c</in>
+          <in>lcode.c</in>
+          <in>lcorolib.c</in>
+          <in>lctype.c</in>
+          <in>ldblib.c</in>
+          <in>ldebug.c</in>
+          <in>ldo.c</in>
+          <in>ldump.c</in>
+          <in>lfunc.c</in>
+          <in>lgc.c</in>
+          <in>linit.c</in>
+          <in>liolib.c</in>
+          <in>llex.c</in>
+          <in>lmathlib.c</in>
+          <in>lmem.c</in>
+          <in>loadlib.c</in>
+          <in>lobject.c</in>
+          <in>lopcodes.c</in>
+          <in>loslib.c</in>
+          <in>lparser.c</in>
+          <in>lstate.c</in>
+          <in>lstring.c</in>
+          <in>lstrlib.c</in>
+          <in>ltable.c</in>
+          <in>ltablib.c</in>
+          <in>ltm.c</in>
+          <in>lua.c</in>
+          <in>luac.c</in>
+          <in>lundump.c</in>
+          <in>lvm.c</in>
+          <in>lzio.c</in>
+        </df>
+      </df>
+      <in>Lunar.cpp</in>
+      <in>Main.cpp</in>
+      <in>bootstraper.lua</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>Lunar.exe</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>lua/src</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>LUA_COMPAT_ALL</Elem>
+            </preprocessorList>
+          </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>lua/src</pElem>
+              <pElem></pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="Lunar.cpp" ex="false" tool="1" flavor2="8">
+      </item>
+      <item path="Main.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bootstraper.lua" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lua/src/lapi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lauxlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lbaselib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lbitlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lcode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lcorolib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lctype.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ldblib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ldebug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ldo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ldump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lfunc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lgc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/linit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/liolib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/llex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lmathlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lmem.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/loadlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lobject.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lopcodes.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/loslib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lparser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lstate.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lstring.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lstrlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ltable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ltablib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/ltm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lua.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/luac.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lundump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lvm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lua/src/lzio.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
