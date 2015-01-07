@@ -92,6 +92,7 @@ More FP Mumbo-jumbo
 * lambda lifting
 * frp
 * covariance
+* Koenig lookup
 
 Metaprogramming
 ---------------
