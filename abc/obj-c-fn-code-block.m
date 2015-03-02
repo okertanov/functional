@@ -1,4 +1,13 @@
 //
+// https://gcc.gnu.org/onlinedocs/gcc/Statement-Exprs.html
+//
+// 6.1 Statements and Declarations in Expressions
+//
+// A compound statement enclosed in parentheses may appear as an expression in GNU C.
+// This allows you to use loops, switches, and local variables within an expression.
+//
+// See also: "GCC hacks in the Linux kernel"
+//
 // clang obj-c-fn-code-block.m -o obj-c-fn-code-block -framework Foundation
 // clang obj-c-fn-code-block.c -o obj-c-fn-code-block
 //
