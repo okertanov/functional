@@ -6,6 +6,7 @@
 // A compound statement enclosed in parentheses may appear as an expression in GNU C.
 // This allows you to use loops, switches, and local variables within an expression.
 //
+// See also: "C++ Function Try Blocks"
 // See also: "GCC hacks in the Linux kernel"
 //
 // clang obj-c-fn-code-block.m -o obj-c-fn-code-block -framework Foundation
