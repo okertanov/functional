@@ -129,6 +129,10 @@ Agile/XP, Classic WF model, basic RUP
 Employment Experience
 ---------------------
 
+### C.T.Co, Riga, Latvia (2012 - now)
+* Apple iOS applications development for the enterprise customers.
+ - Xamarin C#, ObjC. 
+
 ### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
 * I've been involved in the Video Surveillance system development.
  - C++, ATL, COM.
@@ -206,4 +210,3 @@ Languages
 ---------
 * Russian - native
 * English - strong communication skills, computer-related technical lexic
-
