@@ -2,6 +2,8 @@
 // See http://maxim.livejournal.com/494874.html
 //
 // c++ -O3 -Wall -Wextra -std=c++11 -o dak dak.cpp
+//      -O3 -msse3 -ffast-math.
+//      -ftree-vectorizer-verbose=10
 //
 
 #include <cstdint>
