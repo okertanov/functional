@@ -36,11 +36,10 @@ int64_t simd_sum(const std::vector<int64_t>& vec, int step) {
     std::vector<int64_t>& avec = const_cast<std::vector<int64_t>&>(vec);
 
     for (size_t i = 0; i < size - 1; i += 2) {
-        __m128i av128_1 = _mm_loadu_si128(reinterpret_cast<__m128i*>(&avec[i]));
+        __m128i* av128_1 __attribute__((aligned(16))) = reinterpret_cast<__m128i*>(&avec[i]);
         __m128i av128_2 = _mm_loadu_si128(reinterpret_cast<__m128i*>(&avec[i + 1]));
-        __m128i r = _mm_add_epi64(av128_1, av128_2);
-        __m128i* sums_simd = reinterpret_cast<__m128i*>(&sums[i]);
-        _mm_store_si128(sums_simd, r);
+        __m128i r = _mm_add_epi64(*av128_1, av128_2);
+        _mm_store_si128((__m128i*)(&sums[i]), r);
     }
 
     for (size_t i = 0; i < size; i += step) {
