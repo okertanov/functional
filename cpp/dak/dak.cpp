@@ -19,7 +19,7 @@ int64_t plain_sum(const std::vector<int64_t>& vec, int step) {
         sums[i] = vec[i] + vec[i + 1];
     }
 
-    for (size_t i = 0; i < size; i += step) {
+    for (size_t i = 0; i < size - 1; i += step) {
         sum += sums[i];
     }
 
@@ -43,7 +43,7 @@ int64_t simd_sum(const std::vector<int64_t>& vec, int step) {
         _mm_store_si128((__m128i*)(&sums[i]), r);
     }
 
-    for (size_t i = 0; i < size; i += step) {
+    for (size_t i = 0; i < size - 1; i += step) {
         sum += sums[i];
     }
 
