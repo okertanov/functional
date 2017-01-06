@@ -28,10 +28,11 @@ int64_t plain_sum(const std::vector<int64_t>& vec, int step) {
 
 int64_t simd_sum(const std::vector<int64_t>& vec, int step) {
     const size_t size = vec.capacity();
+    const size_t capacity2 = size + (2 - size % 2) % 2;
     int64_t sum = 0;
 
     std::vector<int64_t> sums __attribute__((aligned(16)));
-    sums.reserve(size);
+    sums.reserve(capacity2);
 
     std::vector<int64_t>& avec = const_cast<std::vector<int64_t>&>(vec);
 
