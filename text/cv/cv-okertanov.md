@@ -10,53 +10,49 @@ Objective
 Seeking position as a software engineer, technical consultant
 
 Professional skills and expertise
--------------------
+---------------------------------
 
 ### Programming languages
 
-#### C/C++ - is my L1 language
- - OOP, templates
- - std library
+#### .Net & Xamarin/iOS
+ - Have been unsing it last 5 years every day.
+ - Rx, Linq, MVVM, D/I etc.
+
+#### Swift & Objective-C
+ - 3 years of the OSX and iOS ent-grade software engineering.
+
+#### C/C++
+ - OOP, templates, std library
  - boost (asio, regex, shared pointers, spirit/qi)
- - C++11 goodies (move semantic, initializers, lambdas)
+ - C++17 goodies (move semantic, initializers, lambdas)
  - RAII, RTTI
 
-
-#### Python - the good parts of it
+#### Python
  - Classes, decorators, functional idioms, double underscore methods.
 
-
-#### JavaScript
- - I've wrote tons of JS code, have used hundreds of libraries.
-
+#### JavaScript and Node.js
+ - I've wrote tons of JS code, have used hundreds of libraries like jQuery, Angular, backbone, etc.
 
 #### Lua
- - I'm embedding it since circa Y2000.
+ - I'm embedding it since circa Y2k.
  - Using my own C++ to Lua interop library and object system.
-
 
 #### Lisp, Closure, Scheme
  - I do like Lisps a lot, but i've never been using it commercially.
 
-
-#### Objective-C
- - I'll just place this here. See on your AppStore.
-
-
 #### Perl
  - That tricky one-liners, you know.
-
 
 #### ARM
  - That's my hobby.
 
 
 ### Operating systems
-### Unix - I have more than 20 years of the experience
+
+### Unix
+ - Apple OS X/iOS
  - GNU Linux/RT Linux, Debian, Ubuntu, RH
  - FreeBSD
- - Apple OS X/iOS
- - Sun Solaris
 
 ### Windows
  - NT, 2000, XP, Seven, Eight
@@ -64,7 +60,6 @@ Professional skills and expertise
 
 ### Virtualization
  - XEN PV/HVM
-
 
 ### Technologies, API and foundations
 * C++ stl, boost
@@ -77,16 +72,16 @@ Professional skills and expertise
 * Node.js
 * REST, Ajax, jQuery, jQTouch
 * backbone.js, underscore.js
-* Ext JS, Sencha/Sencha Touch
+* ExtJS, Sencha/Sencha Touch
 * Cocoa/Cocoa Touch, Quartz Composer
 * XML/XSLT/DOM/XUL/SOAP
 * HTML5, CSS
 
 ### Development tools
+* Xcode
 * Microsoft Visual Studio
 * GNU GCC, automake, Scons
 * NetBeans
-* Xcode
 * vim
 * emacs
 * git, svn, hg, cvs
@@ -131,7 +126,9 @@ Employment Experience
 
 ### C.T.Co, Riga, Latvia (2012 - now)
 * Apple iOS applications development for the enterprise customers.
- - Xamarin C#, ObjC. 
+ - Xamarin C#
+ - ObjC
+ - Swift
 
 ### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
 * I've been involved in the Video Surveillance system development.
@@ -210,3 +207,4 @@ Languages
 ---------
 * Russian - native
 * English - strong communication skills, computer-related technical lexic
+
