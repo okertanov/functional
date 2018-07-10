@@ -17,10 +17,8 @@ Professional skills and expertise
 #### Swift & Objective-C
  - 3 years of the OSX and iOS ent-grade software engineering.
 #### C/C++
- - OOP, templates, std library
- - boost (asio, regex, shared pointers, spirit/qi)
- - C++17 goodies (move semantic, initializers, lambdas)
- - RAII, RTTI
+ - OOP, templates, std library, boost (asio, regex, shared pointers, spirit/qi)
+ - C++17 goodies (move semantic, initializers, lambdas), RAII, RTTI
 #### Python
  - Classes, decorators, functional idioms, double underscore methods.
 #### JavaScript and Node.js
@@ -44,18 +42,15 @@ Professional skills and expertise
 ### Virtualization
  - XEN PV/HVM
 ### Technologies, API and foundations
-* C++ stl, boost
-* POSIX API
-* Win32 API
+* Cocoa/Cocoa Touch, Quartz Composer
+* REST, Ajax, jQuery, jQTouch, backbone.js, underscore.js, ExtJS, Sencha Touch
+* XML/XSLT/DOM/XUL/SOAP
+* HTML5, CSS
+* POSIX API & Win32 API
 * COM/DCOM, ATL/WTL, QT
 * ffmpeg, libavcodec: h263, h264 codecs
 * Google V8, Google GAE
 * Node.js
-* REST, Ajax, jQuery, jQTouch, backbone.js, underscore.js
-* ExtJS, Sencha/Sencha Touch
-* Cocoa/Cocoa Touch, Quartz Composer
-* XML/XSLT/DOM/XUL/SOAP
-* HTML5, CSS
 ### Development tools
 * Xcode
 * Microsoft Visual Studio
