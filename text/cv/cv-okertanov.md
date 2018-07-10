@@ -12,7 +12,7 @@ Seeking position as a software engineer, technical consultant
 Professional skills and expertise
 ---------------------------------
 #### .Net & Xamarin/iOS
- - Have been unsing it last 5 years every day.
+ - Have been unsing it last 5 years day by day.
  - Rx, Linq, MVVM, D/I etc.
 #### Swift & Objective-C
  - 3 years of the OSX and iOS ent-grade software engineering.
@@ -38,7 +38,6 @@ Professional skills and expertise
  - FreeBSD
 ### Windows
  - NT, 2000, XP, Seven, Eight, CE/WinMobile/Windows Phone
-
 ### Virtualization
  - XEN PV/HVM
 ### Technologies, API and foundations
@@ -55,23 +54,18 @@ Professional skills and expertise
 * Xcode
 * Microsoft Visual Studio
 * GNU GCC, automake, Scons
-* NetBeans
-* vim
-* emacs
+* NetBeans, vim, emacs
 * git, svn, hg, cvs
 ### Embedded tools
+* Android NDK
 * GNU EABI Toolchains
 * Mentor Graphics Sourcery Tools
 * uClibc, newlib
-* Android NDK
 * ARM ADS
-* eSim RAPID
 * Lauterbach Trace32 JTAG debugger
 * X86/ARM optimization, Performance profiling
-* Nucleus OS
 ### Internet / Intranet technologies
-* TCP/IP
-* WWW, Proxy servers, LAMP, node/npm
+* WebSockets, WWW, Proxy servers, LAMP, node/npm
 * SNMP, service monitoring
 * SMPT, Mail gateways
 * SIP, RTP, RTSP, RTMP
