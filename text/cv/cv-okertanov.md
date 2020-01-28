@@ -23,35 +23,26 @@ Recent Employment Experience
 * Apple iOS applications development for the enterprise customers using Xamarin C#, ObjC, Swift.
 
 ### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
-* Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
- - C++, boost::asio, ATL, libavcodec.
-* Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser.
- - JavaScript, DHTML/Ajax, Lua.
-* C# and WCF/WPF
- - Client-side Video Surveillance system.
+* Developed full stack of server-side application for the video delivery for Web and Mobile platforms: C++, boost::asio, ATL, libavcodec.
+* Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser: JavaScript, DHTML/Ajax, Lua.
+* C# and WCF/WPF: Client-side Video Surveillance system.
 
 
 Professional skills and expertise
 ---------------------------------
 #### .Net & Xamarin/iOS
- - Have been unsing it last 5 years day by day.
  - Rx, Linq, MVVM, D/I etc.
 #### Swift & Objective-C
- - 3 years of the OSX and iOS ent-grade software engineering.
+ - More than 5 years of the OSX and iOS ent-grade software engineering.
 #### C/C++
  - OOP, templates, std library, boost (asio, regex, shared pointers, spirit/qi)
  - C++17 goodies (move semantic, initializers, lambdas), RAII, RTTI
 #### JavaScript and Node.js
  - I've wrote tons of JS code, have used hundreds of libraries like jQuery, Angular, backbone, etc.
 #### Lua
- - I'm embedding it since circa Y2k.
- - Using my own C++ to Lua interop library and object system.
+ - I'm embedding it since circa Y2k, using my own C++ to Lua interop library and object system.
 #### Python
- - Functional idioms.
-#### Lisp, Closure, Scheme
- - I do like Lisps a lot, but i've never been using it commercially.
-#### Perl
- - That tricky one-liners, you know.
+ - Functional idioms, QT bindings.
 #### ARM
  - Embedded, cross-build, toolchains.
 ### Unix
@@ -68,12 +59,9 @@ Professional skills and expertise
 * XML/XSLT/DOM/XUL/SOAP
 * POSIX API & Win32 API, COM/DCOM, ATL/WTL, QT
 * ffmpeg, libavcodec: h263, h264 codecs
-* Google V8, Google GAE
-* Node.js
+* Google V8, Google GAE, Node.js
 ### Development tools
-* Xcode, Microsoft Visual Studio, NetBeans, vim, emacs
-* GNU GCC, automake, Scons
-* git, svn, hg
+* Xcode, Microsoft Visual Studio, NetBeans, vim, emacs, GNU GCC, automake, Scons, git, svn, hg
 ### Embedded tools
 * Android NDK
 * GNU EABI Toolchains, & Mentor Graphics Sourcery Tools
@@ -81,11 +69,9 @@ Professional skills and expertise
 * Lauterbach Trace32 JTAG debugger
 * X86/ARM optimization, Performance profiling
 ### Internet / Intranet technologies
-* WebSockets, WWW, Proxy servers, LAMP, node/npm
-* SNMP, service monitoring, SMPT, Mail gateways, SIP, RTP, RTSP, RTMP
+* WebSockets, WWW, Proxy servers, LAMP, SNMP, service monitoring, SMPT, Mail gateways, SIP, RTP, RTSP, RTMP
 ### Computation, Computer science, Functional calculus
-* Functional: Lambda calculus, Currying, Closures, Continuations, Tail recursion, reflection
-* Declarative and Literate programming: LISP, Scheme
+* Functional: Lambda calculus, Currying, Closures, Continuations, Tail recursion, reflection, Declarative and Literate programming: LISP, Scheme
 * DSL, AOP, STM
 * MATLAB
 ### Office and productivity applications:
@@ -110,7 +96,6 @@ Professional skills and expertise
     Full stack of development tools and libraries for developing MMI applications for
     different embedded devices. Porting the system onto Intel Manitoba XScale-based
     hardware platform. On-site support and integration.
-* Participated in the development and support of a cross-platform build system and in project integration.
 * DECT 6.0 cordless phone. Caller ID core logic development and customization - FSK, Bellcore and DTMF standards.
 * Reference design for EDCT cordless device named “USB Dongle”,
     which serves as the main integration point for EDCT cordless network and PC internet applications: MSN Messenger, Skype, Yahoo Messeger.
@@ -123,4 +108,3 @@ Education
 * Information Technologies in Economics (five-year degree, 1999)
 * Bachelor in Economics (four-year degree, 1998)
 * Russian - native, English - strong communication skills, computer-related technical lexic.
-
