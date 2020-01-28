@@ -7,7 +7,7 @@ Oleg E. Kertanov
 
 Objective
 ---------
-Seeking position as a software engineer, technical consultant
+Seeking position as a software engineer, technical consultant.
 
 Professional skills and expertise
 ---------------------------------
@@ -19,30 +19,30 @@ Professional skills and expertise
 #### C/C++
  - OOP, templates, std library, boost (asio, regex, shared pointers, spirit/qi)
  - C++17 goodies (move semantic, initializers, lambdas), RAII, RTTI
-#### Python
- - Classes, decorators, functional idioms, double underscore methods.
 #### JavaScript and Node.js
  - I've wrote tons of JS code, have used hundreds of libraries like jQuery, Angular, backbone, etc.
 #### Lua
  - I'm embedding it since circa Y2k.
  - Using my own C++ to Lua interop library and object system.
+#### Python
+ - Functional idioms.
 #### Lisp, Closure, Scheme
  - I do like Lisps a lot, but i've never been using it commercially.
 #### Perl
  - That tricky one-liners, you know.
 #### ARM
- - That's my hobby.
+ - Embedded, cross-build, toolchains.
 ### Unix
- - Apple OS X/iOS
+ - Apple macOS and iOS.
  - GNU Linux/RT Linux, Debian, Ubuntu, RH
  - FreeBSD
 ### Windows
- - NT, 2000, XP, Seven, Eight, CE/WinMobile/Windows Phone
+ - CE/WinMobile/Windows Phone
 ### Virtualization
- - XEN PV/HVM
+ - Docker, XEN PV/HVM
 ### Technologies, API and foundations
 * Cocoa/Cocoa Touch, Quartz Composer
-* HTML5, CSS, REST, Ajax, jQuery, jQTouch, backbone.js, underscore.js, ExtJS, Sencha Touch
+* HTML5, CSS, REST, Ajax, jQuery, jQTouch, backbone.js, underscore.js, ExtJS, NestJS
 * XML/XSLT/DOM/XUL/SOAP
 * POSIX API & Win32 API, COM/DCOM, ATL/WTL, QT
 * ffmpeg, libavcodec: h263, h264 codecs
@@ -62,19 +62,25 @@ Professional skills and expertise
 * WebSockets, WWW, Proxy servers, LAMP, node/npm
 * SNMP, service monitoring, SMPT, Mail gateways, SIP, RTP, RTSP, RTMP
 ### Computation, Computer science, Functional calculus
-* Functional: Lambda calculus, Currying, Closures, Continuations, Tail recursion, apply, filter, map, reduce, fold and zip, homoiconicity, reflection
+* Functional: Lambda calculus, Currying, Closures, Continuations, Tail recursion, reflection
 * Declarative and Literate programming: LISP, Scheme
 * DSL, AOP, STM
 * MATLAB
 ### Office and productivity applications:
 \LaTeX, MS Office, Open Office, MS Project, MS Sharepoint, Google Docs
 ### Project Management:
-* Agile/XP, Classic WF model, basic RUP
+* Scrum, Agile/XP, Classic WF model, basic RUP
 
 Employment Experience
 ---------------------
-### C.T.Co, Riga, Latvia (2012 - now)
-* Apple iOS applications development for the enterprise customers using Xamarin C#, ObjC, Swift
+### Blockvis SIA, Riga, Latvia (2018 - now)
+* Swift/iOS, Flutter, React Native applications development.
+* Go lang native bindings for the React Native.
+* Low-level Rust lang apps & support.
+* Node.js & NestJS server-side.
+
+### C.T.Co, Riga, Latvia (2012 - 2018)
+* Apple iOS applications development for the enterprise customers using Xamarin C#, ObjC, Swift.
 
 ### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
 * Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
@@ -106,7 +112,7 @@ Employment Experience
 Education
 ---------
 ### CIM, Ukraine
-* Specialist: Information Technologies in Economics (five-year degree, 1999)
-* Bachelor: Economics (four-year degree, 1998)
-* Russian - native, English - strong communication skills, computer-related technical lexic
+* Information Technologies in Economics (five-year degree, 1999)
+* Bachelor in Economics (four-year degree, 1998)
+* Russian - native, English - strong communication skills, computer-related technical lexic.
 
