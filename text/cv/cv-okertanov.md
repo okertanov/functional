@@ -5,9 +5,31 @@ Oleg E. Kertanov
     Phone: +371 25864676
     Location: Riga, LV
 
+
 Objective
 ---------
 Seeking position as a software engineer, technical consultant.
+
+
+Recent Employment Experience
+----------------------------
+### Blockvis SIA, Riga, Latvia (2018 - now)
+* Swift/iOS, Flutter, React Native applications development.
+* Go lang native bindings for the React Native.
+* Low-level Rust lang apps & support.
+* Node.js & NestJS server-side.
+
+### C.T.Co, Riga, Latvia (2012 - 2018)
+* Apple iOS applications development for the enterprise customers using Xamarin C#, ObjC, Swift.
+
+### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
+* Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
+ - C++, boost::asio, ATL, libavcodec.
+* Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser.
+ - JavaScript, DHTML/Ajax, Lua.
+* C# and WCF/WPF
+ - Client-side Video Surveillance system.
+
 
 Professional skills and expertise
 ---------------------------------
@@ -71,24 +93,9 @@ Professional skills and expertise
 ### Project Management:
 * Scrum, Agile/XP, Classic WF model, basic RUP
 
-Employment Experience
----------------------
-### Blockvis SIA, Riga, Latvia (2018 - now)
-* Swift/iOS, Flutter, React Native applications development.
-* Go lang native bindings for the React Native.
-* Low-level Rust lang apps & support.
-* Node.js & NestJS server-side.
 
-### C.T.Co, Riga, Latvia (2012 - 2018)
-* Apple iOS applications development for the enterprise customers using Xamarin C#, ObjC, Swift.
-
-### Independent Contractor, SSE: A&H Software House, Inc., Riga, Latvia (2010 - 2012)
-* Developed full stack of server-side application for the video delivery for Web and Mobile platforms.
- - C++, boost::asio, ATL, libavcodec.
-* Architected and developed rich Web and Mobile client applications to access NVR server video streams via browser.
- - JavaScript, DHTML/Ajax, Lua.
-* C# and WCF/WPF
- - Client-side Video Surveillance system.
+ Previous Employment Experience
+-------------------------------
 ### SSE, ISS International, Riga, Latvia (2007 - 2010)
 * Unix/Linux/Networking Software development & Integration (ha network services)
  - C, POSIX
@@ -108,6 +115,7 @@ Employment Experience
 * Reference design for EDCT cordless device named “USB Dongle”,
     which serves as the main integration point for EDCT cordless network and PC internet applications: MSN Messenger, Skype, Yahoo Messeger.
 * Make U-Boot work with BSP Code. Port MARVELL Network Packet Processor BSP Code (4,500 files) from VxWorks to compile with U-Boot.
+
 
 Education
 ---------
