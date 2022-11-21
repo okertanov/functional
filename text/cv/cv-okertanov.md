@@ -11,7 +11,12 @@ Seeking position as a software engineer, technical consultant.
 
 Recent Employment Experience
 ----------------------------
-### Blockvis SIA, Riga, Latvia (2018 - now)
+### Debitum SIA, Riga, Latvia (2020 - 2022)
+* C# and node.js backend architect.
+* Blockchain consultant and infrastructure architector.
+
+----------------------------
+### Blockvis SIA, Riga, Latvia (2018 - 2020)
 * Swift/iOS, Flutter, React Native applications development.
 * Go lang native bindings for the React Native.
 * Low-level Rust lang apps & support.
