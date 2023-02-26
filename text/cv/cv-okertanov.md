@@ -13,7 +13,7 @@ Recent Employment Experience
 ----------------------------
 ### Debitum SIA, Riga, Latvia (2020 - 2022)
 * C# and node.js backend architect.
-* Blockchain consultant and infrastructure architector.
+* Blockchain consultant and infrastructure architect.
 
 ----------------------------
 ### Blockvis SIA, Riga, Latvia (2018 - 2020)
