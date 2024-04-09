@@ -11,6 +11,9 @@ Seeking position as a software engineer, technical consultant.
 
 Recent Employment Experience
 ----------------------------
+### Dynatech/Trevolution, Riga, Latvia (2023 - current)
+* Backend developer, TypeScript, NestJS, NodeJS.
+
 ### Debitum SIA, Riga, Latvia (2020 - 2022)
 * C# and node.js backend architect.
 * Blockchain consultant and infrastructure architect.
